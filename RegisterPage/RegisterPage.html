@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .registerForm{
+            display: flex;
+            flex-direction: column;
+        }
+        .registerPaperTop{
+            display: flex;
+            justify-content: space-between;
+        }
+        .registerContent{
+            display: flex;
+        }
+        .registerLeft{
+            width: 50%;
+        }
+        .registerPaper{
+            border: 1px solid;
+            border-radius: 0.5rem;
+            padding: 1rem;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="registerTop">
+
+    </div>
+    <div class="registerContent">
+        <div class="registerLeft">
+            <img />
+        </div>
+        <div class="registerRight">
+            <div class="registerPaper">
+                <div class="registerPaperTop">
+                    <h3>Create Account</h3>
+                    <h6>Login instead</h6>
+                </div>
+                <div class="registerFormContainer">
+                    <form action="" class="registerForm">
+                        <label>First Name</label>
+                        <input type="text">
+                        <label>Last Name</label>
+                        <input type="text">
+                        <label>Email</label>
+                        <input type="email">
+                        <label>Date of birth</label>
+                        <input type="date">
+                        <label>Address</label>
+                            <select>
+                                <option selected>Lebanon</option>
+                            </select> 
+                            <input type="text"> 
+                            <input type="text"> 
+                            <input type="text">
+                        <label>Gender</label>
+                        <select>
+                            <option value="fmale">Fmale</option>
+                            <option value="male">Male</option>
+                            <option value="other">Other</option>
+                            <option value="nogender" selected>NA
+                            </option>
+                        </select>
+                        <label>Username</label>
+                        <input type="text">
+                        <lable>password</lable>
+                        <input type="password">
+                        <label>Education</label>
+                        <select>
+                            <option value="school">School or Equevlant</option>
+                            <option value="highschool">highSchool or Equevlant</option>
+                            <option value="universty">Universty or Equevlant</option>
+                            <opion value="master">Master Degrre</opion>
+                            <option value="noeduction" selected>No Eduction</option>
+                        </select>
+                        <input type="checkbox" checked>By creating an account,I agree to our <a href="#">term of
+                            use</a>and<a href="#">Privacy Policy</a>
+                        <input type="submit" value="Create an account" </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
