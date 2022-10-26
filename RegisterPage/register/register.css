@@ -1,0 +1,53 @@
+.registerForm{
+    display: flex;
+    flex-direction: column;
+}
+.registerPaperTop{
+    display: flex;
+    justify-content: space-between;
+}
+.registerContent{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    background-color: aquamarine;
+}
+.registerLeft img{
+    max-width: 100%;
+    margin: auto;
+    margin-top: 10rem;
+    margin-right: 20rem;
+}
+.registerPaper{
+    border: 1px solid;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.registerRight{
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 1px 2px 3px 1px black;
+    background-color: white;
+}
+a{
+    color:black;
+}
+input{
+    accent-color: black;
+}
+.registerTop{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid grey;
+}
+.registerTop img{
+    max-width: 100%;
+    margin: auto;
+}
+.login{
+    margin-top: 1rem;
+    background-color: white;
+    border: 1px solid gray;
+}
