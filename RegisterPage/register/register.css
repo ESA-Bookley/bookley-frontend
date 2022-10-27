@@ -13,9 +13,13 @@
     display: flex;
     margin-top: 1rem;
     background-color: rgb(147, 226, 137);
+    flex-wrap: wrap;
 }
 .registerLeft{
-    width: 50%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .registerForm input{
     border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;/*top-left top-right bottom-right bottom-left*/
@@ -32,9 +36,7 @@ select{
     margin-left:15rem;
     margin-right: 20rem;
 }
-.registerAddress input{
-    width:4rem;
-}
+
 .registerAddress{
     display:flex;
     justify-content: space-between;
@@ -43,14 +45,19 @@ select{
 .registerPaper{
     border-radius: 0.5rem;
     padding: 1rem;
-}
-.registerRight{
-    border-radius: 0.3rem;
-    margin-top: 1rem;
-    margin-right: 1.5rem;
     margin-bottom: 1rem;
+    margin-top: 1rem;
     box-shadow: 1px 2px 3px 1px green;
     background-color: white;
+}
+.registerRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+   
+   
+
 }
 a{
     color:black;
@@ -72,4 +79,11 @@ input{
     margin-top: 0.5rem;
     background-color: white;
     border: 1px solid gray;
+}
+form > * {
+    margin-bottom: 0.3rem;
+}
+.agreeToTerms{
+    display: flex;
+    flex-wrap: wrap;
 }
