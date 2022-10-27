@@ -6,17 +6,38 @@
     display: flex;
     justify-content: space-between;
 }
+.registerAddress{
+    display: flex;
+}
 .registerContent{
     display: flex;
-    justify-content: flex-end;
     margin-top: 1rem;
-    background-color: aquamarine;
+    background-color: rgb(147, 226, 137);
+}
+.registerLeft{
+    width: 50%;
+}
+.registerForm input{
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;/*top-left top-right bottom-right bottom-left*/
+    border: 0.1px solid;
+}
+select{
+    border-radius: 0.2rem 0.2rem 0.2rem 0.2rem;
 }
 .registerLeft img{
-    max-width: 100%;
+    max-width: 60%;
     margin: auto;
-    margin-top: 10rem;
+    margin-top: 15rem;
+    margin-left:15rem;
     margin-right: 20rem;
+}
+.registerAddress input{
+    width:4rem;
+}
+.registerAddress{
+    display:flex;
+    justify-content: space-between;
+    
 }
 .registerPaper{
     border: 1px solid;
@@ -47,7 +68,8 @@ input{
     margin: auto;
 }
 .login{
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     background-color: white;
     border: 1px solid gray;
 }
+
