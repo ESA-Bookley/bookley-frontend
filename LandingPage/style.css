@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+:root{
+    --logoGreen: #235327;
+    --primaryGreen: #70C174;
+    --secondaryGreen: #BEF3C0;
+    --tertiaryGreen: #EFF7F2;
+    --primaryDark: #0B0706;
+    --secondaryDark: #1D2130;
+    --tertiaryDark: #525560;
+    --primaryLight: #EBF0F9;
+    --secondaryLight: #E5E5E5;
+
+    
+}
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ffff;
+    color: var(--logoGreen);
+    padding-left: 00.5rem;
+    padding-right: 00.5rem;
+}
+.navLogoContainer{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+}
+.navLogo{
+    max-width: 50%;
+}
+.navLinks{
+    display: flex;
+    align-items: center;
+    padding-right: 0.25rem;
+    
+}
+.navBar a{
+    font-size: 1.25rem;
+    padding: 1rem;
+    color: var(--logoGreen);
+}
+.navBar a:hover{
+    
+    
+    color: var(--primaryGreen);
+    
+}
+.navBar .active, .navBar .active:hover {
+    background-color: var(--primaryGreen);
+    color: var(--tertiaryGreen);
+}
+.dropdownAccountMenu{
+    position: relative;
+    display: inline-block;
+    
+}
+.accountAvatar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 00.5rem;
+    border-radius: 50%;
+    border: var(--logoGreen) dashed ;
+    color: var(--logoGreen);
+    cursor: pointer;
+    
+}
+.accountMenu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 12rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+
+  .dropdownAccountMenu:hover .accountMenu {display: block;}
