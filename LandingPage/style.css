@@ -55,6 +55,7 @@ a, a:visited, a:hover, a:active {
     
     
     color: var(--primaryGreen);
+    background-color: var(--secondaryDark);
     
 }
 .navBar .active, .navBar .active:hover {
@@ -95,7 +96,7 @@ a, a:visited, a:hover, a:active {
     text-align: left;
   }
   .accountMenu a:hover {
-    background-color: #ddd;
+    background-color: var(--tertiaryDark);
   }
   .dropdownAccountMenu:hover .accountMenu,  .accountMenu:hover {
     display: block;
