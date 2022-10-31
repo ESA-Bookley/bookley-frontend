@@ -13,7 +13,8 @@
     --secondaryDark: #1D2130;
     --tertiaryDark: #525560;
     --primaryLight: #EBF0F9;
-    --secondaryLight: #E5E5E5;
+    /* --secondaryLight: #E5E5E5; */
+    --secondaryLight: #fff;
 
     
 }
@@ -61,10 +62,45 @@ a, a:visited, a:hover, a:active {
     color: var(--tertiaryGreen);
 }
 .dropdownAccountMenu{
-    position: relative;
-    display: inline-block;
+    /* position: relative;
+    display: inline-block; */
+    overflow: hidden;
     
 }
+/* .dropdownAccountMenu .accountAvatar{
+    font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+} */
+.accountMenu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+  }
+  .accountMenu a {
+    float: none;
+    
+    padding: 0.5rem ;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .accountMenu a:hover {
+    background-color: #ddd;
+  }
+  .dropdownAccountMenu:hover .accountMenu,  .accountMenu:hover {
+    display: block;
+    z-index: 10000;
+  }
 .accountAvatar{
     display: flex;
     height: 2.5rem;
@@ -78,17 +114,17 @@ a, a:visited, a:hover, a:active {
     cursor: pointer;
     
 }
-.accountMenu {
+/* .accountMenu {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
     min-width: 12rem;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1000;
-  }
+  } */
 
 
-  .dropdownAccountMenu:hover .accountMenu {display: block;}
+  /* .dropdownAccountMenu:hover .accountMenu {display: block;} */
   
   .carouselImgContainer{
     position: relative;
@@ -123,10 +159,16 @@ a, a:visited, a:hover, a:active {
   .myPrimaryBtn{
     border: none;
     cursor: pointer;
-    padding: 0.5rem ;
+    padding: 0.5rem 1rem ;
     width: fit-content;
     margin-top: 0.5rem;
+    background-color: var(--primaryLight);
     color: var(--logoGreen);
+  }
+
+  .myPrimaryBtn:hover{
+    background-color: var(--primaryGreen);
+    color: var(--secondaryLight);
   }
 
 
@@ -291,3 +333,99 @@ a, a:visited, a:hover, a:active {
     padding: 00.5rem 1rem;
     margin-top: 3rem;
   }
+
+  .learnMoreBtnW{
+    align-self: baseline;
+    border: none;
+    cursor: pointer;
+    color: var(--logoGreen);
+    background-color: var(--secondaryLight);
+    padding: 00.5rem 1rem;
+    margin-top: 3rem;
+    align-self: center;
+  }
+  .learnMoreBtnW:hover{
+    background-color: var(--primaryGreen);
+    color: var(--secondaryLight);
+  }
+
+  .didYouKnowCardsContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 2rem;
+  }
+
+
+  .didYouKnowCard{
+    position: relative;
+    max-width: 20rem;
+  /* max-width: 800px; Maximum width */
+    margin: 0 auto; /*Center it */
+    border-radius: 1rem;
+  }
+
+  .didYouKnowCard .didYouKnowInfo{
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 100%; /* Full width */
+  height: 100%;
+  padding: 1rem; /* Some padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  text-align: center;
+  }
+  .didYouKnowCard .didYouKnowInfo:hover{
+
+    background: rgba(0, 0, 0, 0.05); /* Black background with 0.5 opacity */
+  
+    }
+
+  .didYouKnowImg{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  .footerCols{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .footerSocialLinks{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  .myFooter{
+    background-color: black;
+    color: var(--secondaryLight);
+  }
+  
+  .fcol{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .footerTitle{
+    margin-bottom: 1rem;
+  }
+  .footerLink{
+    cursor: pointer;
+  }
+  .fRights{
+    width: 100%;
+    text-align: center;
+  }
+
+
+

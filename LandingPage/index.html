@@ -29,7 +29,9 @@
     <script src="https://kit.fontawesome.com/4c5eb9a822.js" crossorigin="anonymous"></script>
     <title>Welcome to Bookley</title>
   </head>
+
   <body>
+
     <div class="navBar">
       <div class="navLogoContainer">
         <img
@@ -49,13 +51,15 @@
             <a href="#" class="accountMenuLink">@isaacbahsoun</a>
             <a href="#" class="accountMenuLink">List a book</a>
             <a href="#" class="accountMenuLink">Saved</a>
-            <a href="#" class="accountMenuLink">Transaction</a>
+            <a href="#" class="accountMenuLink">Transactions</a>
             <a href="#" class="accountMenuLink">Logout</a>
           </div>
         </div>
       </div>
     </div>
+
     <div class="landingContent">
+      
       <div class="carouselContainer">
         <div
           id="carouselExampleIndicators"
@@ -90,7 +94,7 @@
                 <img
                   src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666919362/ESA-Bookley/Carousel/emmanuel-phaeton-_RFT1_Kcwr4-unsplash_xr8mpk.jpg"
                   class="d-block w-100"
-                  alt="..."
+                  alt="Carousel Image"
                 />
                 <div class="carouselContent">
                   <h1>
@@ -100,7 +104,8 @@
                   <q
                     ><i>Sharing <b>Books</b> is sharing <b>Wisdom</b></i></q
                   >
-                  <button class="myPrimaryBtn">Mission</button>
+                  <form action="#mission">
+                  <button class="myPrimaryBtn">Mission</button></form>
                 </div>
               </div>
             </div>
@@ -109,10 +114,12 @@
                 <img
                   src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666919362/ESA-Bookley/Carousel/josh-applegate-cwGk-u9PHOo-unsplash_vkihcn.jpg"
                   class="d-block w-100"
-                  alt="..."
+                  alt="Carousel Image"
                 />
                 <div class="carouselContent">
                   <h1>For a Sustainable, Healthy, Happy Future</h1>
+                  <form action="#whatWeDo">
+                  <button class="myPrimaryBtn">What we do</button></form>
                 </div>
               </div>
             </div>
@@ -121,10 +128,14 @@
                 <img
                   src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666919363/ESA-Bookley/Carousel/annelies-geneyn-bhBONc07WsI-unsplash_ugcc0t.jpg"
                   class="d-block w-100"
-                  alt="..."
+                  alt="Carousel Image"
                 />
                 <div class="carouselContent">
-                  <h1>P2P Book sharing platform</h1>
+                  <h1><q>We <b>share</b> because we <b>care</b></q></h1>
+                  <form action="#facts">
+<button class="myPrimaryBtn">Facts</button>
+                  </form>
+                  
                 </div>
               </div>
             </div>
@@ -150,6 +161,7 @@
           </button>
         </div>
       </div>
+      
       <div class="myCardsContainer">
         <div class="myCardsContainerTitleSection">
           <hr class="myTitleLine" />
@@ -293,6 +305,7 @@
 
         </div>
       </div>
+      
       <div class="myCardsContainer">
         <div class="myCardsContainerTitleSection">
           <hr class="myTitleLine" />
@@ -436,12 +449,13 @@
 
         </div>
       </div>
-      <div class="infoSection">
+      
+      <div class="infoSection" id="mission">
         <div class="myCardsContainerTitleSection">
           <hr class="myTitleLine" />
           <h5 class="myCardsContainerTitle">OUR MISSION</h5>
         </div>
-        <div class="infoSectionContent" >
+        <div class="infoSectionContent"  >
 
           <div class="infoSectionLeft">
 
@@ -463,7 +477,7 @@
         </div>
       </div>
 
-      <div class="infoSection">
+      <div class="infoSection" id="whatWeDo">
         <div class="myCardsContainerTitleSection">
           <hr class="myTitleLine" />
           <h5 class="myCardsContainerTitle">WHAT WE DO</h5>
@@ -476,14 +490,24 @@
             <p class="infoSectionText">
               Our platform ensures a sustainable, eco-friendly, economical, and more connected society
             </p>
-            <ul>
-              <li>One</li>
-              <li>2</li>
-              <li>3</li>
-              <li>Four</li>
+            <ul class="fa-ul" style="align-self: flex-start;">
+              <li><span class="fa-li"><i class="fa-solid fa-leaf"></i></span> <i> Eco Friendly</i> <br/>
+                Reduce tree cutting by sharing your books with people on bookley
+              </li>
+              <li><span class="fa-li"><i class="fa-solid fa-leaf"></i></span><i>Thrifty</i> <br/>
+                It is cost effective to swap books instead of buying
+              </li>
+              <li><span class="fa-li"><i class="fa-solid fa-leaf"></i></span><i>Socially Connective</i> <br/>
+                Provide a connected society through knowledge spreading
+              </li>
+              <li><span class="fa-li"><i class="fa-solid fa-leaf"></i></span><i> Knowledge and Wisdom</i><br/>
+                Create a wise and intellectual society by facilitating access to books
+              </li>
+              
             </ul>
             
-            <button class="learnMoreBtn">
+            
+            <button class="learnMoreBtnW">
               Learn More
             </button>
 
@@ -493,7 +517,90 @@
           </div>
         </div>
       </div>
+
+      <div class="infoSection" id="facts">
+        <div class="myCardsContainerTitleSection">
+          <hr class="myTitleLine" />
+          <h5 class="myCardsContainerTitle">DID YOU KNOW?</h5>
+        </div>
+        <div class="infoSectionContent">
+          <div class="didYouKnowCardsContainer">
+            <div class="didYouKnowCard">
+              <img src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/artur-luczka-B0tIFEU1JVM-unsplash_o2suzq.jpg" alt="" class="didYouKnowImg">
+              <div class="didYouKnowInfo">
+                <h3 class="didYouKnowFact">
+                  40,000 Trees are cut every year
+                </h3>
+                <button class="learnMoreBtnW">Know more </button>
+              </div>
+            </div>
+            <div class="didYouKnowCard">
+              <img src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/christian-burri-V5d31LxEdyw-unsplash_iy5rei.jpg" alt="" class="didYouKnowImg">
+              <div class="didYouKnowInfo">
+                <h3 class="didYouKnowFact">
+                  345,000 Books are printed every year
+                </h3>
+                <button class="learnMoreBtnW">Know more </button>
+              </div>
+            </div>
+            <div class="didYouKnowCard">
+              <img src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/pauline-loroy-tv8PIPPY3rQ-unsplash_g4uziw.jpg" alt="" class="didYouKnowImg">
+              <div class="didYouKnowInfo">
+                <h3 class="didYouKnowFact">
+                  450,000$ Spent on books every year
+                </h3>
+                <button class="learnMoreBtnW" >Know more </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       
+    </div>
+
+    <div class="myFooter">
+      <div class="footerCols">
+
+      
+      <div class="fcol">
+        <img src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png" alt="" class="footerLogo">
+        <div class="footerSocialLinks">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          
+        </div>
+      </div>
+      <div class="fcol">
+        <h5 class="footerTitle">
+          Pages
+        </h5>
+        <a><h6 class="footerLink">Home</h6></a>
+        <a><h6 class="footerLink">About us</h6></a>
+        <a><h6 class="footerLink">Contact us</h6></a>
+        <a><h6 class="footerLink">Log In / Register</h6></a>
+      </div>
+      <div class="fcol">
+        <h5 class="footerTitle">
+        Books
+      </h5>
+      <a><h6 class="footerLink">Categories</h6></a>
+      <a><h6 class="footerLink">Authors</h6></a>
+      <a><h6 class="footerLink">List a book</h6></a>
+      </div>
+      <div class="fcol">
+        <h5 class="footerTitle">
+        Legal
+      </h5>
+      <a><h6 class="footerLink">Terms</h6></a>
+        <a><h6 class="footerLink">Policy</h6></a>
+        
+      </div>
+    </div>
+      <div class="fRights">
+        <p style="margin-bottom: 0;">All rights reserved. Copyright 2022© ESA -- Bookley</p>
+      </div>
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
