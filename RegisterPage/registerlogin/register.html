@@ -16,10 +16,10 @@
                 <div class="leftRegister">
                     <!--waizerd-->
                     <div class="waizerd">
-                        <div class="left-heading">
+                        <!--<div class="left-heading">
                             <h1>Step to join us</h1>
-                        </div>
-                        <div class="section ">
+                        </div>-->
+                        <div class="section">
                             <div class="square-wrapper">
                                 <div id="c1" class="square active-square">
                                     <div class="square-content">
@@ -32,26 +32,26 @@
                                     <div class="square-content">
                                         2
                                     </div>
-                                    <h4>Username</h4>
+                                    <h4>Content Information</h4>
                                 </div>
                                 <div id="c3" class="square">
                                     <div class="square-content">
                                         3
                                     </div>
-                                    <h4>Intersted</h4>
+                                    <h4>User Information</h4>
                                 </div>
-                                <!--<div id="c3" class="square">
+                                <div id="c3" class="square">
                                     <div class="square-content">
                                         4
                                     </div>
-                                    <h4></h4>
-                                </div>-->
+                                    <h4>Intersted</h4>
+                                </div>
                             
                             </div>
-                            <div class="buttonGo">
+                           <!-- <div class="buttonGo">
                                 <h4></h4>
                                 <button type="submit" class="nextlogin" id="btnlogin">Sign In</button>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -60,6 +60,7 @@
                     <div class="formRegister ">
                         <div class="titleRegister">
                             <h1>Sign Up</h1>
+                            <a href="#" class="signIn">Sign In</a>
                         </div>
                         <form action="" class="myForm" name="something">
                             <div class="registerInfo active">
@@ -73,19 +74,7 @@
                                         <span>Last Name</span>
                                     </div>
                                 </div>
-                            
-                             <div class="row-form">
-                                <div class="hold">
-                                    <input type="email" name="email" id="email" required>
-                                    <span>Email</span>
-                                </div>
-                             </div>
-                             <div class="row-form">
-                                <div class="hold">
-                                    <input type="text" name="phone" id="phonenumber" required>
-                                    <span>Phone Number</span>
-                                </div>
-                             </div>
+
                              <div class="row-form">
                                 <div class="hold">
                                     <input type="date" name="date" required>
@@ -94,8 +83,8 @@
                              </div>
                              <div class="row-form">
                                 <div class="hold" >
-                                    <select>
-                                        <option value=""required>...</option>
+                                    <select required>
+                                        <option value="">Gender</option>
                                         <option value="1">Female</option>
                                         <option value="2">male</option>
                                         <option value="3">Other</option>
@@ -105,11 +94,12 @@
                              <div class="row-form">
                                 <div class="hold">
                                     <select name="" id="" required>
+                                        <option value="">Education</option>
                                         <option value="1">School or Equevlant</option>
                                         <option value="2">highSchool or Equevlant</option>
                                         <option value="3">University or Equevlant</option>
                                         <option value="4">Master degree</option>
-                                        <option value="5" selected>No Education</option>
+                                        <option value="5">No Education</option>
                                     </select>
                                 </div>
                              </div>
@@ -119,8 +109,48 @@
                                 <button type="submit" class="next" id="btnnext" rol="menuitem">NEXT</button>
                              </div>
                             </div>
+                            <div class="registerInfo">
+                                <div class="row-form">
+                                    <div class="hold">
+                                        <input type="email" name="email" id="email" required>
+                                        <span>Email</span>
+                                    </div>
+                                 </div>
+                                 <div class="row-form">
+                                    <div class="hold">
+                                        <input type="text" name="phone" id="phonenumber" required>
+                                        <span>Phone Number</span>
+                                    </div>
+                                 </div>
+                                <div class="row-form group-form">
+                                    <div class="hold">
+                                        <select>
+                                            <option value="1">Lebanon</option>
+                                        </select>
+                                    </div>
+                                    <div class="hold">
+            
+                                        <input type="text" name="governote" required>
+                                        <span>Governote</span>
+                                    </div>
+                                </div>
+                                <div class="row-form group-form">
+                                    <div class="hold">
+                                        <input type="text" name="city" required>
+                                        <span>City</span>
+                                    </div>
+                                    <div class="hold">
+                                        <input type="text" name="address" required>
+                                        <span>Address</span>
+                                    </div>
+                                </div>
+                                <div class="buttonSubmit">
+                                    <button type="submit" class="back" id="btnback">BACK</button>
+                                    <button type="submit" class="next" id="btnnext">NEXT</button>
+                                </div>
+                            </div>
                          <div class="registerInfo ">
-                            <div class="row-form group-form">
+                            <!--<div class="row-form group-form">
                                 <div class="hold">
                                     <select>
                                         <option value="1">Lebanon</option>
@@ -141,7 +171,7 @@
                                     <input type="text" name="address" required>
                                     <span>Address</span>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="row-form">
                                 <div class="hold">
                                     <input type="text" name="username" id="username" required>
@@ -160,12 +190,15 @@
                                     <span>Confirm password</span>
                                 </div>
                             </div>
-                            <div class="row-form">
-                                <div class="hold ">
-                                    <label><input type="checkbox" checked>I agree to your <a href="#">Terms of
-                                        use</a> and<a href="#">Privacy and Policy.</a></label>
-                                </div>
+                           <div class="row-form">
+                            <div class="hold ">
+                                <input type="checkbox" checked>
+                                <label>
+                                    I agree to your<a href="#">Terms of
+                                     use</a>and<a href="#">Privacy and Policy.</a>
+                                 </label>
                             </div>
+                           </div>
                             <div class="buttonSubmit">
                                 <button type="submit" class="back" id="btnback">BACK</button>
                                 <button type="submit" class="next" id="btnnext">NEXT</button>
@@ -255,19 +288,20 @@
                     </form>
                 </div>
             </div>
-            </div>
+            <!--</div>-->
        </div>
        <div class="containerLogin">
         <div class="wrapperLogin">
-            <div class="loginLeft">
+            <!--<div class="loginLeft">
                 <img src="registerpicture.jpg">
-            </div>
+            </div>-->
             <div class="loginRight">
-                <div class="title">
+                <div class="titleLogIn">
                     <h1>Sign In</h1>
+                    <a href="#" class="signUp">Sign Up</a>
                 </div>
                 <div class="loginInfo">
-                    <form action="" class="" name="">
+                    <form action="" class="" name="myformLogin">
                         <div class="row-form">
                             <div class="hold">
                                 <input type="text">
@@ -280,10 +314,10 @@
                                 <span>password</span>
                             </div>
                         </div>
-                            <div class="holdcheck">
-                                <input type="checkbox" checked>Remember me
+                            
+                                <input type="checkbox" checked>Remeber me
                                 <a href="#">Forgetpassword</a>
-                            </div>
+                           
                         <div class="loginButton">
                             <button type="submit" class="next">Sign In</button>
                         </div>
@@ -292,5 +326,5 @@
             </div>
         </div>
        </div>
-   </bod>
+   </body>
 </html>

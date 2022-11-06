@@ -4,6 +4,16 @@
 
 :root {
     box-sizing: 0;
+    --logoGreen: #235327;
+    --primaryGreen: #70C174;
+    --secondaryGreen: #BEF3C0;
+    --tertiaryGreen: #EFF7F2;
+    --primaryDark: #0B0706;
+    --secondaryDark: #1D2130;
+    --tertiaryDark: #525560;
+    --primaryLight: #EBF0F9;
+    /*--secondaryLight: #E5E5E5;*/
+    --secondaryLight: #fff;
 }
 
 body {
@@ -18,13 +28,14 @@ body {
 .registerContainer {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin: auto;
 }
 
 .wrapperRegister {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reversea;
     /*margin: auto;*/
     margin-top: 3rem;
     width: 60%;
@@ -35,26 +46,32 @@ body {
     display: flex;
     flex: 1;
     flex-wrap: wrap;
+    padding: 2rem;
     /*flex-direction: column;*/
     background-color: #BEF3C0;
 }
 .rightRegister {
     display: flex;
-    flex: 1;
+    flex:2;
     flex-wrap: wrap;
     /*flex-direction: column;*/
     justify-content: center;
-    background: white; 
-    
-
+    /*background: white;*/
 }
-
+.titleRegister{
+   display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.titleRegister a{
+    color: #70C174;
+}
 .waizerd {
     display: flex;
     flex-direction: column;
 }
 .left-heading h1{
-   color: black;
+   color: #0B0706;
 }
 .myForm {
     justify-content: center;
@@ -62,6 +79,7 @@ body {
 }
 
 h1 {
+    color:#70C174;
     text-align: center;
 }
 
@@ -98,9 +116,9 @@ input {
     width: 100%;
     border: none;
     outline: none;
+    background: none;
     border-bottom: 1px solid black;
 }
-
 .row-form .hold span {
     position: absolute;
     top: 0.1rem;
@@ -115,12 +133,13 @@ input {
     left: 0;
     font-size: 12px;
     font-weight: 500;
-    color: #0f5813;
+     color:#235327;
 }
 
 select {
     width: 100%;
     border: none;
+    background: none;
     border-bottom: 0.1rem solid;
     outline: none;
 }
@@ -175,6 +194,10 @@ select {
     color:white;
     transform: rotateY(180deg);
 }*/
+.loginButton{
+    display: flex;
+    justify-content: center;
+}
 .loginButton button {
     position: relative;
     border: none;
@@ -206,12 +229,12 @@ select {
     height: 60px;
     border: none;
     border-radius: 3rem;
-    background-color: #7e7e7e;
-    cursor: pointer;
+    background-color: #525560;
 }
 
 .active-square {
-    background-color: #0f5813;
+    background-color: #70C174;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
 }
 
 .square-content {
@@ -251,9 +274,7 @@ select {
 }
 
 .containerLogin {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
+   display: flex;
     display: none;
 }
 
@@ -261,10 +282,9 @@ select {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width:30rem;
     /*margin: auto;*/
-    background: white;
     margin-top: 3rem;
-    width: 60%;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
 }
 
@@ -291,20 +311,14 @@ select {
     max-width: 100%;
 
 }
-
-.title {
-    text-align: center;
-}
-
 .holdcheck {
     display: flex;
     flex-direction: row;
     align-content: space-between;
-
 }
 
-a {
-    color: #000;
+a{
+    color:#0B0706;
     margin-left: 3rem;
     text-decoration: none;
 }
@@ -313,15 +327,68 @@ a {
     display: flex;
     flex-direction: column;
 }
+.loginLeft{
+    display: flex;
+    flex-direction: column;
+    background-color:#FFFFFF;
+  
+}
+/*.userProfile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+.avatar{
+    width:50px;
+    height: 50px;
+    
+    border-radius: 3rem;
+}*/
 
-h4 {
+h4{
+    font-style: italic;
     margin-left: 4rem;
 }
-
-h1 {
-    color: #70C174
+/*.bto .loginForm{
+    display: flex;
+    width: 100%;
+    margin-right: 25px;
 }
-
+.bto{
+    position: relative;
+}
+.loginForm .bto span {
+    position: absolute;
+    top: 0.1rem;
+    left: 10px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.loginForm input:focus~span,
+.loginForm input:valid~span {
+    top: -1rem;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+     color:#235327;
+}*/
+/*input[type="checkbox"]{
+    box-shadow: #70C174 0px 19px 38px, #70C174 0px 15px 12px; ;
+}*/
 input[type="checkbox"]:checked {
-    accent-color: green;
+    accent-color: #70C174;
+}
+.titleLogIn{
+    display: flex;
+    justify-content: space-between;
+}
+.titleLogIn a{
+    color:#70C174;
+
+}
+.myformLogin{
+    display: flex;
+    flex-direction: column;
 }
