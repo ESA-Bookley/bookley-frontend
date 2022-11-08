@@ -10,20 +10,72 @@ $(document).ready(function(){
    next.on('click',function(e){
        e.preventDefault();
        const req_field=$('.active :required');
-       const phone=$('#phonenumber').val();
-       const email=$('#email').val();
-       console.log(/^\d{8}$/.test(phone)==false||/^\[A-Za-z]$/.test(phone)==true);
-       console.log(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email)==true)
+       /*const phone=$('#phonenumber').val();
+       console.log(phone);
+       console.log(/^\d{8}$/.test(phone)==false||/^\[A-Za-z]$/.test(phone)==true);*/
+       /*const email=$('#email').val();
+       const missingEmail=/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+       console.log(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email)==true);*/
        req_field.css({
-                  'background':'initail'
+           'background':'initail'
        });
       missing=false;
+      const email = $('.active #email');
+      if(email.val()) {
+        valid_email = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email.val()) == true;
+ 
+        if(!valid_email) {
+          email.css({
+            'border-bottom': '0.5px solid red',
+          });
+          missing = true;
+        }
+ 
+      }
+ 
+      const phone = $('.active #phonenumber');
+      if(phone.val()) {
+        if (/^\d{8}$/.test(phone.val()) == false || /^\[A-Za-z]$/.test(phone.val()) == true) {
+          phone.css({
+              'border-bottom': '0.5px solid red'
+          });
+          missing= true;
+        }
+
+      }
+      const passw=$('.active #password');
+      const testpass1 =/([a-z].*[A-Z])|([A-Z].*[a-z])([0-9])+([!,%,&,@,#,$,^,*,?,_,~])/;
+      const testpass2 =/([0-9])/;
+      const testpass3 =/([!,%,&,@,#,$,^,*,?,_,~])/;
+       if(passw.val()){
+        if(passw.val().length<'8' || testpass1.test(passw.val())==false|| testpass2.test(passw.val())==false|| testpass3.test(passw.val())==false){
+            
+              passw.css({
+                'border-bottom':'0.5px solid red',
+              }); 
+              missing=true;    
+        }
+       }
+       const comfpassw=$('.active #confirmpassword');
+       const testcomfpass1 =/([a-z].*[A-Z])|([A-Z].*[a-z])([0-9])+([!,%,&,@,#,$,^,*,?,_,~])/;
+       const testcomfpass2 =/([0-9])/;
+       const testcomfpass3 =/([!,%,&,@,#,$,^,*,?,_,~])/;
+        if(comfpassw.val()){
+         if(comfpassw.val().length<'8' || testcomfpass1.test(comfpassw.val())==false|| testcomfpass2.test(comfpassw.val())==false|| testcomfpass3.test(comfpassw.val())==false){
+             
+               comfpassw.css({
+                 'border-bottom':'0.5px solid red',
+               }); 
+               missing=true;    
+         }
+        }
+       
       req_field.each(function(){
        if($(this).val()===""){
          missing=true;
        }
       });
-      if(missing==true){
+      if(missing==true ){
         req_field.filter(function(){
           return this.value=='';
         }).css({
@@ -36,7 +88,6 @@ $(document).ready(function(){
           $('.section').find(".active-square").removeClass("active-square").next().addClass("active-square");
            $('.registerInfo').parent().find(".active").removeClass("active").next().addClass("active");
        }
-       
    });
    back.on('click',function(e){
     e.preventDefault();

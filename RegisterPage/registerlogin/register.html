@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="registernshallah final try.css" />
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
    </head>
-   <bod>
+   <body>
        <div class="registerContainer">
             <div class="wrapperRegister">
                 <div class="leftRegister">
@@ -62,22 +62,22 @@
                             <h1>Sign Up</h1>
                             <a href="#" class="signIn">Sign In</a>
                         </div>
-                        <form action="" class="myForm" name="something">
+                        <form action="" class="myForm" name="something" id="registerForm">
                             <div class="registerInfo active">
                                 <div class="row-form group-form">
                                     <div class="hold">
-                                        <input type="text" name="fn" id="firstname" required>
+                                        <input type="text" name="fn" id="firstname" value="" required>
                                         <span>First Name</span>
                                     </div>
                                     <div class="hold">
-                                        <input type="text" name="ln" id="lastname" required>
+                                        <input type="text" name="ln" id="lastname" value="" required>
                                         <span>Last Name</span>
                                     </div>
                                 </div>
 
                              <div class="row-form">
                                 <div class="hold">
-                                    <input type="date" name="date" required>
+                                    <input type="date" name="date" value="" required>
                                     <!--<span>Date of Birth</span>-->
                                 </div>
                              </div>
@@ -106,19 +106,19 @@
     
                              <div class="buttonSubmit">
                                 <h4></h4>
-                                <button type="submit" class="next" id="btnnext" rol="menuitem">NEXT</button>
+                                <button type="submit" class="next" id="btnnext" rol="menuitem" >NEXT</button>
                              </div>
                             </div>
                             <div class="registerInfo">
                                 <div class="row-form">
                                     <div class="hold">
-                                        <input type="email" name="email" id="email" required>
+                                        <input type="email" name="email" id="email" value="" onchange="this.setAttribute('value',this.value)" required>
                                         <span>Email</span>
                                     </div>
                                  </div>
                                  <div class="row-form">
                                     <div class="hold">
-                                        <input type="text" name="phone" id="phonenumber" required>
+                                        <input type="text" name="phone" id="phonenumber" value="" required>
                                         <span>Phone Number</span>
                                     </div>
                                  </div>
@@ -130,17 +130,17 @@
                                     </div>
                                     <div class="hold">
             
-                                        <input type="text" name="governote" required>
+                                        <input type="text" name="governote"  value="" required>
                                         <span>Governote</span>
                                     </div>
                                 </div>
                                 <div class="row-form group-form">
                                     <div class="hold">
-                                        <input type="text" name="city" required>
+                                        <input type="text" name="city"  value="" required>
                                         <span>City</span>
                                     </div>
                                     <div class="hold">
-                                        <input type="text" name="address" required>
+                                        <input type="text" name="address" value="" required>
                                         <span>Address</span>
                                     </div>
                                 </div>
@@ -174,19 +174,19 @@
                             </div>-->
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="text" name="username" id="username" required>
+                                    <input type="text" name="username" id="username" value="" required>
                                     <span>Username/Email</span>
                                 </div>
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="password" name="password" id="password" required>
+                                    <input type="password" name="password" id="password" value="" required>
                                     <span>password</span>
                                 </div>
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="password" name="password" id="password" required>
+                                    <input type="password" name="password" id="confirmpassword"  value="" required>
                                     <span>Confirm password</span>
                                 </div>
                             </div>
@@ -314,9 +314,12 @@
                                 <span>password</span>
                             </div>
                         </div>
-                            
+                        <div class="row-form">
+                            <div class="hold">
                                 <input type="checkbox" checked>Remeber me
                                 <a href="#">Forgetpassword</a>
+                            </div>
+                        </div>
                            
                         <div class="loginButton">
                             <button type="submit" class="next">Sign In</button>

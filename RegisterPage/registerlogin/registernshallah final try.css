@@ -28,14 +28,13 @@ body {
 .registerContainer {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     margin: auto;
 }
 
 .wrapperRegister {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap-reversea;
+    flex-wrap:wrap-reverse;
     /*margin: auto;*/
     margin-top: 3rem;
     width: 60%;
@@ -45,7 +44,6 @@ body {
 .leftRegister {
     display: flex;
     flex: 1;
-    flex-wrap: wrap;
     padding: 2rem;
     /*flex-direction: column;*/
     background-color: #BEF3C0;
@@ -53,7 +51,7 @@ body {
 .rightRegister {
     display: flex;
     flex:2;
-    flex-wrap: wrap;
+    
     /*flex-direction: column;*/
     justify-content: center;
     /*background: white;*/
@@ -128,7 +126,8 @@ input {
 }
 
 .row-form input:focus~span,
-.row-form input:valid~span {
+.row-form input:valid~span ,
+.row-form input:not([value=''])~span{
     top: -1rem;
     left: 0;
     font-size: 12px;
@@ -266,7 +265,9 @@ select {
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
     cursor: pointer;
 }
-
+button:hover{
+    background:#525560 ;
+}
 .info {
     display: flex;
     flex-direction: row;
@@ -311,11 +312,11 @@ select {
     max-width: 100%;
 
 }
-.holdcheck {
+/*.holdcheck {
     display: flex;
     flex-direction: row;
     align-content: space-between;
-}
+}*/
 
 a{
     color:#0B0706;
