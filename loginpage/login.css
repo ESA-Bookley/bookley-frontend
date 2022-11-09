@@ -1,0 +1,169 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    box-sizing: 0;
+    --logoGreen: #235327;
+    --primaryGreen: #70C174;
+    --secondaryGreen: #BEF3C0;
+    --tertiaryGreen: #EFF7F2;
+    --primaryDark: #0B0706;
+    --secondaryDark: #1D2130;
+    --tertiaryDark: #525560;
+    --primaryLight: #EBF0F9;
+    /*--secondaryLight: #E5E5E5;*/
+    --secondaryLight: #fff;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-size: 1rem;
+    background: url(https://res.cloudinary.com/df6hxb2wx/image/upload/v1667232986/ESA-Bookley/InfoSection/alexander-grey-eMP4sYPJ9x0-unsplash_b0zsal.jpg
+) center bottom;
+    background-size: cover;
+}
+.row-form {
+    margin-bottom: 1.5rem;
+}
+
+.row-form,
+.group-form {
+    display: flex;
+
+}
+
+.row-form,
+.group-form,
+.hold {
+    width: 100%;
+    margin-right: 25px;
+}
+
+.hold {
+    position: relative;
+}
+
+input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 1px solid black;
+}
+.row-form .hold span {
+    position: absolute;
+    top: 0.1rem;
+    left: 10px;
+    font-size: 14px;
+    transition: all 0.5s;
+}
+
+.row-form input:focus~span,
+.row-form input:valid~spans{
+    top: -1rem;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+     color:var(--logoGreen);
+}
+.loginButton{
+    display: flex;
+    justify-content: center;
+}
+.loginButton button {
+    position: relative;
+    border: none;
+    background: var(--primaryGreen);
+    width: 5rem;
+    height: 2rem;
+    color: var(--primaryLight);
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    cursor: pointer;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+button:hover{
+    background:var(--tertiaryDark) ;
+}
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerLogin {
+   display: flex;
+   height: 100%;
+    /*display: none;*/
+}
+
+.wrapperLogin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:30rem;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+    /*margin: auto;*/
+    /*box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;*/
+}
+
+.loginRight {
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    /*align-items: center;*/
+    padding: 3rem;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+}
+
+
+a{
+    color:var(--primaryDark);
+    margin-left: 3rem;
+    text-decoration: none;
+}
+
+.loginLeft{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--primaryLight);
+  
+}
+h4{
+    font-style: italic;
+    margin-left: 4rem;
+}
+
+input[type="checkbox"]:checked {
+    accent-color:var(--primaryGreen);
+}
+.titleLogIn{
+    display: flex;
+    justify-content: space-between;
+}
+.titleLogIn a{
+    color:var(--primaryGreen);
+
+}
+.myformLogin{
+    display: flex;
+    flex-direction: column;
+}
+.loginRightSpace{
+    flex:1;
+}
+h1 {
+    color: var(--primaryGreen);
+    text-align: center;
+}
