@@ -207,8 +207,8 @@ a, a:visited, a:hover, a:active {
   .myCardsWrapper{
     display: flex;
     padding-top: 00.1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
     justify-content: center;
     /* flex-wrap: wrap;*/
     gap: 1rem; 
