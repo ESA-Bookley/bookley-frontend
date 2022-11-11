@@ -18,10 +18,10 @@
 
     
 }
+/*
 a, a:visited, a:hover, a:active {
     text-decoration: none !important;
 }
-
 .navBar{
     display: flex;
     justify-content: space-between;
@@ -66,7 +66,7 @@ a, a:visited, a:hover, a:active {
 .dropdownAccountMenu{
     /* position: relative;
     display: inline-block; */
-    overflow: hidden;
+ /*   overflow: hidden;
     
 }
 .accountMenu {
@@ -104,11 +104,112 @@ a, a:visited, a:hover, a:active {
     color: var(--logoGreen);
     cursor: pointer;
     
+} */
+a, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+}
+
+.navBar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  background-color: #ffff;
+  color: var(--logoGreen);
+  padding-left: 00.5rem;
+  padding-right: 00.5rem;
+}
+.navLogoContainer{
+  display: flex;
+  align-items: center;
+  /* padding: 0.5rem; */
+}
+/* .navLogo{
+  max-width: 50%;
+} */
+.navLinks{
+  display: flex;
+  align-items: center;
+  padding-right: 0.25rem;
+  
+}
+.navBar a{
+  font-size: 1.25rem;
+  padding: 1rem;
+  color: var(--logoGreen);
+  transition: all ease-in-out 0.3s;
+}
+.navBar .active, .navBar .active:hover {
+  background-color: var(--primaryGreen);
+  color: var(--tertiaryGreen);
+}
+.navBar a:hover{
+  
+  
+  color: var(--primaryGreen);
+  background-color: var(--tertiaryDark);
+  
+}
+
+.dropdownAccountMenu{
+  /* position: relative;
+  display: inline-block; */
+  overflow: hidden;
+  
+}
+/* .dropdownAccountMenu .accountAvatar{
+  font-size: 16px;  
+border: none;
+outline: none;
+color: white;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
+} */
+.accountMenu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f980;
+  min-width: 10rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 3;
+  right: 0;
+}
+.accountMenu a {
+  float: none;
+  padding: 0.5rem ;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.accountMenu a:hover {
+  /* background-color: var(--tertiaryDark); */
+  color: var(--primaryGreen);
+  background-color: var(--tertiaryDark);
+  
+}
+.dropdownAccountMenu:hover .accountMenu,  .accountMenu:hover {
+  display: block;
+  z-index: 3;
+}
+.accountAvatar{
+  display: flex;
+  height: 2.5rem;
+  width: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 00.5rem;
+  border-radius: 50%;
+  border: var(--logoGreen) dotted ;
+  color: var(--logoGreen);
+  cursor: pointer;
+  
 }
 
 .infoSection:nth-child(odd){
     background-color: var(--secondaryLight);
-    color: var(--primaryDark);
+    color: var(--logoGreen);
   }
 .infoSection{
     background-color: var(--primaryGreen);
@@ -149,11 +250,61 @@ a, a:visited, a:hover, a:active {
   .infoSectionText{
     align-self: flex-start;
   }
-
-  .sdgGoal:hover{
-    transform: scale(1.1);
+  .sdgGoal{
+    transition: all ease-in-out 0.7s ;
     margin-bottom: 1rem;
-    margin-top: 1rem;
-    font-weight: 600;
     cursor: pointer;
+  }
+  .sdgDesc{
+    display: none;
+  }
+  .sdgGoal:hover{
+    transform: scale(1.05);
+    /* margin-bottom: 1rem;
+    margin-top: 1rem; */
+    /* font-weight: 600; */
+    cursor: pointer;
+  }
+  .sdgGoal:hover .sdgDesc{
+    display: block;
+  }
+
+  /* .sdgGoal:hover .infoSectionImg {
+    display: none;
+  } */
+  .footerCols{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  }
+
+  .footerSocialLinks{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  .myFooter{
+    background-color: black;
+    color: var(--secondaryLight);
+  }
+  
+  .fcol{
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+  .footerTitle{
+    margin-bottom: 1rem;
+  }
+  .footerLink{
+    cursor: pointer;
+  }
+  .footerLink:hover{
+    color: var(--primaryGreen);
+  }
+  .fRights{
+    width: 100%;
+    text-align: center;
   }
