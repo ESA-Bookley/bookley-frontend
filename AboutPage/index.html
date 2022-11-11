@@ -43,16 +43,46 @@
       </div>
       <div class="navLinks">
         <a href="/LandingPage/" class="navLink">Home</a>
-        <a href="/AboutPage/index.html" class="navLink active">About</a>
-        <a href="#" class="navLink">Categories</a>
-        <a href="#" class="navLink">Contact</a>
+        <a href="/AboutPage/" class="navLink active">About</a>
+        <a href="#" class="navLink" onclick="openNav()">Categories</a>
+        <div class="categoriesMenu" id="catNav">
+          <i class="fa-solid fa-xmark closeIcon" onclick="closeNav()"></i>
+          <div class="categoriesItems">
+            <a href="#" class="categoryItem">IT</a>
+            <a href="#" class="categoryItem">Novel</a>
+            <a href="#" class="categoryItem">History</a>
+            <a href="#" class="categoryItem">Sports</a>
+            <a href="#" class="categoryItem">Finance</a>
+            <a href="#" class="categoryItem">Cooking</a>
+            <a href="#" class="categoryItem">Beauty</a>
+            <a href="#" class="categoryItem">Cars</a>
+            <a href="#" class="categoryItem">Philosophy</a>
+            <a href="#" class="categoryItem">Language</a>
+            <a href="#" class="categoryItem">Comic</a>
+            <a href="#" class="categoryItem">Education</a>
+            <a href="#" class="categoryItem">School Books</a>
+            <a href="#" class="categoryItem">University Books</a>
+            <a href="#" class="categoryItem">Anime</a>
+            <a href="#" class="categoryItem">Crafts</a>
+            <a href="#" class="categoryItem">Tutorial</a>
+            <a href="#" class="categoryItem">Politics</a>
+            <a href="#" class="categoryItem">Economic</a>
+            <a href="#" class="categoryItem">Trading</a>
+            <a href="#" class="categoryItem">Gaming</a>
+          </div>
+        </div>
+        <a href="/ContactPage" class="navLink">Contact</a>
         <div class="dropdownAccountMenu">
           <div class="accountAvatar">IB</div>
           <div class="accountMenu">
-            <a href="#" class="accountMenuLink">@isaacbahsoun</a>
-            <a href="#" class="accountMenuLink">List a book</a>
-            <a href="#" class="accountMenuLink">Saved</a>
-            <a href="#" class="accountMenuLink">Transactions</a>
+            <a href="/UserPage" class="accountMenuLink">@isaacbahsoun</a>
+            <a href="/UserDashboard#addBook" class="accountMenuLink"
+              >List a book</a
+            >
+            <a href="/UserDashboard#saved" class="accountMenuLink">Saved</a>
+            <a href="/TransactionsHistory" class="accountMenuLink"
+              >Transactions</a
+            >
             <a href="#" class="accountMenuLink">Logout</a>
           </div>
         </div>
@@ -361,5 +391,16 @@
         </p>
       </div>
     </div>
+    <script>
+      /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById("catNav").style.height = "100%";
+      }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("catNav").style.height = "0%";
+      }
+    </script>
   </body>
 </html>
