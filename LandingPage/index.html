@@ -44,16 +44,46 @@
       </div>
       <div class="navLinks">
         <a href="/LandingPage/" class="navLink active">Home</a>
-        <a href="#" class="navLink">About</a>
-        <a href="#" class="navLink">Categories</a>
-        <a href="#" class="navLink">Contact</a>
+        <a href="/AboutPage/" class="navLink">About</a>
+        <a href="#" class="navLink" onclick="openNav()">Categories</a>
+        <div class="categoriesMenu" id="catNav">
+          <i class="fa-solid fa-xmark closeIcon" onclick="closeNav()"></i>
+          <div class="categoriesItems">
+            <a href="#" class="categoryItem">IT</a>
+            <a href="#" class="categoryItem">Novel</a>
+            <a href="#" class="categoryItem">History</a>
+            <a href="#" class="categoryItem">Sports</a>
+            <a href="#" class="categoryItem">Finance</a>
+            <a href="#" class="categoryItem">Cooking</a>
+            <a href="#" class="categoryItem">Beauty</a>
+            <a href="#" class="categoryItem">Cars</a>
+            <a href="#" class="categoryItem">Philosophy</a>
+            <a href="#" class="categoryItem">Language</a>
+            <a href="#" class="categoryItem">Comic</a>
+            <a href="#" class="categoryItem">Education</a>
+            <a href="#" class="categoryItem">School Books</a>
+            <a href="#" class="categoryItem">University Books</a>
+            <a href="#" class="categoryItem">Anime</a>
+            <a href="#" class="categoryItem">Crafts</a>
+            <a href="#" class="categoryItem">Tutorial</a>
+            <a href="#" class="categoryItem">Politics</a>
+            <a href="#" class="categoryItem">Economic</a>
+            <a href="#" class="categoryItem">Trading</a>
+            <a href="#" class="categoryItem">Gaming</a>
+          </div>
+        </div>
+        <a href="/ContactPage" class="navLink">Contact</a>
         <div class="dropdownAccountMenu">
           <div class="accountAvatar">IB</div>
           <div class="accountMenu">
-            <a href="#" class="accountMenuLink">@isaacbahsoun</a>
-            <a href="#" class="accountMenuLink">List a book</a>
-            <a href="#" class="accountMenuLink">Saved</a>
-            <a href="#" class="accountMenuLink">Transactions</a>
+            <a href="/UserPage" class="accountMenuLink">@isaacbahsoun</a>
+            <a href="/UserDashboard#addBook" class="accountMenuLink"
+              >List a book</a
+            >
+            <a href="/UserDashboard#saved" class="accountMenuLink">Saved</a>
+            <a href="/TransactionsHistory" class="accountMenuLink"
+              >Transactions</a
+            >
             <a href="#" class="accountMenuLink">Logout</a>
           </div>
         </div>
@@ -169,47 +199,10 @@
       <div class="myCardsContainer">
         <div class="myCardsContainerTitleSection">
           <hr class="myTitleLine" />
-          <h5 class="myCardsContainerTitle">Recently Listed</h5>
+          <h5 class="myCardsContainerTitle">Most Liked</h5>
         </div>
 
         <div class="myCardsWrapper">
-          <div class="myBookCardContainer">
-            <div class="myBookCardImgContainer">
-              <img
-                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
-                alt="book"
-                class="bookCardImg"
-              />
-            </div>
-
-            <div class="myBookCardInfoContainer">
-              <!-- <p class="myBookCardCategory">Novel</p> -->
-              <h5 class="myBookCardTitle">
-                The Forty Rules of LoveThe Forty Rules of Love
-              </h5>
-              <!-- <h6 class="myBookCardAuthor"><i>Elif Shafak</i></h6> <p class="myBookCardPoints">354 pts.</p> -->
-            </div>
-            <div class="myBookCardBot">
-              <div class="bookCardAuthorContainer">
-                <span class="cardBotTag"> AUTHOR </span>
-                <i>Elif Shafak</i>
-              </div>
-              <div class="bookCardCatContainer">
-                <span class="cardBotTag"> CATEGORY </span>
-                NOVEL
-              </div>
-              <div class="bookCardPtsContainer">
-                <span class="cardBotTag"> PTS </span>
-                345
-              </div>
-            </div>
-            <!-- <div class="myBookCardListingInfo">
-                
-                  <div class="myBookCardListingInfoRight">
-                   
-                  </div>
-                </div> -->
-          </div>
           <div class="myBookCardContainer">
             <div class="myBookCardImgContainer">
               <img
@@ -1179,5 +1172,16 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
+    <script>
+      /* Open when someone clicks on the span element */
+      function openNav() {
+        document.getElementById("catNav").style.height = "100%";
+      }
+
+      /* Close when someone clicks on the "x" symbol inside the overlay */
+      function closeNav() {
+        document.getElementById("catNav").style.height = "0%";
+      }
+    </script>
   </body>
 </html>
