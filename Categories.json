@@ -1,0 +1,29 @@
+{
+    "Categories":
+    [
+        {"id":1 , "Category": "IT"},
+        {"id":2 , "Category": "Novel"},
+        {"id":3 , "Category": "History"},
+        {"id":4 , "Category": "Sports"},
+        {"id":5 , "Category": "Finance"},
+        {"id":6 , "Category": "Cooking"},
+        {"id":7 , "Category": "Beauty"},
+        {"id":8 , "Category": "Cars"},
+        {"id":9 , "Category": "Philosophy"},
+        {"id":10 , "Category": "Language"},
+        {"id":11 , "Category": "Comic"},
+        {"id":12 , "Category": "Education"},
+        {"id":13 , "Category": "School Books<"},
+        {"id":14 , "Category": "University Books"},
+        {"id":15 , "Category": "Anime"},
+        {"id":16 , "Category": "Crafts"},
+        {"id":17 , "Category": "Tutorial"},
+        {"id":18 , "Category": "Politics"},
+        {"id":19 , "Category": "Economic"},
+        {"id":20 , "Category": "Trading"},
+        {"id":21 , "Category": "Gaming"},
+        {"id":22 , "Category": "Romance"},
+        {"id":23 , "Category": "Drama"}
+    ]
+}
+
