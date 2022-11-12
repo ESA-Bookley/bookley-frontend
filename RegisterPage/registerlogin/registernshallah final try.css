@@ -28,7 +28,8 @@ body {
 .registerContainer {
     display: flex;
     flex-direction: column;
-    margin: auto;
+    /*margin: auto;*/
+    
 }
 
 .wrapperRegister {
@@ -51,10 +52,11 @@ body {
 .rightRegister {
     display: flex;
     flex:2;
-    
+    padding: 3rem;
     /*flex-direction: column;*/
     justify-content: center;
     /*background: white;*/
+    background: rgb(0,0,0,0.2);
 }
 .titleRegister{
    display: flex;
@@ -112,6 +114,7 @@ h1 {
 
 .hold {
     position: relative;
+    
 }
 
 input {
@@ -138,6 +141,32 @@ input {
     font-weight: 500;
      color:var(--logoGreen);
 }
+.row-form select:focus~span,
+.row-form select:valid~span ,
+.row-form input:not([value=''])~span{
+    top: -1rem;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+     color:var(--logoGreen);
+}
+.row-form .hold small {
+    position: absolute;
+    top: 0.1rem;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+/* .row-form input:focus~small,
+.row-form input:valid~small ,
+.row-form input:not([value=''])~small{
+    top: -1rem;
+    left: 0;
+
+    font-size: 12px;
+    font-weight: 500;
+     color:var(--logoGreen);
+} */
 
 select {
     width: 100%;
@@ -146,7 +175,6 @@ select {
     border-bottom: 0.1rem solid;
     outline: none;
 }
-
 .buttonSubmit {
     display: flex;
     justify-content: space-between;
@@ -401,5 +429,32 @@ a{
 }
 .TermsPolicy{
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    /* font-size: 0.7rem; */
+}
+.TermsPolicy input{
+    width: 1rem;
+}
+.RegisterLinks{
+    margin: 0; 
+    color: var(--primaryGreen);
+     font-weight: bold;
+}
+.icons{
+    display: flex;
+    flex-direction: row;
+    flex:1;
+    align-content: space-between;
+}
+.error-message {
+    color: red;
+    font-size: 80%;
+    margin-top: 5px;
+    display: none;
+}
+
+.eyeIcon{
+    margin: 0;
+    right: 0;
+    cursor: pointer;
 }

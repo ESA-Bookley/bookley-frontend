@@ -8,7 +8,9 @@
         <script src="register1.js"></script>
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
         <link rel="stylesheet" href="registernshallah final try.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
    </head>
    <body>
        <div class="registerContainer">
@@ -68,39 +70,49 @@
                                     <div class="hold">
                                         <input type="text" name="fn" id="firstname" value="" required>
                                         <span>First Name</span>
+                                        <div class="error-message"></div>
                                     </div>
                                     <div class="hold">
                                         <input type="text" name="ln" id="lastname" value="" required>
                                         <span>Last Name</span>
+                                        <div class="error-message"></div>
+                                       
                                     </div>
                                 </div>
 
                              <div class="row-form">
                                 <div class="hold">
-                                    <input type="date" name="date" value="" required>
-                                    <!--<span>Date of Birth</span>-->
+                                    <input type="text" id="dpicker"  name="date" value="" required >
+                                    <!-- <input type="text" class="form-control datepicker" /> -->
+                                    <span  >Date of Birth</span>  
                                 </div>
                              </div>
                              <div class="row-form">
                                 <div class="hold" >
-                                    <select required>
-                                        <option value="">Gender</option>
+                                    <select class="selsected" required>
+                                        <option value="" ></option>
                                         <option value="1">Female</option>
                                         <option value="2">male</option>
                                         <option value="3">Other</option>
                                     </select>
+                                    <span>Gender</span>
+                                    <div class="error-message"></div>
+                                    
                                 </div>
                              </div>
                              <div class="row-form">
                                 <div class="hold">
-                                    <select name="" id="" required>
-                                        <option value="">Education</option>
+                                    <select name="" id="" class="selected" required>
+                                        <option value=""></option>
                                         <option value="1">School or Equevlant</option>
                                         <option value="2">highSchool or Equevlant</option>
                                         <option value="3">University or Equevlant</option>
                                         <option value="4">Master degree</option>
                                         <option value="5">No Education</option>
                                     </select>
+                                    <span>Eduction</span>
+                                    <div class="error-message"></div>
+                                    
                                 </div>
                              </div>
     
@@ -114,12 +126,16 @@
                                     <div class="hold">
                                         <input type="email" name="email" id="email" value="" onchange="this.setAttribute('value',this.value)" required>
                                         <span>Email</span>
+                                        <div class="error-message"></div>
+                                        
                                     </div>
                                  </div>
                                  <div class="row-form">
                                     <div class="hold">
                                         <input type="text" name="phone" id="phonenumber" value="" required>
                                         <span>Phone Number</span>
+                                        <div class="error-message"></div>
+                                        
                                     </div>
                                  </div>
                                 <div class="row-form group-form">
@@ -132,16 +148,21 @@
             
                                         <input type="text" name="governote"  value="" required>
                                         <span>Governote</span>
+                                        <div class="error-message"></div>
+                                       
                                     </div>
                                 </div>
                                 <div class="row-form group-form">
                                     <div class="hold">
                                         <input type="text" name="city"  value="" required>
                                         <span>City</span>
+                                        <div class="error-message"></div>
+                                        
                                     </div>
                                     <div class="hold">
                                         <input type="text" name="address" value="" required>
                                         <span>Address</span>
+                                        <div class="error-message"></div>
                                     </div>
                                 </div>
                                 <div class="buttonSubmit">
@@ -176,26 +197,38 @@
                                 <div class="hold">
                                     <input type="text" name="username" id="username" value="" required>
                                     <span>Username/Email</span>
+                                    <div class="error-message"></div>
+                                   
                                 </div>
                             </div>
                             <div class="row-form">
                                 <div class="hold">
                                     <input type="password" name="password" id="password" value="" required>
                                     <span>password</span>
+                                    <small class="eyeIcon"><i class="fa-regular fa-eye-slash  eyeOne"></i></small>
+                                    <small class="eyeIcon"><i class="fa-solid fa-eye" style="display: none;"></i></small>
+                                    <div class="error-message"></div>
+                                    
                                 </div>
                             </div>
                             <div class="row-form">
                                 <div class="hold">
                                     <input type="password" name="password" id="confirmpassword"  value="" required>
-                                    <span>Confirm password</span>
+                                    
+                                        <span>Confirm password</span>
+                                    <small class="eyeIcon"><i class="fa-regular fa-eye-slash eyeTwo"></i></small>
+                                    <small class="eyeIcon"><i class="fa-solid fa-eye" style="display: none;"></i></small>
+                                    <div class="error-message"></div>
+                                   
+                            
                                 </div>
                             </div>
                                 <div class="TermsPolicy">
                                     <input type="checkbox" checked>
-                                     <label>
-                                         agree to your<a href="#">Terms of
-                                             use</a> and <a href="#">Privacy and Policy.</a>
-                                     </label> 
+                                     <p >
+                                         Agree to &nbsp;<a href="#" class="RegisterLinks">Terms of
+                                             use</a> &nbsp; and  &nbsp;<a href="#" class="RegisterLinks" >Privacy Policy.</a>
+                                         </p> 
                                  </div>
                             
                             <!--
@@ -293,11 +326,12 @@
             </div>
             <!--</div>-->
        </div>
-       <div class="containerLogin">
+      <!---<div class="containerLogin">
+
         <div class="wrapperLogin">
-            <!--<div class="loginLeft">
+            <div class="loginLeft">
                 <img src="registerpicture.jpg">
-            </div>-->
+            </div>
             <div class="loginRight">
                 <div class="titleLogIn">
                     <h1>Sign In</h1>
@@ -332,6 +366,25 @@
             </div>
         </div>
         <div class="loginRightSpace"></div>
-       </div>
+       </div>-->
+       
+
    </body>
+   <script>
+    let func = () => {
+        console.log("wesel")
+        elm.type = 'date'
+        elm.value = '1990-11-11';
+    }
+    let elm = document.getElementById('dpicker');
+     elm.addEventListener('focus',(event) => {
+        event.target.type = 'date'
+        event.target.value = '1990-11-11'
+     });
+     /*let pwd = document.getElementById('password');
+     let eyeOne = document.getElementById('eyeOne');
+     pwd.addEventListener('click',(event)=>{
+        pwd.type = 'text';
+     })*/
+   </script>
 </html>

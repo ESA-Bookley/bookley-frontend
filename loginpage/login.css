@@ -167,3 +167,9 @@ h1 {
     color: var(--primaryGreen);
     text-align: center;
 }
+.TermsPolicy{
+    display: flex;
+}
+.TermsPolicy input{
+    width:1rem;
+}
