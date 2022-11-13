@@ -519,7 +519,7 @@ let CardsPage = document.getElementById("cardsPage");
 
 let miniAuthor = (str) => {
     let Str = str.split(' ')
-    let newStr = Str[1] + " " + Str[0][0] + "."
+    let newStr = Str[0] + " " + Str[1][0] + "."
     return newStr;
 
 }
@@ -543,7 +543,7 @@ BOOKS.forEach(book => {
     <div class="myBookCardBot">
       <div class="bookCardAuthorContainer">
         <span class="cardBotTag"> AUTHOR </span>
-        <i>${ book.Author.length < 12 ? book.Author : miniAuthor(book.Author) }</i>
+        <i>${ book.Author.length <= 12 ? book.Author : miniAuthor(book.Author) }</i>
       </div>
       <div class="bookCardCatContainer">
         <span class="cardBotTag"> CATEGORY </span>
