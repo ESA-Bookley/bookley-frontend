@@ -191,6 +191,7 @@
   width: 100%;
 }
 .form {
+  position: relative;
   font-size: 1rem;
 }
 .inputGroup {
@@ -201,7 +202,7 @@
   position: relative;
 }
 .inputGroup label {
-  padding: 0.5rem 0.5rem;
+  padding: 0.25rem 0.25rem;
   width: 100%;
   display: block;
   text-align: left;
@@ -259,8 +260,24 @@
   z-index: 2;
   position: absolute;
   right: 1rem;
-  top: 50%;
+  top: 0;
   transform: translateY(-50%);
   cursor: pointer;
   visibility: hidden;
+}
+.minimizeSort,
+.maximizeSort {
+  position: absolute;
+  right: 1rem;
+  top: -0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primaryGreen);
+  cursor: pointer;
+}
+#sortOptions {
+  display: none;
+}
+.minimizeSort {
+  display: none;
 }

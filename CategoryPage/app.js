@@ -559,3 +559,20 @@ BOOKS.forEach(book => {
 
 });
 
+// Minimize and Maximize Sort :
+let SortOpts = document.getElementById('sortOptions');
+let MiniSortOpts = document.getElementById('minimizeSort');
+let MaxiSortOpts = document.getElementById('maximizeSort');
+
+let minimizeSort = () => {
+    SortOpts.style.display = "none";
+    MiniSortOpts.style.display = "none";
+    MaxiSortOpts.style.display = "block";
+}
+let maximizeSort = () => {
+    SortOpts.style.display = "block";
+    MiniSortOpts.style.display = "block";
+    MaxiSortOpts.style.display = "none";
+    
+}
+

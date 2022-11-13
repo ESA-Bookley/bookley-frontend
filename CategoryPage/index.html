@@ -37,14 +37,44 @@
         </div>
         <div class="sortSectionLB">
           <form class="form">
-            <h3 style="color: var(--primaryGreen)">Sort Options:</h3>
-            <div class="inputGroup">
-              <input id="radio1" name="radio" type="radio" />
-              <label for="radio1">Points high to low</label>
-            </div>
-            <div class="inputGroup">
-              <input id="radio2" name="radio" type="radio" />
-              <label for="radio2">No</label>
+            <h5 style="color: var(--primaryGreen)">Sort Options</h5>
+            <span
+              class="minimizeSort"
+              id="minimizeSort"
+              onclick="minimizeSort()"
+              >-</span
+            >
+            <span
+              class="maximizeSort"
+              id="maximizeSort"
+              onclick="maximizeSort()"
+              >+</span
+            >
+            <div id="sortOptions">
+              <div class="inputGroup">
+                <input id="sortRadio1" name="sortRadio" type="radio" />
+                <label for="sortRadio1">Points high to low</label>
+              </div>
+              <div class="inputGroup">
+                <input id="sortRadio2" name="sortRadio" type="radio" />
+                <label for="sortRadio2">Points high to low</label>
+              </div>
+              <div class="inputGroup">
+                <input id="sortRadio3" name="sortRadio" type="radio" />
+                <label for="sortRadio3">Points high to low</label>
+              </div>
+              <div class="inputGroup">
+                <input id="sortRadio4" name="sortRadio" type="radio" />
+                <label for="sortRadio4">Points high to low</label>
+              </div>
+              <div class="inputGroup">
+                <input id="sortRadio5" name="sortRadio" type="radio" />
+                <label for="sortRadio5">Points high to low</label>
+              </div>
+              <div class="inputGroup">
+                <input id="sortRadio6" name="sortRadio" type="radio" />
+                <label for="sortRadio6">Points high to low</label>
+              </div>
             </div>
           </form>
         </div>
