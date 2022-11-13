@@ -1,9 +1,9 @@
 $(document).ready(function(){
     const next=$( '.buttonSubmit #btnnext');
     const back=$('.buttonSubmit #btnback');
-    const login=$('.buttonGo #btnlogin');
-    /*$('.messageErorr').hide();*/
-    console.log(login);
+    //const login=$('.buttonGo #btnlogin');
+    //$('.messageErorr').hide();
+    //console.log(login);
     /*console.log(next);
     console.log(back);
     console.log( $('.section').find(".active-square").removeClass("active-square").next().addClass("active-square"));
@@ -55,7 +55,7 @@ $(document).ready(function(){
               passw.css({
                 'border-bottom':'0.5px solid red',
               }); 
-              /*passw.parents('.hold').find('.error-message').show().text('Password must be at least 8 chars and contain at least 1 digit, 1 uppercase character, 1 lowercase character, and 1 special character');
+              passw.parents('.hold').find('.error-message').show().text('Password must be at least 8 chars and contain at least 1 digit, 1 uppercase character, 1 lowercase character, and 1 special character');
                  missing=true; 
               if( testpass1.test(passw.val())==false){
                 passw.parents('.hold').find('.error-message').show().text('password must contain 1 Captail letter and 1 Small letter');
@@ -68,8 +68,10 @@ $(document).ready(function(){
               if( testpass3.test(passw.val())==false){
                 passw.parents('.hold').find('.error-message').show().text('password must contain 1 Spacial character');
                 missing=true;
-              }*/
-             // passw.parents('.hold').find('.error-message').show().text('Password must be at least 8 chars and contain at least 1 digit, 1 uppercase character, 1 lowercase character, and 1 special character');   
+              }
+              else{
+
+              }  
         }
        }
        const comfpassw=$('.active #confirmpassword');
@@ -91,6 +93,60 @@ $(document).ready(function(){
           
         }
         }
+        const fn=$('.active #firstname')
+        const test1 =/([0-9])/;
+        const test2=/([!,%,&,@,#,$,^,*,?,_,~])/
+        if(fn.val()){
+          if(test1.test(fn.val())==true || test2.test(fn.val())==true){
+            fn.css({
+              'border-bottom':'0.5px solid red',
+            });
+            fn.parents('.hold').find('.error-message').show().text('Name must be letter only');
+               missing=true; 
+        }
+      }
+      const ln=$('.active #lastname')
+      if(ln.val()){
+        if(test1.test(ln.val())==true || test2.test(ln.val())==true){
+          ln.css({
+            'border-bottom':'0.5px solid red',
+          });
+          ln.parents('.hold').find('.error-message').show().text('Name must be letter only');
+             missing=true; 
+      }
+    }
+    const gov=$('.active #governote')
+    if(gov.val()){
+      if(test1.test(gov.val())==true|| test2.test(gov.val())==true){
+        gov.css({
+          'border-bottom':'0.5px solid red',
+        });
+        gov.parents('.hold').find('.error-message').show().text('must be letter only');
+           missing=true; 
+    }
+  }
+  const city=$('.active #city')
+  if(city.val()){
+    if(test1.test(city.val())==true || test2.test(city.val())==true){
+      city.css({
+        'border-bottom':'0.5px solid red',
+      });
+      city.parents('.hold').find('.error-message').show().text('must be letter only');
+         missing=true; 
+  }
+}
+  
+const address=$('.active #address')
+if(address.val()){
+  if(test1.test(address.val())==true || test2.test(address.val())==true){
+    address.css({
+      'border-bottom':'0.5px solid red',
+    });
+    address.parents('.hold').find('.error-message').show().text('must be letter only');
+       missing=true; 
+}
+}
+      
        
       req_field.each(function(){
        if($(this).val()===""){
@@ -119,10 +175,12 @@ $(document).ready(function(){
           });
           $(this).parents(".hold").find(".error-message").text("");
    });
-   $('input').on('change',function(){
+   $('#dpicker').on('change',function(){
     $(this).css({
               'border-bottom':'0.5px solid black'
     });
+    $(this).parents(".hold").find(".error-message").text("");
+
 });
    $('select').on('change',function(){
       $(this).css({
@@ -140,6 +198,7 @@ $(document).ready(function(){
      const comfpassw=$('#confirmpassword');
      comfpassw.attr('type')==='password'? comfpassw.attr('type','text') : comfpassw.attr('type','password')
 });
+
    back.on('click',function(e){
     e.preventDefault();
      if(this.id == 'btnback'){  

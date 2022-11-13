@@ -61,7 +61,8 @@ input {
 }
 
 .row-form input:focus~span,
-.row-form input:valid~spans{
+.row-form input:valid~span,
+.row-form input:not([value=''])~span{
     top: -1rem;
     left: 0;
     font-size: 12px;
@@ -93,6 +94,7 @@ input {
 }
 button:hover{
     background:var(--tertiaryDark) ;
+    color: var(--primaryGreen);
 }
 .info {
     display: flex;
@@ -154,6 +156,7 @@ input[type="checkbox"]:checked {
 }
 .titleLogIn a{
     color:var(--primaryGreen);
+    font-weight: bolder;
 
 }
 .myformLogin{
@@ -172,4 +175,15 @@ h1 {
 }
 .TermsPolicy input{
     width:1rem;
+}
+.eyeIcon{
+    margin: 0;
+    right: 0;
+    cursor: pointer;
+}
+.row-form .hold small {
+    position: absolute;
+    top: 0.1rem;
+    font-size: 14px;
+    transition: all 0.3s;
 }

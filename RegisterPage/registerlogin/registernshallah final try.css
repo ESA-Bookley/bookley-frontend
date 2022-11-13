@@ -65,6 +65,7 @@ body {
 }
 .titleRegister a{
     color: var(--primaryGreen);
+    font-weight: bold;
 }
 .waizerd {
     display: flex;
@@ -266,6 +267,7 @@ select {
 .active-square {
     background-color: var(--primaryGreen);
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    /*color: var(--primaryGreen);*/
 }
 
 .square-content {
@@ -299,6 +301,7 @@ select {
 }
 button:hover{
     background:var(--tertiaryDark) ;
+    color:var(--primaryGreen);
 }
 .info {
     display: flex;
@@ -438,7 +441,7 @@ a{
 .RegisterLinks{
     margin: 0; 
     color: var(--primaryGreen);
-     font-weight: bold;
+     /*font-weight: bold;*/
 }
 .icons{
     display: flex;

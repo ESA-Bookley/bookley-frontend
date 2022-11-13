@@ -4,6 +4,7 @@
   <head>
         <meta charset="utf-8" />
         <title></title>
+        
         <script src="jquery-3.6.1.min.js"></script>
         <script src="register1.js"></script>
         <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
@@ -85,6 +86,7 @@
                                     <input type="text" id="dpicker"  name="date" value="" required >
                                     <!-- <input type="text" class="form-control datepicker" /> -->
                                     <span  >Date of Birth</span>  
+                                    <div class="error-message"></div>
                                 </div>
                              </div>
                              <div class="row-form">
@@ -146,7 +148,7 @@
                                     </div>
                                     <div class="hold">
             
-                                        <input type="text" name="governote"  value="" required>
+                                        <input type="text" name="governote" id="governote"  value="" required>
                                         <span>Governote</span>
                                         <div class="error-message"></div>
                                        
@@ -154,13 +156,13 @@
                                 </div>
                                 <div class="row-form group-form">
                                     <div class="hold">
-                                        <input type="text" name="city"  value="" required>
+                                        <input type="text" name="city" id="city" value="" required>
                                         <span>City</span>
                                         <div class="error-message"></div>
                                         
                                     </div>
                                     <div class="hold">
-                                        <input type="text" name="address" value="" required>
+                                        <input type="text" name="address" id="address" value="" required>
                                         <span>Address</span>
                                         <div class="error-message"></div>
                                     </div>

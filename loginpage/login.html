@@ -4,9 +4,12 @@
         <head>
             <meta charset="utf-8" />
             <title>Login</title>
-            <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
             <link rel="stylesheet" href="login.css" />
+            <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
             <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+            <script src="jquery-3.6.1.min.js"></script>
+            <script src="login.js"></script>
        </head>
     </head>
     <body>
@@ -24,14 +27,16 @@
                         <form action="" class="" name="myformLogin">
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="text">
+                                    <input type="text" id="username" value="">
                                     <span>Username/Email</span>
+                                    <small class="eyeIcon"><i class="fa-solid fa-user"></i></small>
                                 </div>
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="password">
+                                    <input type="password" id="password" value="">
                                     <span>password</span>
+                                    <small class="eyeIcon"><i class="fa-regular fa-eye-slash  eyeOne"></i></small>
                                 </div>
                             </div>
                             <div class="TermsPolicy">
