@@ -1,0 +1,144 @@
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  :root{
+    --logoGreen: #235327;
+    --primaryGreen: #70C174;
+    --secondaryGreen: #BEF3C0;
+    --tertiaryGreen: #EFF7F2;
+    --primaryDark: #0B0706;
+    --secondaryDark: #1D2130;
+    --tertiaryDark: #525560;
+    --primaryLight: #EBF0F9;
+    /* --secondaryLight: #E5E5E5; */
+    --secondaryLight: #fff;
+
+
+    
+}
+  
+  .categoryPageLeftBar {
+    height: 100%;
+    width: 15rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--primaryGreen);
+    overflow-x: hidden;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  
+  .categoryPageItems {
+    margin-left: 15rem;
+    padding: 2rem;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .cardsPage{
+    display: grid;
+  grid-template-columns: repeat(auto-fill, 12rem);
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  }
+  /* Card */
+
+  .myBookCardContainer{
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+    color: var(--primaryGreen);
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 18rem;
+    max-height: 18rem;
+    min-width: 12rem;
+    max-width: 12rem;
+    overflow: hidden;
+    box-shadow: 8px 8px 8px -4px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 8px 8px 8px -4px rgba(0,0,0,0.6);
+    -moz-box-shadow: 8px 8px 8px -4px rgba(0,0,0,0.6);
+  }
+
+  .myBookCardImgContainer{
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    transition: all ease-in-out 0.6s;
+  }
+  .bookCardImg{
+
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    
+  }
+
+  .myBookCardImgContainer:hover{
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    transform: rotateY(10deg);
+    transform: scale(1.05);
+
+  }
+  .myBookCardTitle{
+    margin: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    
+  }
+  .myBookCardBot{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--primaryGreen);
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .bookCardAuthorContainer, .bookCardCatContainer, .bookCardPtsContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.1rem;
+    margin-top: 0.1rem;
+    justify-content: center;
+    border: 0.1rem solid transparent;
+  }
+  .bookCardAuthorContainer, .bookCardCatContainer{
+    border-right: 0.1rem solid var(--tertiaryDark);
+  }
+
+/* ******************************************************** */
+/* Search Left Bar */
+/* .searchSectionLB{
+    position: relative;
+}
+.searchLeftBar{
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    padding-bottom: 0;
+    border-bottom: 1px solid black;
+}
+.searchLbl{
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
