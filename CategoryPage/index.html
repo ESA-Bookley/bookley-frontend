@@ -36,7 +36,7 @@
           </span>
         </div>
         <div class="sortSectionLB">
-          <form class="form">
+          <form class="sortSectionLBForm">
             <h5 style="color: var(--primaryGreen)">Sort Options</h5>
             <span
               class="minimizeSort"
@@ -57,28 +57,94 @@
               </div>
               <div class="inputGroup">
                 <input id="sortRadio2" name="sortRadio" type="radio" />
-                <label for="sortRadio2">Points high to low</label>
+                <label for="sortRadio2">Points low to high </label>
               </div>
               <div class="inputGroup">
                 <input id="sortRadio3" name="sortRadio" type="radio" />
-                <label for="sortRadio3">Points high to low</label>
+                <label for="sortRadio3">Most Recent</label>
               </div>
               <div class="inputGroup">
                 <input id="sortRadio4" name="sortRadio" type="radio" />
-                <label for="sortRadio4">Points high to low</label>
+                <label for="sortRadio4">Most Old</label>
               </div>
               <div class="inputGroup">
                 <input id="sortRadio5" name="sortRadio" type="radio" />
-                <label for="sortRadio5">Points high to low</label>
+                <label for="sortRadio5">Alphabetical A to Z</label>
               </div>
               <div class="inputGroup">
                 <input id="sortRadio6" name="sortRadio" type="radio" />
-                <label for="sortRadio6">Points high to low</label>
+                <label for="sortRadio6">Alphabetical Z to A</label>
               </div>
             </div>
           </form>
         </div>
-        <div class="filterSectionLB"></div>
+        <div class="filterSectionLB">
+          <form class="filterSectionLBForm">
+            <h5 style="color: var(--primaryGreen)">Filters Options</h5>
+            <span
+              class="minimizeFilters"
+              id="minimizeFilters"
+              onclick="minimizeSort()"
+              >-</span
+            >
+            <span
+              class="maximizeFilters"
+              id="maximizeFilters"
+              onclick="maximizeSort()"
+              >+</span
+            >
+            <div id="filtersOptions">
+              <div class="inputGroupFilters">
+                <input
+                  id="filtersCheckbox1"
+                  name="filtersCheckbox"
+                  type="checkbox"
+                />
+                <label for="filtersCheckbox1">Points high to low</label>
+              </div>
+              <div class="inputGroupFilters">
+                <input
+                  id="filtersCheckbox2"
+                  name="filtersCheckbox"
+                  type="checkbox"
+                />
+                <label for="filtersCheckbox2">Points low to high </label>
+              </div>
+              <div class="inputGroupFilters">
+                <input
+                  id="filtersCheckbox3"
+                  name="filtersCheckbox"
+                  type="checkbox"
+                />
+                <label for="filtersCheckbox3">Most Recent</label>
+              </div>
+              <div class="inputGroupFilters">
+                <input
+                  id="filtersCheckbox4"
+                  name="filtersCheckbox"
+                  type="checkbox"
+                />
+                <label for="filtersCheckbox4">Most Old</label>
+              </div>
+              <!-- <div class="inputGroupFilters">
+                <input
+                  id="filtersCheckbox5"
+                  name="filtersCheckbox"
+                  type="checkbox"
+                />
+                <label for="filtersCheckbox5">Alphabetical A to Z</label>
+              </div>
+              <div class="inputGroupFilters">
+                <input
+                  id="filtersCheckbox6"
+                  name="filtersCheckbox"
+                  type="checkbox"
+                />
+                <label for="filtersCheckbox6">Alphabetical Z to A</label>
+              </div> -->
+            </div>
+          </form>
+        </div>
       </div>
       <div class="categoryPageItems">
         <h1>Title</h1>

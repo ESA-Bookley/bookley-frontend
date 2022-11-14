@@ -190,7 +190,7 @@
 .sortSectionLB {
   width: 100%;
 }
-.form {
+.sortSectionLBForm {
   position: relative;
   font-size: 1rem;
 }
@@ -276,7 +276,120 @@
   cursor: pointer;
 }
 #sortOptions {
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
+  transition: all ease-in-out 0.25s;
+}
+.minimizeSort {
   display: none;
+}
+
+/*  Filter Left Bar */
+.filterSectionLB {
+  width: 100%;
+}
+.filterSectionLBForm {
+  position: relative;
+  font-size: 1rem;
+}
+.inputGroupFilters {
+  background-color: #efefef;
+  /* display: block; */
+  width: 100%;
+  margin-bottom: 0.25rem;
+  /* position: relative; */
+  /* TEST */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.inputGroupFilters label {
+  /* padding: 0.25rem 0.25rem; */
+  padding: 0.25rem;
+  width: 100%;
+  display: block;
+  text-align: left;
+  color: var(--primaryDark);
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 200ms ease-in;
+  overflow: hidden;
+}
+.inputGroupFilters label:before {
+  width: 1rem;
+  height: 1rem;
+  /* border-radius: 50%; */
+  content: "";
+  background-color: var(--primaryGreen);
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  z-index: -1;
+}
+.inputGroupFilters label:after {
+  width: 1rem;
+  height: 1rem;
+  content: "";
+  border: 2px solid var(--tertiaryDark);
+  background-color: var(--primaryLight);
+  /* border-radius: 50%; */
+  z-index: 2;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+.inputGroupFilters input:checked ~ label {
+  color: #fff;
+}
+.inputGroupFilters input:checked ~ label:before {
+  transform: translate(-50%, -50%) scale3d(56, 56, 1);
+  opacity: 1;
+}
+.inputGroupFilters input:checked ~ label:after {
+  background-color: var(--primaryGreen);
+  border-color: var(--secondaryGreen);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+}
+.inputGroupFilters input {
+  width: 1rem;
+  height: 1rem;
+  order: 1;
+  z-index: 2;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  visibility: hidden;
+}
+.minimizeSort,
+.maximizeSort {
+  position: absolute;
+  right: 1rem;
+  top: -0.25rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primaryGreen);
+  cursor: pointer;
+}
+#sortOptions {
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
+  transition: all ease-in-out 0.25s;
 }
 .minimizeSort {
   display: none;

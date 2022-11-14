@@ -565,12 +565,12 @@ let MiniSortOpts = document.getElementById('minimizeSort');
 let MaxiSortOpts = document.getElementById('maximizeSort');
 
 let minimizeSort = () => {
-    SortOpts.style.display = "none";
+    SortOpts.style.height = 0;
     MiniSortOpts.style.display = "none";
     MaxiSortOpts.style.display = "block";
 }
 let maximizeSort = () => {
-    SortOpts.style.display = "block";
+    SortOpts.style.height = 100+"%" ;
     MiniSortOpts.style.display = "block";
     MaxiSortOpts.style.display = "none";
     
