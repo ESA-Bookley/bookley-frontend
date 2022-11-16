@@ -1,0 +1,72 @@
+:root {
+    box-sizing: 0;
+    --logoGreen: #235327;
+    --primaryGreen: #70C174;
+    --secondaryGreen: #BEF3C0;
+    --tertiaryGreen: #EFF7F2;
+    --primaryDark: #0B0706;
+    --secondaryDark: #1D2130;
+    --tertiaryDark: #525560;
+    --primaryLight: #EBF0F9;
+    /*--secondaryLight: #E5E5E5;*/
+    --secondaryLight: #fff;
+}
+body{
+    height: 100vh;
+}
+.containerTransaction{
+    display: flex;
+    background: var(--primaryGreen);
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 2rem;
+ }
+ .warpperTransaction{
+    width:20rem;
+    display: flex;
+    flex-direction: column;
+    background:var(--secondaryGreen) ;
+    margin: auto;
+    margin-top: 3rem;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+ }
+ .contentTransaction{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+ }
+ p{
+    font-weight: bold;
+ }
+.details{
+    display: flex;
+}
+.topTransaction{
+    display: flex;
+    justify-content: flex-end;
+}
+.close{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+}
+.close:hover{
+    opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    content: ' ';
+    height: 25px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
