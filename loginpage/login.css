@@ -12,7 +12,6 @@
     --secondaryDark: #1D2130;
     --tertiaryDark: #525560;
     --primaryLight: #EBF0F9;
-    /*--secondaryLight: #E5E5E5;*/
     --secondaryLight: #fff;
 }
 
@@ -24,25 +23,66 @@ body {
 ) center bottom;
     background-size: cover;
 }
+.containerLogin {
+   display: flex;
+   height: 100%;
+}
+
+.wrapperLogin {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width:30rem;
+    flex:1;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginRight {
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    background: rgb(0,0,0,0.2);
+}
+.loginRightSpace{
+    flex:1;
+}
+.titleLogIn{
+    display: flex;
+    justify-content: space-between;
+}
+.titleLogIn a{
+    color:var(--primaryGreen);
+    font-weight: bolder;
+
+}
+h1 {
+    color: var(--primaryGreen);
+    text-align: center;
+}
+.myformLogin{
+    display: flex;
+    flex-direction: column;
+}
 .row-form {
     margin-bottom: 1.5rem;
 }
 
-.row-form,
-.group-form {
+.row-form{
     display: flex;
 
 }
+.hold {
+    position: relative;
+    
+}
 
 .row-form,
-.group-form,
 .hold {
     width: 100%;
     margin-right: 25px;
-}
-
-.hold {
-    position: relative;
 }
 
 input {
@@ -57,124 +97,18 @@ input {
     top: 0.1rem;
     left: 10px;
     font-size: 14px;
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
-.row-form input:focus~span,
+
 .row-form input:valid~span,
+.row-form input:focus~span,
 .row-form input:not([value=''])~span{
     top: -1rem;
     left: 0;
     font-size: 12px;
     font-weight: 500;
      color:var(--logoGreen);
-}
-.loginButton{
-    display: flex;
-    justify-content: center;
-}
-.loginButton button {
-    position: relative;
-    border: none;
-    background: var(--primaryGreen);
-    width: 5rem;
-    height: 2rem;
-    color: var(--primaryLight);
-    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    cursor: pointer;
-}
-
-.section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
-
-}
-button:hover{
-    background:var(--tertiaryDark) ;
-    color: var(--primaryGreen);
-}
-.info {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.containerLogin {
-   display: flex;
-   height: 100%;
-    /*display: none;*/
-}
-
-.wrapperLogin {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width:30rem;
-    flex:1;
-    align-items: center;
-    justify-content: center;
-    /*margin: auto;*/
-    /*box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;*/
-}
-
-.loginRight {
-    display: flex;
-   flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
-    padding: 3rem;
-    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-}
-
-
-a{
-    color:var(--primaryDark);
-    margin-left: 3rem;
-    text-decoration: none;
-}
-
-.loginLeft{
-    display: flex;
-    flex-direction: column;
-    background-color:var(--primaryLight);
-  
-}
-h4{
-    font-style: italic;
-    margin-left: 4rem;
-}
-
-input[type="checkbox"]:checked {
-    accent-color:var(--primaryGreen);
-}
-.titleLogIn{
-    display: flex;
-    justify-content: space-between;
-}
-.titleLogIn a{
-    color:var(--primaryGreen);
-    font-weight: bolder;
-
-}
-.myformLogin{
-    display: flex;
-    flex-direction: column;
-}
-.loginRightSpace{
-    flex:1;
-}
-h1 {
-    color: var(--primaryGreen);
-    text-align: center;
-}
-.TermsPolicy{
-    display: flex;
-}
-.TermsPolicy input{
-    width:1rem;
 }
 .eyeIcon{
     margin: 0;
@@ -187,3 +121,47 @@ h1 {
     font-size: 14px;
     transition: all 0.3s;
 }
+a{
+    color:var(--primaryDark);
+    margin-left: 3rem;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked {
+    accent-color:var(--primaryGreen);
+}
+.TermsPolicy{
+    display: flex;
+}
+.TermsPolicy input{
+    width:1rem;
+}
+.loginButton{
+    display: flex;
+    justify-content: center;
+}
+.loginButton button {
+   /* position: relative;
+    border: none;
+    background: var(--primaryGreen);
+    width: 5rem;
+    height: 2rem;
+    color: var(--primaryLight);
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    cursor: pointer;*/
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem ;
+    width: fit-content;
+    margin-top: 0.5rem;
+    background: var(--primaryGreen);
+    color: var(--primaryLight);
+}
+
+
+button:hover{
+    /*background:var(--tertiaryDark) ;
+    color: var(--primaryGreen);*/
+    background-color: var(--primaryGreen);
+    color: var(--secondaryLight);
+}
+

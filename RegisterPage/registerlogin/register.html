@@ -1,206 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-        <meta charset="utf-8" />
-        <title></title>
-        
-        <script src="jquery-3.6.1.min.js"></script>
-        <script src="register1.js"></script>
-        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
-        <link rel="stylesheet" href="registernshallah final try.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-   </head>
-   <body>
-       <div class="registerContainer">
-            <div class="wrapperRegister">
-                <div class="leftRegister">
-                    <!--waizerd-->
-                    <div class="waizerd">
-                        <!--<div class="left-heading">
-                            <h1>Step to join us</h1>
-                        </div>-->
-                        <div class="section">
-                            <div class="square-wrapper">
-                                <div id="c1" class="square active-square">
-                                    <div class="square-content">
-                                        1
-                                    </div>
-                                      <h4>Personal Information</h4>
+<head>
+    <meta charset="utf-8" />
+    <title>Sign Up</title>
+
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="register1.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="registernshallah final try.css" />
+    
+
+</head>
+
+<body>
+    <div class="registerContainer">
+        <div class="wrapperRegister">
+            <div class="leftRegister">
+                <div class="waizerd">
+                    <div class="section">
+                        <div class="circle-wrapper">
+                            <div id="c1" class="circle active-circle">
+                                <div class="circle-content">
+                                    1
                                 </div>
-        
-                                <div id="c2" class="square ">
-                                    <div class="square-content">
-                                        2
-                                    </div>
-                                    <h4>Content Information</h4>
-                                </div>
-                                <div id="c3" class="square">
-                                    <div class="square-content">
-                                        3
-                                    </div>
-                                    <h4>User Information</h4>
-                                </div>
-                                <div id="c3" class="square">
-                                    <div class="square-content">
-                                        4
-                                    </div>
-                                    <h4>Intersted</h4>
-                                </div>
-                            
+                                <h4>Personal Information</h4>
                             </div>
-                           <!-- <div class="buttonGo">
-                                <h4></h4>
-                                <button type="submit" class="nextlogin" id="btnlogin">Sign In</button>
-                            </div>-->
+
+                            <div id="c2" class="circle ">
+                                <div class="circle-content">
+                                    2
+                                </div>
+                                <h4>Content Information</h4>
+                            </div>
+                            <div id="c3" class="circle">
+                                <div class="circle-content">
+                                    3
+                                </div>
+                                <h4>User Information</h4>
+                            </div>
+                            <div id="c3" class="circle">
+                                <div class="circle-content">
+                                    4
+                                </div>
+                                <h4>Intersted</h4>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="rightRegister">
-                    <div class="formRegister ">
-                        <div class="titleRegister">
-                            <h1>Sign Up</h1>
-                            <a href="#" class="signIn">Sign In</a>
-                        </div>
-                        <form action="" class="myForm" name="something" id="registerForm">
-                            <div class="registerInfo active">
-                                <div class="row-form group-form">
-                                    <div class="hold">
-                                        <input type="text" name="fn" id="firstname" value="" required>
-                                        <span>First Name</span>
-                                        <div class="error-message"></div>
-                                    </div>
-                                    <div class="hold">
-                                        <input type="text" name="ln" id="lastname" value="" required>
-                                        <span>Last Name</span>
-                                        <div class="error-message"></div>
-                                       
-                                    </div>
-                                </div>
-
-                             <div class="row-form">
+            <div class="rightRegister">
+                <div class="formRegister ">
+                    <div class="titleRegister">
+                        <h1>Sign Up</h1>
+                        <a href="login.html" class="signIn">Sign In</a>
+                    </div>
+                    <form action="" class="myForm" name="something" id="registerForm">
+                        <div class="registerInfo active">
+                            <div class="row-form group-form">
                                 <div class="hold">
-                                    <input type="text" id="dpicker"  name="date" value="" required >
-                                    <!-- <input type="text" class="form-control datepicker" /> -->
-                                    <span  >Date of Birth</span>  
+                                    <input type="text" name="fn" id="firstname" value="" required>
+                                    <span>First Name</span>
                                     <div class="error-message"></div>
                                 </div>
-                             </div>
-                             <div class="row-form">
-                                <div class="hold" >
-                                    <select class="selsected" required>
-                                        <option value="" ></option>
-                                        <option value="1">Female</option>
-                                        <option value="2">male</option>
-                                        <option value="3">Other</option>
+                                <div class="hold">
+                                    <input type="text" name="ln" id="lastname" value="" required>
+                                    <span>Last Name</span>
+                                    <div class="error-message"></div>
+
+                                </div>
+                            </div>
+
+                            <div class="row-form">
+                                <div class="hold">
+                                    <input type="text" id="dpicker" name="date" value="" required>
+                                    <span>Date of Birth</span>
+                                    <div class="error-message"></div>
+                                </div>
+                            </div>
+                            <div class="row-form">
+                                <div class="hold">
+                                    <select class="selected" required>
+                                        <option value=""></option>
+                                        <option value="1" class="regOption">Female</option>
+                                        <option value="2" class="regOption">Male</option>
+                                        <option value="3" class="regOption">Other</option>
                                     </select>
                                     <span>Gender</span>
                                     <div class="error-message"></div>
-                                    
+
                                 </div>
-                             </div>
-                             <div class="row-form">
+                            </div>
+                            <div class="row-form">
                                 <div class="hold">
-                                    <select name="" id="" class="selected" required>
+                                    <select name="" id="menu1" class="dr1" required>
                                         <option value=""></option>
                                         <option value="1">School or Equevlant</option>
-                                        <option value="2">highSchool or Equevlant</option>
+                                        <option value="2">HighSchool or Equevlant</option>
                                         <option value="3">University or Equevlant</option>
                                         <option value="4">Master degree</option>
                                         <option value="5">No Education</option>
                                     </select>
                                     <span>Eduction</span>
                                     <div class="error-message"></div>
-                                    
+
                                 </div>
-                             </div>
-    
-                             <div class="buttonSubmit">
+                            </div>
+
+                            <div class="buttonSubmit">
                                 <h4></h4>
-                                <button type="submit" class="next" id="btnnext" rol="menuitem" >NEXT</button>
-                             </div>
+                                <button type="submit" class="next" id="btnnext" rol="menuitem">NEXT</button>
                             </div>
-                            <div class="registerInfo">
-                                <div class="row-form">
-                                    <div class="hold">
-                                        <input type="email" name="email" id="email" value="" onchange="this.setAttribute('value',this.value)" required>
-                                        <span>Email</span>
-                                        <div class="error-message"></div>
-                                        
-                                    </div>
-                                 </div>
-                                 <div class="row-form">
-                                    <div class="hold">
-                                        <input type="text" name="phone" id="phonenumber" value="" required>
-                                        <span>Phone Number</span>
-                                        <div class="error-message"></div>
-                                        
-                                    </div>
-                                 </div>
-                                <div class="row-form group-form">
-                                    <div class="hold">
-                                        <select>
-                                            <option value="1">Lebanon</option>
-                                        </select>
-                                    </div>
-                                    <div class="hold">
-            
-                                        <input type="text" name="governote" id="governote"  value="" required>
-                                        <span>Governote</span>
-                                        <div class="error-message"></div>
-                                       
-                                    </div>
-                                </div>
-                                <div class="row-form group-form">
-                                    <div class="hold">
-                                        <input type="text" name="city" id="city" value="" required>
-                                        <span>City</span>
-                                        <div class="error-message"></div>
-                                        
-                                    </div>
-                                    <div class="hold">
-                                        <input type="text" name="address" id="address" value="" required>
-                                        <span>Address</span>
-                                        <div class="error-message"></div>
-                                    </div>
-                                </div>
-                                <div class="buttonSubmit">
-                                    <button type="submit" class="back" id="btnback">BACK</button>
-                                    <button type="submit" class="next" id="btnnext">NEXT</button>
+                        </div>
+                        <div class="registerInfo">
+                            <div class="row-form">
+                                <div class="hold">
+                                    <input type="email" name="email" id="email" value=""
+                                        onchange="this.setAttribute('value',this.value)" required>
+                                    <span>Email</span>
+                                    <div class="error-message"></div>
+
                                 </div>
                             </div>
-                         <div class="registerInfo ">
-                            <!--<div class="row-form group-form">
+                            <div class="row-form">
+                                <div class="hold">
+                                    <input type="text" name="phone" id="phonenumber" value="" required>
+                                    <span>Phone Number</span>
+                                    <div class="error-message"></div>
+
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
                                 <div class="hold">
                                     <select>
                                         <option value="1">Lebanon</option>
                                     </select>
                                 </div>
                                 <div class="hold">
-        
-                                    <input type="text" name="governote" required>
+                                    <select id="governote" class="selsected" required>
+                                        <option value=""></option>
+                                        <option value="1">Beirut</option>
+                                        <option value="2">Mount Lebanon</option>
+                                        <option value="3">North</option>
+                                        <option value="4">Beqaa</option>
+                                        <option value="5">Nabatiye</option>
+                                        <option value="6">South</option>
+                                    </select>
                                     <span>Governote</span>
+                                    <div class="error-message"></div>
+
                                 </div>
+
                             </div>
                             <div class="row-form group-form">
                                 <div class="hold">
-                                    <input type="text" name="city" required>
+                                    <input type="text" name="city" id="city" value="" required>
                                     <span>City</span>
+                                    <div class="error-message"></div>
+
                                 </div>
                                 <div class="hold">
-                                    <input type="text" name="address" required>
+                                    <input type="text" name="address" id="address" value="" required>
                                     <span>Address</span>
+                                    <div class="error-message"></div>
                                 </div>
-                            </div>-->
+                            </div>
+                            <div class="buttonSubmit">
+                                <button type="submit" class="back" id="btnback">BACK</button>
+                                <button type="submit" class="next" id="btnnext">NEXT</button>
+                            </div>
+                        </div>
+                        <div class="registerInfo ">
                             <div class="row-form">
                                 <div class="hold">
                                     <input type="text" name="username" id="username" value="" required>
                                     <span>Username/Email</span>
                                     <div class="error-message"></div>
-                                   
+
                                 </div>
                             </div>
                             <div class="row-form">
@@ -208,172 +190,110 @@
                                     <input type="password" name="password" id="password" value="" required>
                                     <span>password</span>
                                     <small class="eyeIcon"><i class="fa-regular fa-eye-slash  eyeOne"></i></small>
-                                    <small class="eyeIcon"><i class="fa-solid fa-eye" style="display: none;"></i></small>
+                                    <small class="eyeIcon"><i class="fa-regular fa-eye"
+                                            style="display: none;"></i></small>
                                     <div class="error-message"></div>
-                                    
+
                                 </div>
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="password" name="password" id="confirmpassword"  value="" required>
-                                    
-                                        <span>Confirm password</span>
+                                    <input type="password" name="password" id="confirmpassword" value="" required>
+
+                                    <span>Confirm password</span>
                                     <small class="eyeIcon"><i class="fa-regular fa-eye-slash eyeTwo"></i></small>
-                                    <small class="eyeIcon"><i class="fa-solid fa-eye" style="display: none;"></i></small>
+                                    <small class="eyeIcon"><i class="fa-regular fa-eye "
+                                            style="display: none;"></i></small>
                                     <div class="error-message"></div>
-                                   
-                            
+
+
                                 </div>
                             </div>
-                                <div class="TermsPolicy">
-                                    <input type="checkbox" checked>
-                                     <p >
-                                         Agree to &nbsp;<a href="#" class="RegisterLinks">Terms of
-                                             use</a> &nbsp; and  &nbsp;<a href="#" class="RegisterLinks" >Privacy Policy.</a>
-                                         </p> 
-                                 </div>
-                            
-                            <!--
-                                <div class="row-form"></div>
-                                <div class="hold "></div>-->
-                               
+                            <div class="TermsPolicy">
+                                <input type="checkbox" checked>
+                                <p>
+                                    Agree to &nbsp;<a href="#" class="RegisterLinks">Terms of
+                                        use</a> &nbsp; and &nbsp;<a href="#" class="RegisterLinks">Privacy Policy.</a>
+                                </p>
+                            </div>
                             <div class="buttonSubmit">
                                 <button type="submit" class="back" id="btnback">BACK</button>
                                 <button type="submit" class="next" id="btnnext">NEXT</button>
                             </div>
-                         </div>
-                     
-    
-                       <div class="registerInfo">
-                        <div class="row-form group-form">
-                            <div class="hold">
-                               <input type="checkbox">Novels
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">History
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Music
-                            </div>
                         </div>
-                        <div class="row-form group-form">
-                            <div class="hold">
-                                <input type="checkbox">IT
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Bomic
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Business
-                            </div>
-                        </div>
-                        <div class="row-form group-form">
-                            <div class="hold">
-                                <input type="checkbox">University and books
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox"> Art
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">chemistry
-                            </div>
-                        </div>
-                        <div class="row-form group-form">
-                            <div class="hold">
-                                <input type="checkbox">Geography
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Dictionary
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Low
-                            </div>
-                        </div>
-                     <div class="row-form group-form">
-                            <div class="hold">
-                                <input type="checkbox">Finance
-    
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Cooking
-                            </div>
-                            <div class="hold">
-                                <input type="checkbox">Sport
-                            </div>
-                     </div>
-    
-                        <div class="buttonSubmit">
-                            <button type="submit" class="back" id="btnback">BACK</button>
-                            <button type="submit" class="create" id="createbtn">Create</button>
-                        </div>
-    
-                     </div>
-                     <!--<div class="registerInfo  ">
-                        <div class="row-form">
-                            <div class="hold">
-                                <h1>hellodear</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quaerat numquam,
-                                    unde iure et nemo voluptatum dolorum sed voluptatibus laborum, perferendis repudiandae
-                                    velit doloribus cumque? Molestiae hic iste facilis nemo!</p>
-                            </div>
-                        </div>
-                        <div class="buttonSubmit">
-                            <h4></h4>
-                            <button type="submit" class="create" id="createbtn">Create</button>
-                        </div>
-                     </div>-->
-                     </div>
-                    </form>
-                </div>
-            </div>
-            <!--</div>-->
-       </div>
-      <!---<div class="containerLogin">
 
-        <div class="wrapperLogin">
-            <div class="loginLeft">
-                <img src="registerpicture.jpg">
-            </div>
-            <div class="loginRight">
-                <div class="titleLogIn">
-                    <h1>Sign In</h1>
-                    <a href="#" class="signUp">Sign Up</a>
+
+                        <div class="registerInfo">
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox">Novels
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">History
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Music
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox">IT
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Bomic
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Business
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox">University and books
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox"> Art
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">chemistry
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox">Geography
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Dictionary
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Low
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox">Finance
+
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Cooking
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox">Sport
+                                </div>
+                            </div>
+
+                            <div class="buttonSubmit">
+                                <button type="submit" class="back" id="btnback">BACK</button>
+                                <button type="submit" class="create" id="createbtn">Create</button>
+                            </div>
+                        </div>
                 </div>
-                <div class="loginInfo">
-                    <form action="" class="" name="myformLogin">
-                        <div class="row-form">
-                            <div class="hold">
-                                <input type="text">
-                                <span>Username/Email</span>
-                            </div>
-                        </div>
-                        <div class="row-form">
-                            <div class="hold">
-                                <input type="password">
-                                <span>password</span>
-                            </div>
-                        </div>
-                        <div class="row-form">
-                            <div class="hold">
-                                <input type="checkbox" checked>Remeber me
-                                <a href="#">Forgetpassword</a>
-                            </div>
-                        </div>
-                           
-                        <div class="loginButton">
-                            <button type="submit" class="next">Sign In</button>
-                        </div>
-                    </form>
-                </div>
+                </form>
             </div>
         </div>
-        <div class="loginRightSpace"></div>
-       </div>-->
-       
-
-   </body>
-   <script>
-    let func = () => {
+    </div>
+    <!--<script src="picker.js"></script>-->
+    <script>
+          let func = () => {
         console.log("wesel")
         elm.type = 'date'
         elm.value = '1990-11-11';
@@ -383,10 +303,7 @@
         event.target.type = 'date'
         event.target.value = '1990-11-11'
      });
-     /*let pwd = document.getElementById('password');
-     let eyeOne = document.getElementById('eyeOne');
-     pwd.addEventListener('click',(event)=>{
-        pwd.type = 'text';
-     })*/
-   </script>
+    </script>
+</body>
+
 </html>

@@ -1,22 +1,10 @@
 $(document).ready(function(){
     const next=$( '.buttonSubmit #btnnext');
     const back=$('.buttonSubmit #btnback');
-    //const login=$('.buttonGo #btnlogin');
-    //$('.messageErorr').hide();
-    //console.log(login);
-    /*console.log(next);
-    console.log(back);
-    console.log( $('.section').find(".active-square").removeClass("active-square").next().addClass("active-square"));
-    console.log( $('.registerInfo').parent().find(".active").removeClass("active").next().addClass("active"));*/
    next.on('click',function(e){
        e.preventDefault();
        const req_field=$('.active :required');
-       /*const phone=$('#phonenumber').val();
-       console.log(phone);
-       console.log(/^\d{8}$/.test(phone)==false||/^\[A-Za-z]$/.test(phone)==true);*/
-       /*const email=$('#email').val();
-       const missingEmail=/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-       console.log(/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(email)==true);*/
+
        $('.error-message').hide().text('');
        req_field.css({
            'border-bottom': '0.5px solid black' 
@@ -57,7 +45,7 @@ $(document).ready(function(){
               }); 
               passw.parents('.hold').find('.error-message').show().text('Password must be at least 8 chars and contain at least 1 digit, 1 uppercase character, 1 lowercase character, and 1 special character');
                  missing=true; 
-              if( testpass1.test(passw.val())==false){
+              /*if( testpass1.test(passw.val())==false){
                 passw.parents('.hold').find('.error-message').show().text('password must contain 1 Captail letter and 1 Small letter');
                 missing=true;
               }
@@ -68,10 +56,7 @@ $(document).ready(function(){
               if( testpass3.test(passw.val())==false){
                 passw.parents('.hold').find('.error-message').show().text('password must contain 1 Spacial character');
                 missing=true;
-              }
-              else{
-
-              }  
+              }*/
         }
        }
        const comfpassw=$('.active #confirmpassword');
@@ -115,16 +100,6 @@ $(document).ready(function(){
              missing=true; 
       }
     }
-    const gov=$('.active #governote')
-    if(gov.val()){
-      if(test1.test(gov.val())==true|| test2.test(gov.val())==true){
-        gov.css({
-          'border-bottom':'0.5px solid red',
-        });
-        gov.parents('.hold').find('.error-message').show().text('must be letter only');
-           missing=true; 
-    }
-  }
   const city=$('.active #city')
   if(city.val()){
     if(test1.test(city.val())==true || test2.test(city.val())==true){
@@ -146,8 +121,6 @@ if(address.val()){
        missing=true; 
 }
 }
-      
-       
       req_field.each(function(){
        if($(this).val()===""){
         $(this).parents('.hold').find('.error-message').show().text('This field is required'); 
@@ -164,25 +137,28 @@ if(address.val()){
         return false;
        }
        else{   
-           $('.section').find(".active-square").removeClass("active-square").next().addClass("active-square");
+           $('.section').find(".active-circle").removeClass("active-circle").next().addClass("active-circle");
            $('.registerInfo').parent().find(".active").removeClass("active").next().addClass("active");
        }
       
    });
-   $('input').on('keyup',function(){
+   $('input').on('keyup',function(e){
+    e.preventDefault();
           $(this).css({
                     'border-bottom':'0.5px solid black'
           });
           $(this).parents(".hold").find(".error-message").text("");
    });
-   $('#dpicker').on('change',function(){
+   $('#dpicker').on('change',function(e){
+    e.preventDefault();
     $(this).css({
               'border-bottom':'0.5px solid black'
     });
     $(this).parents(".hold").find(".error-message").text("");
 
 });
-   $('select').on('change',function(){
+   $('select').on('change',function(e){
+    e.preventDefault();
       $(this).css({
               'border-bottom':'0.5px solid black'
     });
@@ -190,11 +166,15 @@ if(address.val()){
 });
   $(document).on('click','.eyeOne',function(e){
            e.preventDefault();
+           $(this).toggleClass('fa-regular fa-eye-slash').toggleClass('fa-regular fa-eye');
+            
             const passw=$('#password');
             passw.attr('type')==='password'? passw.attr('type','text') : passw.attr('type','password')
   });
   $(document).on('click','.eyeTwo',function(e){
     e.preventDefault();
+    $(this).toggleClass('fa-regular fa-eye-slash').toggleClass('fa-regular fa-eye');
+    
      const comfpassw=$('#confirmpassword');
      comfpassw.attr('type')==='password'? comfpassw.attr('type','text') : comfpassw.attr('type','password')
 });
@@ -202,24 +182,8 @@ if(address.val()){
    back.on('click',function(e){
     e.preventDefault();
      if(this.id == 'btnback'){  
-       $('.section').find(".active-square").removeClass("active-square").prev().addClass("active-square");
+       $('.section').find(".active-circle").removeClass("active-circle").prev().addClass("active-circle");
        $('.registerInfo').parent().find(".active").removeClass("active").prev().addClass("active");
           }
    });
-   
-  /*$('.signIn').on('click',function(e){
-    e.preventDefault();
-    $('.registerContainer').fadeOut(100);
-   $('.containerLogin').fadeIn(100);
-});
-$('.signUp').on('click',function(e){
-  e.preventDefault();
-  $('.containerLogin').fadeOut(100);
- $('.registerContainer').fadeIn(100);
-});
- /*login.on('click',function(e){
-  e.preventDefault();
-  $('.registerContainer').fadeOut(100);
- $('.containerLogin').fadeIn(100);
-});*/ 
 });
