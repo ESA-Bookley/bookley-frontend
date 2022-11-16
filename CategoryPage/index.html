@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/4c5eb9a822.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="categoryPageContent">
@@ -37,19 +38,8 @@
         </div>
         <div class="sortSectionLB">
           <form class="sortSectionLBForm">
-            <h5 style="color: var(--primaryGreen)">Sort Options</h5>
-            <span
-              class="minimizeSort"
-              id="minimizeSort"
-              onclick="minimizeSort()"
-              >-</span
-            >
-            <span
-              class="maximizeSort"
-              id="maximizeSort"
-              onclick="maximizeSort()"
-              >+</span
-            >
+            <h5 style="color: var(--primaryGreen)">Sort By</h5>
+            <span class="minMaxSort" id="minMaxSort">+</span>
             <div id="sortOptions">
               <div class="inputGroup">
                 <input id="sortRadio1" name="sortRadio" type="radio" />
@@ -80,70 +70,187 @@
         </div>
         <div class="filterSectionLB">
           <form class="filterSectionLBForm">
-            <h5 style="color: var(--primaryGreen)">Filters Options</h5>
-            <span
-              class="minimizeFilters"
-              id="minimizeFilters"
-              onclick="minimizeSort()"
-              >-</span
-            >
-            <span
-              class="maximizeFilters"
-              id="maximizeFilters"
-              onclick="maximizeSort()"
-              >+</span
-            >
+            <h5 style="color: var(--primaryGreen)">Filters</h5>
+
+            <span class="minMaxFilters" id="minMaxFilters">-</span>
             <div id="filtersOptions">
-              <div class="inputGroupFilters">
-                <input
-                  id="filtersCheckbox1"
-                  name="filtersCheckbox"
-                  type="checkbox"
-                />
-                <label for="filtersCheckbox1">Points high to low</label>
+              <div class="filterOptionHeader">
+                <h6>Condition</h6>
+                <h6 id="conditionMinMax" class="actionMinMax">-</h6>
               </div>
-              <div class="inputGroupFilters">
-                <input
-                  id="filtersCheckbox2"
-                  name="filtersCheckbox"
-                  type="checkbox"
-                />
-                <label for="filtersCheckbox2">Points low to high </label>
+              <div id="conditionFilter" class="filterSection">
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersNew"
+                    name="filtersCondition"
+                    type="checkbox"
+                  />
+                  <label for="filtersNew">New</label>
+                </div>
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersUsed"
+                    name="filtersCondition"
+                    type="checkbox"
+                  />
+                  <label for="filtersUsed">Used</label>
+                </div>
               </div>
-              <div class="inputGroupFilters">
-                <input
-                  id="filtersCheckbox3"
-                  name="filtersCheckbox"
-                  type="checkbox"
-                />
-                <label for="filtersCheckbox3">Most Recent</label>
+              <div class="filterOptionHeader">
+                <h6>Points</h6>
+                <h6 id="pointsMinMax" class="actionMinMax">-</h6>
               </div>
-              <div class="inputGroupFilters">
-                <input
-                  id="filtersCheckbox4"
-                  name="filtersCheckbox"
-                  type="checkbox"
-                />
-                <label for="filtersCheckbox4">Most Old</label>
+              <div id="pointsFilter" class="filterSection">
+                <div slider id="slider-distance">
+                  <div>
+                    <div inverse-left style="width: 70%"></div>
+                    <div inverse-right style="width: 70%"></div>
+                    <div range style="left: 20%; right: 40%"></div>
+                    <span thumb style="left: 20%"></span>
+                    <span thumb style="left: 60%"></span>
+                    <div sign style="left: 20%">
+                      <span id="value">200</span>
+                    </div>
+                    <div sign style="left: 60%">
+                      <span id="value">600</span>
+                    </div>
+                  </div>
+                  <input
+                    type="range"
+                    tabindex="0"
+                    value="200"
+                    max="1000"
+                    min="0"
+                    step="50"
+                    oninput="
+                  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                  var children = this.parentNode.childNodes[1].childNodes;
+                  children[1].style.width=value+'%';
+                  children[5].style.left=value+'%';
+                  children[7].style.left=value+'%';children[11].style.left=value+'%';
+                  children[11].childNodes[1].innerHTML=this.value;"
+                  />
+
+                  <input
+                    type="range"
+                    tabindex="0"
+                    value="600"
+                    max="1000"
+                    min="0"
+                    step="50"
+                    oninput="
+                  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                  var children = this.parentNode.childNodes[1].childNodes;
+                  children[3].style.width=(100-value)+'%';
+                  children[5].style.right=(100-value)+'%';
+                  children[9].style.left=value+'%';children[13].style.left=value+'%';
+                  children[13].childNodes[1].innerHTML=this.value;"
+                  />
+                </div>
+                <!-- <div id="form-wrapper">
+                  <form class="sliderForm">
+                    <h5 id="form-title">Select Debt Amount</h5>
+                    <div id="debt-amount-slider">
+                      <input
+                        type="radio"
+                        name="debt-amount"
+                        id="1"
+                        value="1"
+                        required
+                      />
+                      <label for="1" data-debt-amount="< $10k"></label>
+                      <input
+                        type="radio"
+                        name="debt-amount"
+                        id="2"
+                        value="2"
+                        required
+                      />
+                      <label for="2" data-debt-amount="$10k-25k"></label>
+                      <input
+                        type="radio"
+                        name="debt-amount"
+                        id="3"
+                        value="3"
+                        required
+                      />
+                      <label for="3" data-debt-amount="$25k-50k"></label>
+                      <input
+                        type="radio"
+                        name="debt-amount"
+                        id="4"
+                        value="4"
+                        required
+                      />
+                      <label for="4" data-debt-amount="$50k-100k"></label>
+                      <input
+                        type="radio"
+                        name="debt-amount"
+                        id="5"
+                        value="5"
+                        required
+                      />
+                      <label for="5" data-debt-amount="$100k+"></label>
+                      <div id="debt-amount-pos"></div>
+                    </div>
+                  </form>
+                </div> -->
               </div>
-              <!-- <div class="inputGroupFilters">
-                <input
-                  id="filtersCheckbox5"
-                  name="filtersCheckbox"
-                  type="checkbox"
-                />
-                <label for="filtersCheckbox5">Alphabetical A to Z</label>
+              <div class="filterOptionHeader">
+                <h6>Categories</h6>
+                <h6 id="catMinMax" class="actionMinMax">-</h6>
               </div>
-              <div class="inputGroupFilters">
-                <input
-                  id="filtersCheckbox6"
-                  name="filtersCheckbox"
-                  type="checkbox"
-                />
-                <label for="filtersCheckbox6">Alphabetical Z to A</label>
-              </div> -->
+              <div id="catFilter" class="filterSection">
+                <div class="inputGroupFilters">
+                  <input id="filtersCat1" name="filtersCat" type="checkbox" />
+                  <label for="filtersCat1">NOVEL</label>
+                </div>
+                <div class="inputGroupFilters">
+                  <input id="filtersCat2" name="filtersCat" type="checkbox" />
+                  <label for="filtersCat2">COOKING</label>
+                </div>
+                <div class="inputGroupFilters">
+                  <input id="filtersCat3" name="filtersCat" type="checkbox" />
+                  <label for="filtersCat3">IT</label>
+                </div>
+              </div>
+              <div class="filterOptionHeader">
+                <h6>Authors</h6>
+                <h6 id="authorsMinMax" class="actionMinMax">-</h6>
+              </div>
+              <div id="authorsFilter" class="filterSection">
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersAuthor1"
+                    name="filtersAuthor"
+                    type="checkbox"
+                  />
+                  <label for="filtersAuthor1">Any Name</label>
+                </div>
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersAuthor2"
+                    name="filtersAuthor"
+                    type="checkbox"
+                  />
+                  <label for="filtersAuthor2">Test</label>
+                </div>
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersAuthor3"
+                    name="filtersAuthor"
+                    type="checkbox"
+                  />
+                  <label for="filtersAuthor3">Betty Horse</label>
+                </div>
+              </div>
             </div>
           </form>
+        </div>
+        <div class="resetFiltersContainer">
+          <button class="restBTN">Reset</button>
         </div>
       </div>
       <div class="categoryPageItems">
