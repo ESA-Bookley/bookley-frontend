@@ -17,6 +17,10 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <div class="categoryPageContent">
@@ -25,9 +29,10 @@
           <span>
             <input
               class="balloon"
-              id="planet"
-              type="text"
+              id="categoryPageSearch"
+              type="search"
               placeholder="Search..."
+              oninput="updateResult(this.value)"
             /><label for="planet">
               <i
                 class="fa-solid fa-magnifying-glass"
@@ -37,32 +42,63 @@
           </span>
         </div>
         <div class="sortSectionLB">
-          <form class="sortSectionLBForm">
+          <form class="sortSectionLBForm" onchange="sortFunc()">
             <h5 style="color: var(--primaryGreen)">Sort By</h5>
             <span class="minMaxSort" id="minMaxSort">+</span>
             <div id="sortOptions">
               <div class="inputGroup">
-                <input id="sortRadio1" name="sortRadio" type="radio" />
+                <input
+                  id="sortRadio1"
+                  name="sortRadio"
+                  type="radio"
+                  value="phtl"
+                  ;
+                />
                 <label for="sortRadio1">Points high to low</label>
               </div>
               <div class="inputGroup">
-                <input id="sortRadio2" name="sortRadio" type="radio" />
+                <input
+                  id="sortRadio2"
+                  name="sortRadio"
+                  type="radio"
+                  value="plth"
+                />
                 <label for="sortRadio2">Points low to high </label>
               </div>
               <div class="inputGroup">
-                <input id="sortRadio3" name="sortRadio" type="radio" />
+                <input
+                  id="sortRadio3"
+                  name="sortRadio"
+                  type="radio"
+                  value="mr"
+                />
                 <label for="sortRadio3">Most Recent</label>
               </div>
               <div class="inputGroup">
-                <input id="sortRadio4" name="sortRadio" type="radio" />
+                <input
+                  id="sortRadio4"
+                  name="sortRadio"
+                  type="radio"
+                  value="mo"
+                />
                 <label for="sortRadio4">Most Old</label>
               </div>
               <div class="inputGroup">
-                <input id="sortRadio5" name="sortRadio" type="radio" />
+                <input
+                  id="sortRadio5"
+                  name="sortRadio"
+                  type="radio"
+                  value="a2z"
+                />
                 <label for="sortRadio5">Alphabetical A to Z</label>
               </div>
               <div class="inputGroup">
-                <input id="sortRadio6" name="sortRadio" type="radio" />
+                <input
+                  id="sortRadio6"
+                  name="sortRadio"
+                  type="radio"
+                  value="z2a"
+                />
                 <label for="sortRadio6">Alphabetical Z to A</label>
               </div>
             </div>
@@ -203,7 +239,7 @@
                 <h6 id="catMinMax" class="actionMinMax">-</h6>
               </div>
               <div id="catFilter" class="filterSection">
-                <div class="inputGroupFilters">
+                <!-- <div class="inputGroupFilters">
                   <input id="filtersCat1" name="filtersCat" type="checkbox" />
                   <label for="filtersCat1">NOVEL</label>
                 </div>
@@ -214,14 +250,14 @@
                 <div class="inputGroupFilters">
                   <input id="filtersCat3" name="filtersCat" type="checkbox" />
                   <label for="filtersCat3">IT</label>
-                </div>
+                </div> -->
               </div>
               <div class="filterOptionHeader">
                 <h6>Authors</h6>
                 <h6 id="authorsMinMax" class="actionMinMax">-</h6>
               </div>
               <div id="authorsFilter" class="filterSection">
-                <div class="inputGroupFilters">
+                <!-- <div class="inputGroupFilters">
                   <input
                     id="filtersAuthor1"
                     name="filtersAuthor"
@@ -244,7 +280,7 @@
                     type="checkbox"
                   />
                   <label for="filtersAuthor3">Betty Horse</label>
-                </div>
+                </div> -->
               </div>
             </div>
           </form>
@@ -254,9 +290,15 @@
         </div>
       </div>
       <div class="categoryPageItems">
-        <h1>Title</h1>
-        <div class="cardsPage" id="cardsPage">
-          <div class="myBookCardContainer">
+        <div class="myCardsContainerTitleSection">
+          <hr class="myTitleLine" />
+          <h1 id="catPageTitle">Category Title</h1>
+        </div>
+
+        <p id="catSearchTermTxt"></p>
+        <p id="catSortOptionTxt"></p>
+        <div class="cardsPage list" id="cardsPage">
+          <!-- <div class="myBookCardContainer">
             <div class="myBookCardImgContainer">
               <img
                 src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
@@ -265,20 +307,20 @@
               />
             </div>
             <div class="myBookCardInfoContainer">
-              <h5 class="myBookCardTitle">
+              <h5 class="myBookCardTitle title">
                 The Forty Rules of LoveThe Forty Rules of Love
               </h5>
             </div>
             <div class="myBookCardBot">
-              <div class="bookCardAuthorContainer">
+              <div class="bookCardAuthorContainer author">
                 <span class="cardBotTag"> AUTHOR </span>
                 <i>Elif Shafak</i>
               </div>
-              <div class="bookCardCatContainer">
+              <div class="bookCardCatContainer category">
                 <span class="cardBotTag"> CATEGORY </span>
                 NOVEL
               </div>
-              <div class="bookCardPtsContainer">
+              <div class="bookCardPtsContainer points">
                 <span class="cardBotTag"> PTS </span>
                 345
               </div>
@@ -311,7 +353,7 @@
                 345
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

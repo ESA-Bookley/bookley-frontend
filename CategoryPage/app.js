@@ -493,7 +493,74 @@ let BOOKS = [
   },
 ];
 
+let BOOK_CARD = (item) => `<div class="myBookCardContainer" id="bookCard-${
+  item.Id
+}">
+<div class="myBookCardImgContainer">
+  <img
+    src=${item.Image}
+    alt="book"
+    class="bookCardImg"
+  />
+</div>
+<div class="myBookCardInfoContainer">
+  <h5 class="myBookCardTitle title">
+    ${item.Title.toUpperCase()}
+  </h5>
+</div>
+<div class="myBookCardBot">
+  <div class="bookCardAuthorContainer">
+    <span class="cardBotTag"> AUTHOR </span>
+    <i class="author">${
+      item.Author.length <= 12 ? item.Author : miniAuthor(item.Author)
+    }</i>
+  </div>
+  <div class="bookCardCatContainer">
+    <span class="cardBotTag"> CATEGORY </span>
+    <span class='category'>${item.Category.toUpperCase()}</span>
+  </div>
+  <div class="bookCardPtsContainer">
+    <span class="cardBotTag"> PTS </span>
+    <span class='score'>${item.PageCount}</span>
+  </div>
+</div>
+</div>`;
+
+let Authors = [];
+BOOKS.forEach((book) => {
+  book.Author !== "" ? Authors.push(book.Author) : Authors.push("Unkown");
+});
+let AuthorsSet = new Set(Authors);
+let AUTHORS = Array.from(AuthorsSet);
+
+let Categories = [];
+BOOKS.forEach((book) => {
+  Categories.push(book.Category.toUpperCase());
+});
+let CategoriesSet = new Set(Categories);
+let CATEGORIES = Array.from(CategoriesSet);
+
 let CardsPage = document.getElementById("cardsPage");
+let CategoryFilter = document.getElementById("catFilter");
+let AuthorFilter = document.getElementById("authorsFilter");
+
+CATEGORIES.forEach((c) => {
+  CategoryFilter.innerHTML += `
+  <div class="inputGroupFilters">
+    <input id="${c}-catFilter" name="filtersCat" type="checkbox" value="${c}" />
+    <label for="${c}-catFilter">${c}</label>
+  </div>
+    `;
+});
+
+AUTHORS.sort().forEach((a) => {
+  AuthorFilter.innerHTML += `
+    <div class="inputGroupFilters">
+      <input id="${a}-authorFilter" name="filtersAuthor" type="checkbox" value="${a}" />
+      <label for="${a}-authorFilter">${a}</label>
+    </div>
+      `;
+});
 
 let miniAuthor = (str) => {
   let Str = str.split(" ");
@@ -502,41 +569,11 @@ let miniAuthor = (str) => {
 };
 
 BOOKS.forEach((book) => {
-  CardsPage.innerHTML += `
-    <div class="myBookCardContainer">
-    <div class="myBookCardImgContainer">
-      <img
-        src=${book.Image}
-        alt="book"
-        class="bookCardImg"
-      />
-    </div>
-    <div class="myBookCardInfoContainer">
-      <h5 class="myBookCardTitle">
-        ${book.Title.toUpperCase()}
-      </h5>
-    </div>
-    <div class="myBookCardBot">
-      <div class="bookCardAuthorContainer">
-        <span class="cardBotTag"> AUTHOR </span>
-        <i>${
-          book.Author.length <= 12 ? book.Author : miniAuthor(book.Author)
-        }</i>
-      </div>
-      <div class="bookCardCatContainer">
-        <span class="cardBotTag"> CATEGORY </span>
-        ${book.Category.toUpperCase()}
-      </div>
-      <div class="bookCardPtsContainer">
-        <span class="cardBotTag"> PTS </span>
-        ${book.PageCount}
-      </div>
-    </div>
-  </div>
-    `;
+  CardsPage.innerHTML += BOOK_CARD(book);
 });
 
 // Using jQuery:
+
 $(document).ready(() => {
   $("#minMaxSort").html("+");
   $("#sortOptions").slideUp();
@@ -591,4 +628,115 @@ $(document).ready(() => {
   });
 });
 
-// Test Slider
+// Test Search:
+let searchQ = document.getElementById("categoryPageSearch");
+function updateResult(query) {
+  CardsPage.innerHTML = "";
+  BOOKS.map(function (algo) {
+    query.split(" ").map(function (word) {
+      if (algo.Title.toLowerCase().indexOf(word.toLowerCase()) != -1) {
+        CardsPage.innerHTML += `
+ 
+
+          <div class="myBookCardContainer" id="bookCard-${algo.Id}">
+          <div class="myBookCardImgContainer">
+            <img
+              src=${algo.Image}
+              alt="book"
+              class="bookCardImg"
+            />
+          </div>
+          <div class="myBookCardInfoContainer">
+            <h5 class="myBookCardTitle title">
+              ${algo.Title.toUpperCase()}
+            </h5>
+          </div>
+          <div class="myBookCardBot">
+            <div class="bookCardAuthorContainer">
+              <span class="cardBotTag"> AUTHOR </span>
+              <i class="author">${
+                algo.Author.length <= 12 ? algo.Author : miniAuthor(algo.Author)
+              }</i>
+            </div>
+            <div class="bookCardCatContainer">
+              <span class="cardBotTag"> CATEGORY </span>
+              <span class='category'>${algo.Category.toUpperCase()}</span>
+            </div>
+            <div class="bookCardPtsContainer">
+              <span class="cardBotTag"> PTS </span>
+              <span class='score'>${algo.PageCount}</span>
+            </div>
+          </div>
+        </div>
+          `;
+      }
+    });
+  });
+}
+
+let sortOp = document.getElementsByName("sortRadio");
+let sortOpTxt = document.getElementById("catSortOptionTxt");
+let sortFunc = () => {
+  sortOp.forEach((op) => {
+    if (op.checked) {
+      let sop = op;
+      switch (sop.value) {
+        case "phtl":
+          CardsPage.innerHTML = "";
+          BOOKS.sort((b1, b2) => b2.PageCount - b1.PageCount).forEach(
+            (book) => {
+              CardsPage.innerHTML += BOOK_CARD(book);
+            }
+          );
+          searchQ.value = "";
+          sortOpTxt.innerText = "Points highest to lowest /";
+          break;
+        case "plth":
+          CardsPage.innerHTML = "";
+          sortOpTxt.innerHTML = "Points lowest to highest /";
+          BOOKS.sort((b1, b2) => b1.PageCount - b2.PageCount).forEach(
+            (book) => {
+              CardsPage.innerHTML += BOOK_CARD(book);
+            }
+          );
+          searchQ.value = "";
+
+          break;
+        case "mr":
+          alert("Most Recent: Doesn't work with demo data");
+          searchQ.value = "";
+          sortOpTxt.innerHTML = "Most Resent /";
+          break;
+        case "mo":
+          alert("Most Old: Doesn't work with demo data");
+          searchQ.value = "";
+          sortOpTxt.innerHTML = "Oldest /";
+          break;
+        case "a2z":
+          CardsPage.innerHTML = "";
+          BOOKS.sort((b1, b2) => b1.Title.localeCompare(b2.Title)).forEach(
+            (book) => {
+              CardsPage.innerHTML += BOOK_CARD(book);
+            }
+          );
+          searchQ.value = "";
+          sortOpTxt.innerHTML = "Alphabetical A to Z /";
+          break;
+        case "z2a":
+          CardsPage.innerHTML = "";
+          BOOKS.sort((b1, b2) => b1.Title.localeCompare(b2.Title))
+            .reverse()
+            .forEach((book) => {
+              CardsPage.innerHTML += BOOK_CARD(book);
+            });
+          searchQ.value = "";
+          sortOpTxt.innerHTML = "Alphabetical Z to A /";
+          break;
+
+        default:
+          alert("Default In Switch for Sort");
+          break;
+      }
+    }
+  });
+};

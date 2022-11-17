@@ -134,6 +134,11 @@
   position: relative;
   margin-top: 1.5rem;
 }
+input[type="search"]::-webkit-search-cancel-button {
+  /* appearance: none; */
+  color: green;
+  background-color: red;
+}
 .balloon {
   display: inline-block;
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
@@ -582,4 +587,26 @@ div[slider] > input[type="range"]::-ms-tooltip {
 .restBTN:hover {
   background-color: var(--primaryGreen);
   color: var(--secondaryLight);
+}
+
+/*  Extras */
+#catSortOptionTxt,
+#catSearchTermTxt {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--tertiaryDark);
+  margin-bottom: 0.25rem;
+}
+#catPageTitle {
+  color: var(--primaryGreen);
+  margin-bottom: 0.25rem;
+}
+.myTitleLine {
+  width: 8rem;
+  margin: 0 1rem;
+}
+.myCardsContainerTitleSection {
+  display: flex;
+  align-items: center;
+  /* padding: 0.5rem; */
 }
