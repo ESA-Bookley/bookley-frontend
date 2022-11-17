@@ -1,0 +1,119 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    box-sizing: 0;
+    --logoGreen: #235327;
+    --primaryGreen: #70C174;
+    --secondaryGreen: #BEF3C0;
+    --tertiaryGreen: #EFF7F2;
+    --primaryDark: #0B0706;
+    --secondaryDark: #1D2130;
+    --tertiaryDark: #525560;
+    --primaryLight: #EBF0F9;
+    /*--secondaryLight: #E5E5E5;*/
+    --secondaryLight: #fff;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-size: 1rem;
+}
+form>* {
+    margin: 0.5rem;
+}
+.containerUserprofile{
+    display: flex;
+    justify-content: center;
+
+}
+.warpperUserprofile{
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    flex-wrap: wrap;
+}
+.topProfile{
+    display: flex;
+    padding: 3rem;
+    justify-content: space-between;
+    flex:1;
+    background: var(--primaryGreen);
+}
+.image{
+    width:15rem;
+    height:20rem;
+    padding: 2rem;
+    border: 1px solid  #70C174;
+}
+img{   
+       width: 100%;
+       height: 100%;
+       box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+    
+}
+/*.informationUser{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: white;
+    color:var(--primaryGreen);
+    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+}*/
+.middelProfile{
+   /* margin-top: 0.5rem; */
+    display: flex;
+    padding: 3rem;
+    flex: 1;
+}
+
+
+.myform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+   
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+button {
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    background: var(--primaryGreen);
+    color: var(--primaryLight);
+}
+button:hover{
+    /*background:var(--tertiaryDark) ;
+    color: var(--primaryGreen);*/
+    background-color: var(--primaryGreen);
+    color: var(--secondaryLight);
+}
+select {
+    border: none;
+    border-bottom: 1px solid #70C174;
+    outline: none;
+}
+.myform input{
+    border: 1px solid transparent;
+    border-bottom: 1px solid #70C174;
+    outline:none ;
+}
+input[type="file"]{
+    display: none;
+    width:15rem;
+    height:20rem;
+}
+.icon i{
+    font-size:x-large;
+    cursor: pointer;
+}
+
+
