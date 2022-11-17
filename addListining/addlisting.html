@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="addlisting.js"></script>
+    <link rel="stylesheet" href="addlisting.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="containerAdd">
+        <div class="title">
+            <h1>Add a Listing</h1>
+        </div>
+        <div class="wrapperAdd">
+            <div class="leftListing">
+                <div class="Div" id="Div">
+                    <img src="N11245321A_1.avif" alt="" id="image">
+                    <input type="file" accept="image/*" id="photo">
+                </div>
+            </div>
+
+            <div class="rightListiong">
+                <form class="myform">
+                    <span>Tittle</span>
+                    <input type="text" required>
+                    <span>categories</span>
+                    <input type="text">
+                    <span>Description</span>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <span>Autor</span>
+                    <input type="text" name="" id="">
+                    <span>Publisher</span>
+                    <input type="text">
+                    <span>Date Of Publisher</span>
+                    <div>
+                        <input type="number" placeholder="DD" min="1" maxlength="2">
+                        <input type="number" placeholder="MM" min="1" max="31" maxlength="2">
+                        <input type="number" placeholder="YYYY" min="2020" max="2022" maxlength="4">
+                    </div>
+                    <span>ISBN</span>
+                    <input type="number">
+                    <span>PageCount</span>
+                    <input type="number">
+                    <span>Language</span>
+                    <select name="" id="">
+                        <option value="1">English</option>
+                        <option value="2">French</option>
+                        <option value="3">German</option>
+                        <option value="4">Spanish</option>
+                        <option value="5" selected>عربي</option>
+                    </select>
+                    <div class="Condition">
+                        <span>Condition:</span>
+                        <input type="radio" name="Condition">New
+                        <input type="radio" name="Condition">Used
+                    </div>
+                    <button type="submit">ADD</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
