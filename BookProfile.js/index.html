@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Page</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="bookley.css" />
+    <script
+      src="https://kit.fontawesome.com/4c5eb9a822.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="bookPageContainer">
+      <div class="bookPageRow bookPageRowTop">
+        <div class="bookPageCol">
+        <div class="imgContainer-bookPage">
+            <img
+            src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+            alt="Book"
+            class="bookPageImg"
+          />
+        </div>
+
+        </div>
+        <div class="bookPageCol">
+            <div class="listingContent-bookPage">
+                <div class="bookInfo-bookPage">
+                    <h1 class="bookTitle-bookPage">
+                        The Forty Rules of Love, <span class="author-bookPage">by Elif Shafak,</span> <span class="dateInTitle-bookPage"> 2009
+                    </h1></span>
+                    <p class="bookCategory-bookPage">NOVEL</p>
+                    <h6 class="bookInfoTagTitle-pookPage">Description:</h6>
+                    <p class="bookInfoText-bookPage">
+                        The Forty Rules of Love is a novel written by the Turkish author Elif Shafak, The book was published in March 2009. It is about Maulana Jalal-Ud-Din, known as Rumi and his companion Shams Tabrizi. This book explains how Shams transformed a scholar into a Sufi (mystic) through love.
+                    </p>
+                    <h6 class="bookInfoTagTitle-pookPage">About the Author:</h6>
+                    <p class="bookInfoText-bookPage">
+                        Elif ShafakFRSL is a Turkish-British novelist, essayist, public speaker, political scientist and activist. Shafak writes in Turkish and English, and has published 19 works.
+                    </p>
+                    </div>
+                    <div class="userInfo-bookPage">
+                        <div class="userAvatar-bookPage">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdvbWFuJTIwcHJvZmlsZXxlbnwwfHwwfHw%3D&w=1000&q=80" alt="" class="userImg-bookPage">
+                        </div>
+                        <div class="userDetails-bookPage">
+                            <h5>Mona Kane</h5>
+                            <p>Accumulated Score: 2048 </p>
+                            <p>Member Since: 2020</p>
+        
+                        </div>
+                        <div class="reportUser-bookPage">
+                            <h5 class="reportIcon-bookPage"><i class="fa-solid fa-circle-exclamation"></i></h5>
+        
+                        </div>
+                        
+                    </div>
+                    <div class="listingInfoContainer-bookPage">
+                        <div class="listingInfoDiv-bookPage">
+                            <h6>CONDITION</h6>
+                            <h6>USED</h6>
+                        </div>
+                        <div class="listingInfoDiv-bookPage">
+                            <h6>POINTS</h6>
+                            <h6>354</h6>
+                        </div>
+                        <div class="listingInfoDiv-bookPage">
+                            <h6>LIKES</h6>
+                            <h6>55</h6>
+                        </div>
+                        <div class="listingInfoDiv-bookPage">
+                            <h6>RATING</h6>
+                            <h6>4.5</h6>
+                        </div>
+                    </div>
+                    <div class="actionButtonsContainer-bookPage">
+                        <button class="actionBtn clicked"><i class="fa-solid fa-bag-shopping"></i></button>
+                        <button class="actionBtn" id="saveBtn"><i class="fa-solid fa-bookmark"></i></button>
+                        <button class="actionBtn" id="likeBtn"><i class="fa-solid fa-thumbs-up"></i></button>
+                    </div>
+            </div>
+
+
+        </div>
+        <div class="bookPageCol">
+          <div class="bookDetailsContainer-bookPage">
+            <h6 class="boookDetailHeader-bookPage">Details</h6>
+            <hr>
+            <ul class="bookDetailsList-bookPage">
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Title:</span>
+                <span class="detailValue">The Forty Rules of Love</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Category:</span>
+                <span class="detailValue">Litrary Fiction</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Author:</span>
+                <span class="detailValue">Shafak Elif</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Publisher:</span>
+                <span class="detailValue">Viking</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Page Count:</span>
+                <span class="detailValue">354</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Date of Publication:</span>
+                <span class="detailValue">March 2009</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Language:</span>
+                <span class="detailValue">English</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Edition:</span>
+                <span class="detailValue">--</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">Volume:</span>
+                <span class="detailValue">--</span>
+              </li>
+              <li class="detailListItem-bookPage">
+                <span class="detailName">ISBN:</span>
+                <span class="detailValue">9780141047188</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bookPageSection">
+        <h6>You might also like</h6>
+        <div class="cardWrapper-bookPage">
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+          <div class="myBookCardContainer">
+            <div class="myBookCardImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666954510/ESA-Bookley/Books/51S9hxaZfdL._SX324_BO1_204_203_200__pex0dh.jpg"
+                alt="book"
+                class="bookCardImg"
+              />
+            </div>
+            <div class="myBookCardInfoContainer">
+              <h5 class="myBookCardTitle title">
+                The Forty Rules of LoveThe Forty Rules of Love
+              </h5>
+            </div>
+            <div class="myBookCardBot">
+              <div class="bookCardAuthorContainer author">
+                <span class="cardBotTag"> AUTHOR </span>
+                <i>Elif Shafak</i>
+              </div>
+              <div class="bookCardCatContainer category">
+                <span class="cardBotTag"> CATEGORY </span>
+                NOVEL
+              </div>
+              <div class="bookCardPtsContainer points">
+                <span class="cardBotTag"> PTS </span>
+                345
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
