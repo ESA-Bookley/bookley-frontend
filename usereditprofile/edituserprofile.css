@@ -19,7 +19,7 @@
 body {
     height: 100vh;
     margin: 0;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 form>* {
     margin: 0.5rem;
@@ -32,6 +32,7 @@ form>* {
 .warpperUserprofile{
     display: flex;
     flex-direction: row-reverse;
+    margin-top: 2rem;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
     flex-wrap: wrap;
 }
@@ -111,9 +112,13 @@ input[type="file"]{
     width:15rem;
     height:20rem;
 }
-.icon i{
-    font-size:x-large;
+#icon i{
+    font-size:2rem;
+    color: white;
     cursor: pointer;
 }
-
+input,select{
+    width:100%;
+    background: none;
+}
 
