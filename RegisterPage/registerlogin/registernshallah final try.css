@@ -289,6 +289,24 @@ option[value=""]{
         height: 100%;
         justify-content: center;
     }
+    .row-form select:focus~span,
+.row-form select:valid~span ,
+.row-form input:not([value=''])~span{
+    top: -1rem;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+     color:var(--primaryGreen);
+}
+.row-form input:focus~span,
+.row-form input:valid~span ,
+.row-form input:not([value=''])~span{
+    top: -1rem;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+     color:var(--primaryGreen);
+}
 }
 
 @media only screen and (max-width:1024px) {
