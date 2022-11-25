@@ -31,9 +31,7 @@ body {
 .wrapperLogin {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     width:30rem;
-    flex:1;
     align-items: center;
     justify-content: center;
 }
@@ -165,3 +163,15 @@ button:hover{
     color: var(--secondaryLight);
 }
 
+@media only screen and (max-width:500px) {
+    .wrapperLogin{
+        width:100%;  
+        height: 100%;      
+    }
+}
+@media only screen and (max-width:768px){
+    .wrapperLogin{
+        width:100%;
+        height: 100%;
+    }
+}

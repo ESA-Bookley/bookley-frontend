@@ -272,6 +272,28 @@ option[value=""]{
     box-shadow: 0 0 10px 100px red inset;
 }*/
 
-.dr1 select2-results__option select2-results__option--highlighted {
-    background: var(--tertiaryGreen) !important;
- }
+ @media only screen and (max-width:500px) {
+    .leftRegister {
+        display: none;
+
+    }
+
+    .wrapperRegister {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .wrapperRegister {
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .wrapperRegister {
+        width: 100%;
+    }
+
+}

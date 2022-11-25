@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>Sign Up</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.6.1.min.js"></script>
     <script src="register1.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
@@ -290,19 +290,8 @@
             </div>
         </div>
     </div>
-    <!--<script src="picker.js"></script>-->
-    <script>
-          let func = () => {
-        console.log("wesel")
-        elm.type = 'date'
-        elm.value = '1990-11-11';
-    }
-    let elm = document.getElementById('dpicker');
-     elm.addEventListener('focus',(event) => {
-        event.target.type = 'date'
-        event.target.value = '1990-11-11'
-     });
-    </script>
+    <script src="picker.js"></script>
+   
 </body>
 
 </html>
