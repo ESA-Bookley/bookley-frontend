@@ -19,7 +19,7 @@
 body {
     height: 100vh;
     margin: 0;
-    font-size: 2rem;
+    font-size: 1rem;
 }
 form>* {
     margin: 0.5rem;
@@ -31,16 +31,13 @@ form>* {
 }
 .warpperUserprofile{
     display: flex;
+    justify-content: center;
     flex-direction: row-reverse;
-    margin-top: 2rem;
     box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-    flex-wrap: wrap;
+   
 }
 .topProfile{
     display: flex;
-    padding: 3rem;
-    justify-content: space-between;
-    flex:1;
     background: var(--primaryGreen);
 }
 .image{
@@ -55,19 +52,11 @@ img{
        box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
     
 }
-/*.informationUser{
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    background: white;
-    color:var(--primaryGreen);
-    box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
-}*/
+
 .middelProfile{
-   /* margin-top: 0.5rem; */
+
     display: flex;
-    padding: 3rem;
-    flex: 1;
+  
 }
 
 
@@ -79,8 +68,8 @@ img{
    
 }
 input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+input::-webkit-inner-spin-button{
+   -webkit-appearance: none;
     margin: 0;
 }
 button {
@@ -116,12 +105,6 @@ input[type="file"]{
     font-size:1rem;
     cursor: pointer;
 }
-input,select{
-    width:100%;
-    background: none;
-}
-
-
 @media  only screen and(max-width:500px) {
     .warpperUserprofile{
         height: 100%;
@@ -158,3 +141,5 @@ input,select{
         padding: 0;
     }
 }
+
+
