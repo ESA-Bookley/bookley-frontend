@@ -113,8 +113,7 @@ input[type="file"]{
     height:20rem;
 }
 #icon i{
-    font-size:2rem;
-    color: white;
+    font-size:1rem;
     cursor: pointer;
 }
 input,select{
@@ -122,3 +121,40 @@ input,select{
     background: none;
 }
 
+
+@media  only screen and(max-width:500px) {
+    .warpperUserprofile{
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .middelProfile,.topProfile{
+        padding: 0;
+    }
+    
+}
+@media only screen and (max-width:768px){
+    .warpperUserprofile{
+        
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+  
+    .middelProfile,.topProfile{
+        padding: 0;
+    }
+   
+}
+@media only screen and (max-width:1024px){
+    .warpperUserprofile{
+        
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .middelProfile,.topProfile{
+        padding: 0;
+    }
+}
