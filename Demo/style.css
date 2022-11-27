@@ -1,0 +1,234 @@
+.carouselImgContainer {
+  position: relative;
+}
+.carouselImgContainer img {
+  object-fit: cover;
+  vertical-align: middle;
+  max-height: 30rem;
+}
+.carouselContent {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.carouselImgContainer .carouselContent {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 20rem;
+  height: 100%;
+  padding: 1rem;
+}
+/* Landing BTNS */
+.myPrimaryBtn {
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: var(--primaryGreen);
+  color: var(--secondaryLight);
+}
+.myPrimaryBtn:hover {
+  background-color: var(--primaryLight);
+  color: var(--logoGreen);
+  border: 1px solid var(--primaryGreen);
+}
+.learnMoreBtn {
+  align-self: baseline;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--primaryGreen);
+  border: 1px solid var(--primaryGreen);
+  padding: 00.5rem 1rem;
+  margin-top: 0.5rem;
+}
+.learnMoreBtn:hover {
+  background-color: var(--primaryGreen);
+  color: var(--secondaryLight);
+  border: 1px solid transparent;
+}
+
+.learnMoreBtnW {
+  align-self: baseline;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: var(--secondaryLight);
+  background-color: var(--primaryGreen);
+  padding: 00.5rem 1rem;
+  /* margin-top: 3rem; */
+  align-self: center;
+}
+.learnMoreBtnW:hover {
+  background-color: var(--primaryGreen);
+  color: var(--secondaryLight);
+  border: 1px solid var(--secondaryLight);
+}
+.didYouKnowInfo > .learnMoreBtnW:hover {
+  border: 1px solid transparent;
+}
+
+/*  My Info Sections */
+.myInfoSectionContent {
+  max-width: 100%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.pageSection:nth-child(odd) > .myInfoSectionContent {
+  flex-direction: row-reverse;
+}
+.linfo {
+  padding: 1rem;
+  width: 50%;
+}
+.rinfo {
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.rinfoImgContainer {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+.myInfoSectionImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 650px) {
+  .myInfoSectionContent {
+    flex-direction: column-reverse;
+  }
+  .pageSection:nth-child(odd) > .myInfoSectionContent {
+    flex-direction: column-reverse;
+  }
+  .linfo {
+    width: 100%;
+  }
+  .rinfo {
+    width: 100%;
+  }
+}
+
+/*  Did You Know Section */
+
+.didYouKnowCardsContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.myDidYouKnowCard {
+  width: 18rem;
+  height: 18rem;
+  border-radius: 1rem;
+  background-image: url("https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/artur-luczka-B0tIFEU1JVM-unsplash_o2suzq.jpg");
+  overflow: hidden;
+}
+#fact1 {
+  background-image: url("https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/artur-luczka-B0tIFEU1JVM-unsplash_o2suzq.jpg");
+}
+#fact2 {
+  background-image: url("https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/christian-burri-V5d31LxEdyw-unsplash_iy5rei.jpg");
+}
+#fact3 {
+  background-image: url("https://res.cloudinary.com/df6hxb2wx/image/upload/v1667169057/ESA-Bookley/InfoSection/pauline-loroy-tv8PIPPY3rQ-unsplash_g4uziw.jpg");
+}
+.myDidYouKnowInfo {
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+.myDidYouKnowInfo:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
+.myDidYouKnowInfo:hover h3 {
+  color: var(--primaryLight);
+  font-weight: 900;
+  text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1),
+    10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
+}
+@media screen and (min-width: 1111px) {
+  .didYouKnowCardsContainer {
+    gap: 4rem;
+  }
+  .myDidYouKnowCard {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+/*  Card Scroll */
+
+.cardWrapper-bookPage {
+  display: flex;
+  padding: 25px 0px;
+  list-style: none;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.cardWrapper-bookPage > .myBookCardContainer {
+  scroll-snap-align: start;
+}
+.cardWrapper-bookPage > .myBookCardContainer:not(:last-child) {
+  margin-right: 1rem;
+}
+.cardWrapper-bookPage::-webkit-scrollbar {
+  height: 0.5rem;
+}
+.cardWrapper-bookPage::-webkit-scrollbar-thumb,
+.cardWrapper-bookPage::-webkit-scrollbar-track {
+  border-radius: 92px;
+}
+.cardWrapper-bookPage::-webkit-scrollbar-thumb {
+  background: var(--primaryGreen);
+}
+.cardWrapper-bookPage::-webkit-scrollbar-track {
+  background: var(--tertiaryGreen);
+}
+@media (min-width: 500px) {
+  .myBookCardContainer {
+    flex-basis: calc(50% - 10px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 700px) {
+  .myBookCardContainer {
+    flex-basis: calc(calc(100% / 3) - 20px);
+  }
+
+  .card:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+@media (min-width: 1100px) {
+  .myBookCardContainer {
+    flex-basis: calc(25% - 30px);
+  }
+
+  .myBookCardContainer:not(:last-child) {
+    margin-right: 40px;
+  }
+}
