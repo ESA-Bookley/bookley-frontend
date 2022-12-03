@@ -71,6 +71,7 @@ $(document).ready(function(){
                }); 
                phone.parents('.hold').find('.error-message').show().text('Password must be at least 8 chars and contain at least 1 digit, 1 uppercase character, 1 lowercase character, and 1 special character');
                missing=true;    
+               
          }
          if(comfpassw.val()!=passw.val()){
           comfpassw.parents('.hold').find('.error-message').show().text('Password did not match');

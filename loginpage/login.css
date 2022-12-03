@@ -106,7 +106,7 @@ input {
     left: 0;
     font-size: 12px;
     font-weight: 500;
-     color:var(--logoGreen);
+     color:var(--primaryDark);
 }
 .eyeIcon{
     margin: 0;
