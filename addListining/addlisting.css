@@ -88,7 +88,7 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 span {
-    color: green;
+    color: var(--logoGreen);
 }
 
 .rightListiong input {
@@ -97,7 +97,7 @@ span {
 }
 input:focus{
     transition: all 2s;
-    border-bottom: 1px solid rgb(42, 231, 42);
+    border-bottom: 1px solid var(--logoGreen);
 }
 .rightListiong input:focus {
     outline: none;
@@ -163,5 +163,7 @@ input[type="file"] {
 @media only screen and (max-width:1024px) {
     .wrapperAdd{
         width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }
