@@ -105,7 +105,7 @@ input[type="file"]{
     font-size:1rem;
     cursor: pointer;
 }
-@media  only screen and(max-width:500px) {
+@media  only screen and (max-width:500px) {
     .warpperUserprofile{
         height: 100%;
         flex-direction: column;
@@ -118,9 +118,7 @@ input[type="file"]{
 }
 @media only screen and (max-width:768px){
     .warpperUserprofile{
-        
         height: 100%;
-        flex-direction: column;
         justify-content: center;
     }
   
@@ -133,7 +131,6 @@ input[type="file"]{
     .warpperUserprofile{
         
         height: 100%;
-        flex-direction: column;
         justify-content: center;
     }
     
