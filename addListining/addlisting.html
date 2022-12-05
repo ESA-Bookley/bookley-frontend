@@ -28,41 +28,52 @@
 
             <div class="rightListiong">
                 <form class="myform">
-                    <span>Tittle</span>
-                    <input type="text" required>
+                    <div class="hold">
+                        <span>Tittle</span>
+                        <input type="text" name="title" id="title" required>
+                        <small class="error-message"></small>
+                    </div>
                     <span>categories</span>
-                    <input type="text" required>
+                    <input type="text" name="categories">
                     <span>Description</span>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
-                    <span>Autor</span>
-                    <input type="text" name="" id="">
+                    <textarea name="Description" id="" cols="30" rows="10"></textarea>
+                    <span>Author</span>
+                    <input type="text" name="author" id="">
                     <span>Publisher</span>
                     <input type="text">
                     <span>Date Of Publisher</span>
-                    <div>
+                    <div class="date">
                         <input type="number" placeholder="DD" min="1" maxlength="2">
                         <input type="number" placeholder="MM" min="1" max="31" maxlength="2">
                         <input type="number" placeholder="YYYY" min="2020" max="2022" maxlength="4">
-                    </div>
+                    </div> 
                     <span>ISBN</span>
                     <input type="number">
-                    <span>PageCount</span>
-                    <input type="number" required>
-                    <span>Language</span>
-                    <select name="" id="" >
-                        <option value="1"></option>
-                        <option value="2">English</option>
-                        <option value="3">French</option>
-                        <option value="4">German</option>
-                        <option value="5">Spanish</option>
-                        <option value="6">عربي</option>
-                    </select>
-                    <div class="Condition">
-                        <span>Condition:</span>
-                        <input type="radio" name="Condition">New
-                        <input type="radio" name="Condition">Used
+                    <div class="hold">
+                        <span>PageCount</span>
+                        <input type="number" name="countpage" id="countpage" required>
+                        <small class="error-message"></small>
                     </div>
-                    <button type="submit">ADD</button>
+                    <div class="hold">
+                        <span>Language</span>
+                        <select name="Language" id="lang">
+                            <option value="1">English</option>
+                            <option value="2">French</option>
+                            <option value="3">German</option>
+                            <option value="4">Spanish</option>
+                            <option value="5" selected>عربي</option>
+                            <option value="6" >Other</option>
+                        </select>
+                    </div>
+                    <div class="hold">
+                        <div class="Condition">
+                            <span>Condition:</span>
+                            <input type="radio" name="Condition" id="new" value="new">New
+                            <input type="radio" name="Condition" id="used" value="old">Used
+                        </div>
+                        <small class="error-message"></small>
+                    </div>
+                    <button type="submit" id="add">ADD</button>
                 </form>
             </div>
         </div>
