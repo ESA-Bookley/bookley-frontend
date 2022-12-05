@@ -1,0 +1,98 @@
+.aboutContent {
+  padding-top: 4rem;
+}
+
+.infoSectionText {
+  align-self: flex-start;
+}
+/*  My Info Sections */
+.myInfoSectionContent {
+  max-width: 100%;
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.pageSection:nth-child(odd) > .myInfoSectionContent {
+  flex-direction: row-reverse;
+}
+.linfo {
+  padding: 1rem;
+  width: 50%;
+}
+.rinfo {
+  padding: 1rem;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.rinfoImgContainer {
+  width: 20rem;
+  height: 20rem;
+  overflow: hidden;
+}
+.myInfoSectionImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 650px) {
+  .myInfoSectionContent {
+    flex-direction: column-reverse;
+  }
+  .pageSection:nth-child(odd) > .myInfoSectionContent {
+    flex-direction: column-reverse;
+  }
+  .linfo {
+    width: 100%;
+  }
+  .rinfo {
+    width: 100%;
+  }
+}
+
+.sdgGoal {
+  transition: all ease-in-out 0.7s;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.sdgDesc {
+  display: none;
+}
+.sdgGoal:hover {
+  transform: scale(0.85);
+  cursor: pointer;
+}
+.sdgGoal:hover .sdgDesc {
+  display: block;
+}
+
+#sdg4 > * {
+  color: #c5192d !important;
+}
+#sdg8 > * {
+  color: #a31c44;
+}
+#sdg9 > * {
+  color: rgb(242, 106, 45);
+}
+#sdg10 > * {
+  color: rgb(224, 20, 131);
+}
+#sdg11 > * {
+  color: rgb(248, 157, 42);
+}
+#sdg12 > * {
+  color: rgb(191, 141, 44);
+}
+#sdg13 > * {
+  color: rgb(64, 127, 70);
+}
+#sdg15 > * {
+  color: rgb(89, 186, 72);
+}
+#sdg17 > * {
+  color: rgb(19, 73, 107);
+}

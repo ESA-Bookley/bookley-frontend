@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/4c5eb9a822.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../assets/bookley.css" />
+    <title>About BOOKLEY</title>
+  </head>
+
+  <body id="body">
+    <div class="navBar">
+      <div class="navLogoContainer">
+        <img
+          src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png"
+          alt=""
+          class="navLogo"
+        />
+      </div>
+      <div class="navLinks">
+        <a href="../index.html" class="navLink">Home</a>
+        <a href="./index.html" class="navLink active">About</a>
+        <a href="#" class="navLink" onclick="openNav()">Categories</a>
+        <div class="categoriesMenu" id="catNav">
+          <i class="fa-solid fa-xmark closeIcon" onclick="closeNav()"></i>
+          <div class="categoriesItems">
+            <a href="#" class="categoryItem">IT</a>
+            <a href="#" class="categoryItem">Novel</a>
+            <a href="#" class="categoryItem">History</a>
+            <a href="#" class="categoryItem">Sports</a>
+            <a href="#" class="categoryItem">Finance</a>
+            <a href="#" class="categoryItem">Cooking</a>
+            <a href="#" class="categoryItem">Beauty</a>
+            <a href="#" class="categoryItem">Cars</a>
+            <a href="#" class="categoryItem">Philosophy</a>
+            <a href="#" class="categoryItem">Language</a>
+            <a href="#" class="categoryItem">Comic</a>
+            <a href="#" class="categoryItem">Education</a>
+            <a href="#" class="categoryItem">School Books</a>
+            <a href="#" class="categoryItem">University Books</a>
+            <a href="#" class="categoryItem">Anime</a>
+            <a href="#" class="categoryItem">Crafts</a>
+            <a href="#" class="categoryItem">Tutorial</a>
+            <a href="#" class="categoryItem">Politics</a>
+            <a href="#" class="categoryItem">Economic</a>
+            <a href="#" class="categoryItem">Trading</a>
+            <a href="#" class="categoryItem">Gaming</a>
+          </div>
+        </div>
+        <a href="/ContactPage" class="navLink">Contact</a>
+        <div class="dropdownAccountMenu">
+          <div class="accountAvatar">IB</div>
+          <div class="accountMenu" id="accMenu">
+            <a href="/UserPage" class="accountMenuLink">@isaacbahsoun</a>
+            <a href="/UserDashboard#addBook" class="accountMenuLink"
+              >List a book</a
+            >
+            <a href="/UserDashboard#saved" class="accountMenuLink">Saved</a>
+            <a href="/TransactionsHistory" class="accountMenuLink"
+              >Transactions</a
+            >
+            <a href="#" class="accountMenuLink">Logout</a>
+            <div class="colorModeContainer">
+              <div class="theme-container shadow-light">
+                <img
+                  id="theme-icon"
+                  src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
+                  alt="ERR"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="navBarMob">
+      <div class="navLogoContainer">
+        <img
+          src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png"
+          alt=""
+          class="navLogo"
+        />
+      </div>
+      <div class="navMobIconContainer">
+        <span class="mobMenueIcon" id="MobileMenuIcon">
+          <i class="fa-solid fa-bars"></i>
+        </span>
+      </div>
+      <div class="mobileNavMenu" id="mobNavMenu">
+        <div class="navMenTop">
+          <div class="navLogoContainer">
+            <img
+              src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png"
+              alt=""
+              class="navLogo"
+            />
+          </div>
+          <div class="navMobIconContainer">
+            <span class="mobMenueIcon" id="MobileMenuIconX">
+              <i class="fa-solid fa-x"></i>
+            </span>
+          </div>
+        </div>
+        <a href="../index.html" class="mobNavLink"> Home</a>
+        <a href="./index.html" class="mobNavLink">About</a>
+        <a href="#" class="mobNavLink" onclick="openNavMob()"> Categories</a>
+        <div class="categoriesMenu" id="catNavMob">
+          <i class="fa-solid fa-xmark closeIcon" onclick="closeNavMob()"></i>
+          <div class="categoriesItems">
+            <a href="#" class="categoryItem">IT</a>
+            <a href="#" class="categoryItem">Novel</a>
+            <a href="#" class="categoryItem">History</a>
+            <a href="#" class="categoryItem">Sports</a>
+            <a href="#" class="categoryItem">Finance</a>
+            <a href="#" class="categoryItem">Cooking</a>
+            <a href="#" class="categoryItem">Beauty</a>
+            <a href="#" class="categoryItem">Cars</a>
+            <a href="#" class="categoryItem">Philosophy</a>
+            <a href="#" class="categoryItem">Language</a>
+            <a href="#" class="categoryItem">Comic</a>
+            <a href="#" class="categoryItem">Education</a>
+            <a href="#" class="categoryItem">School Books</a>
+            <a href="#" class="categoryItem">University Books</a>
+            <a href="#" class="categoryItem">Anime</a>
+            <a href="#" class="categoryItem">Crafts</a>
+            <a href="#" class="categoryItem">Tutorial</a>
+            <a href="#" class="categoryItem">Politics</a>
+            <a href="#" class="categoryItem">Economic</a>
+            <a href="#" class="categoryItem">Trading</a>
+            <a href="#" class="categoryItem">Gaming</a>
+          </div>
+        </div>
+        <a href="/ContactPage" class="mobNavLink">Contact</a>
+        <a href="/ContactPage" class="mobNavLink">Sign In</a>
+        <div class="colorModeContainerMob">
+          <div class="theme-containerMob shadow-light">
+            <img
+              id="theme-iconMob"
+              src="https://www.uplooder.net/img/image/55/7aa9993fc291bc170abea048589896cf/sun.svg"
+              alt="ERR"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aboutContent">
+      <div class="pageSection" id="mission">
+        <div class="myInfoSectionContent">
+          <div class="linfo">
+            <h1 class="infoSectionHeader">
+              A platform for Peer-to-Peer book sharing
+            </h1>
+            <p class="infoSectionText">
+              Our mission is to create a platform that facilitates peer-to-peer
+              book-sharing.
+              <br /><br />
+              Once done with your books, list them on bookley for a score. Use
+              your score to buy the books you want from bookley and help save a
+              tree.
+              <br /><br />
+              We are Creating sustainable society, for everyone and forever.
+            </p>
+          </div>
+          <div class="rinfo">
+            <div class="rinfoImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1667154440/ESA-Bookley/InfoSection/ben-white-EMZxDosijJ4-unsplash_goojsz.jpg"
+                alt=""
+                class="myInfoSectionImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageSection" id="whatWeDo">
+        <div class="myInfoSectionContent">
+          <div class="linfo">
+            <h1 class="infoSectionHeader">
+              We care for earth, we care for the coming birth !
+            </h1>
+            <p class="infoSectionText">
+              Our platform ensures a sustainable, eco-friendly, economical, and
+              more connected society
+            </p>
+            <ul class="fa-ul" style="align-self: flex-start">
+              <li>
+                <span class="fa-li"><i class="fa-solid fa-leaf"></i></span>
+                <i> Eco Friendly</i> <br />
+                Reduce tree cutting by sharing your books with people on bookley
+              </li>
+              <li>
+                <span class="fa-li"><i class="fa-solid fa-leaf"></i></span
+                ><i>Thrifty</i> <br />
+                It is cost effective to swap books instead of buying
+              </li>
+              <li>
+                <span class="fa-li"><i class="fa-solid fa-leaf"></i></span
+                ><i>Socially Connective</i> <br />
+                Provide a connected society through knowledge spreading
+              </li>
+              <li>
+                <span class="fa-li"><i class="fa-solid fa-leaf"></i></span
+                ><i> Knowledge and Wisdom</i><br />
+                Create a wise and intellectual society by facilitating access to
+                books
+              </li>
+            </ul>
+          </div>
+          <div class="rinfo">
+            <div class="rinfoImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1667164752/ESA-Bookley/InfoSection/daniel-oberg-sEApBUS4fIk-unsplash_jv3osj.jpg"
+                class="myInfoSectionImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageSection" id="SDG">
+        <div class="myInfoSectionContent">
+          <div class="linfo">
+            <h1 class="infoSectionHeader">We meet 9/17 SDGs</h1>
+            <p class="infoSectionText">
+              The Sustainable Development Goals or Global Goals are a collection
+              of 17 interlinked global goals designed to be a "shared blueprint
+              for peace and prosperity for people and the planet, now and into
+              the future". The SDGs were set up in 2015 by the United Nations
+              General Assembly and are intended to be achieved by 2030.
+            </p>
+            <p class="infoSectionText">
+              BOOKLEY works on achieving at least <b>9</b> out of the
+              <b>17</b> goals:
+            </p>
+
+            <ul class="fa-ul" style="align-self: flex-start">
+              <li class="sdgGoal" id="sdg4">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: #c5192d !important"
+                  ></i
+                ></span>
+                <i> 4 QUALITY EDUCATION</i> <br />
+                <span class="sdgDesc">
+                  BOOKLEY makes it easy for everyone to have access to books
+                  therfore equal education</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg8">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: #a31c44 !important"
+                  ></i></span
+                ><i>8 DECENT WORK AND ECONOMICAL GROWTH</i>
+                <br />
+                <span class="sdgDesc">
+                  BOOKLEY spreads knwoledge opening portals for better jobs, in
+                  addition to saving money spent on new books
+                </span>
+              </li>
+              <li class="sdgGoal" id="sdg9">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(242, 106, 45) !important"
+                  ></i></span
+                ><i>9 INDUSTRY, INOVATION AND INFRASTRUCTURE </i>
+                <br />
+                <span class="sdgDesc">
+                  BOOKLEY it self is an inovative project developed by youth to
+                  give hope and optimism to others that can be the change</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg10">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(224, 20, 131) !important"
+                  ></i></span
+                ><i> 10 REDUCED INEQUALITIES</i><br />
+                <span class="sdgDesc">
+                  With BOOKLEY everyone has equal opportunities and rights
+                  accessing books</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg11">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(248, 157, 42) !important"
+                  ></i></span
+                ><i> 11 SUSTAINABLE CITIES AND COMUNITIES</i><br />
+                <span class="sdgDesc">
+                  BOOKLEY is creating a community of readers taking into
+                  consideration sustainabilty by sharing</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg12">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(191, 141, 44) !important"
+                  ></i></span
+                ><i> 12 RESPONSIBLE CONSUMPTION AND PRODUCTION</i><br />
+                <span class="sdgDesc">
+                  BOOKLEY reduces the production of books, the waste of books
+                  yet enhances the consumption of knowledge</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg13">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(64, 127, 70) !important"
+                  ></i></span
+                ><i> 13 CLIMATE ACTION</i><br />
+                <span class="sdgDesc">
+                  BOOKLEY reduces trees cutting, therfore it is a positive
+                  impact to the climate</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg15">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(89, 186, 72) !important"
+                  ></i></span
+                ><i> 15 LIFE ON LAND</i><br />
+                <span class="sdgDesc">
+                  BOOKLEY is eco-friendly with the aim to preserve a healthy
+                  planet for all living beings on earth</span
+                >
+              </li>
+              <li class="sdgGoal" id="sdg17">
+                <span class="fa-li"
+                  ><i
+                    class="fa-solid fa-bullseye"
+                    style="color: rgb(19, 73, 107) !important"
+                  ></i></span
+                ><i> 17 PARTNERSHIP FOR THE GOALS</i><br />
+                <span class="sdgDesc">
+                  BOOKLEY is a Peer to Peer platform; every user envolved is a
+                  partner in helping us achieve our goals</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="rinfo">
+            <div class="rinfoImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1667247171/ESA-Bookley/InfoSection/E-SDGs-Poster-801x476_cq88sc.jpg"
+                alt=""
+                class="myInfoSectionImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageSection" id="fact1">
+        <div class="myInfoSectionContent">
+          <div class="linfo">
+            <h1 class="infoSectionHeader">15 BILLION TREES CUT ANNUALY</h1>
+            <p class="infoSectionText">
+              Annually we cut down approximately 15 billion trees globally and
+              plant around 5 billion. So we're losing about 10 billion trees a
+              year. Imagine an area of forest the size of a football field
+              disappearing every second, this is the rate of deforestation.
+              There are approximately 3.04 trillion trees on earth, at this rate
+              within 300 years there will be none left.
+            </p>
+          </div>
+          <div class="rinfo">
+            <div class="rinfoImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1668122501/ESA-Bookley/DataFacts/Data_Trees_Cut_qismat.jpg"
+                alt=""
+                class="myInfoSectionImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageSection" id="fact2">
+        <div class="myInfoSectionContent">
+          <div class="linfo">
+            <h1 class="infoSectionHeader">
+              700+ MILLION BOOKS PRINTED ANNUALY
+            </h1>
+            <p class="infoSectionText">
+              Over the past 25 years, the number of books sold per year ranged
+              from as low as 591 million books (2012) to as high as 778 million
+              books (2008)<br />
+              751 million print books were sold in 2020, the second highest
+              units sold per year on record<br />
+              As of 2020, the number of books sold each year has grown:<br />
+              27.07% since 2012<br />
+              15.00% since 2015<br />
+              9.31% since 2017<br />
+              Based on 2020’s 751 million books sold, we can estimate that:<br />
+
+              62.58 million books were sold per month<br />
+              14.44 million books were sold per week<br />
+              2.06 million books were sold each day<br />
+              85,952 books were sold per hour<br />
+              1,433 books were sold per minute<br />
+              24 books were sold per minute
+            </p>
+          </div>
+          <div class="rinfo">
+            <div class="rinfoImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1668124845/ESA-Bookley/DataFacts/man-working-printing-house-with-paper-paints_lcy62o.jpg"
+                alt=""
+                class="myInfoSectionImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pageSection" id="fact3">
+        <div class="myInfoSectionContent">
+          <div class="linfo">
+            <h1 class="infoSectionHeader">
+              138 BILLION DOLLARS SPENT ON BOOKS ANNUALY
+            </h1>
+            <p class="infoSectionText">
+              The global books market size was valued at USD 138.35 billion in
+              2021 and is expected to expand at a compound annual growth rate
+              (CAGR) of 1.9% from 2022 to 2030. Increasing consumer spending on
+              books supported by rising incomes and interest, as well as
+              continued innovations in the format that have enhanced the overall
+              reading experience, are among the key factors boosting the market.
+              The market has been dominated by academic publishers, with
+              non-academic publishing or trade publishing accounting for a
+              rather minuscule share in comparison. Academic publishing houses
+              have a symbiotic relationship with the educational system. A
+              majority of these publishing houses directly cater to schools,
+              colleges, universities, and research institutes that cover
+              technical, medical, and professional education.
+            </p>
+          </div>
+          <div class="rinfo">
+            <div class="rinfoImgContainer">
+              <img
+                src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1668128027/ESA-Bookley/DataFacts/us-books-market_yrchml.png"
+                class="myInfoSectionImg"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="myFooter" id="footer">
+      <div class="footerCols">
+        <div class="fcol">
+          <img
+            src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png"
+            alt=""
+            class="footerLogo"
+          />
+          <div class="footerSocialLinks">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        </div>
+        <div class="fcol">
+          <h5 class="footerTitle">Pages</h5>
+          <a href="../index.html"><h6 class="footerLink">Home</h6></a>
+          <a href="../AboutPage/index.html"
+            ><h6 class="footerLink">About us</h6></a
+          >
+          <a><h6 class="footerLink">Contact us</h6></a>
+          <a><h6 class="footerLink">LogIn / Register</h6></a>
+        </div>
+        <div class="fcol">
+          <h5 class="footerTitle">Books</h5>
+          <a><h6 class="footerLink">Categories</h6></a>
+          <a><h6 class="footerLink">Authors</h6></a>
+          <a><h6 class="footerLink">List a book</h6></a>
+        </div>
+        <div class="fcol">
+          <h5 class="footerTitle">Legal</h5>
+          <a><h6 class="footerLink">Terms</h6></a>
+          <a><h6 class="footerLink">Policy</h6></a>
+        </div>
+      </div>
+      <div class="footerRows">
+        <div class="fRow">
+          <img
+            src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png"
+            alt=""
+            class="footerLogo"
+          />
+        </div>
+        <div class="fRow">
+          <h5 class="footerTitle">Pages</h5>
+          <a><h6 class="footerLink">Home</h6></a>
+          <a><h6 class="footerLink">About</h6></a>
+          <a><h6 class="footerLink">Contact</h6></a>
+          <a><h6 class="footerLink">LogIn/Register</h6></a>
+        </div>
+        <div class="fRow">
+          <h5 class="footerTitle">Books</h5>
+          <a><h6 class="footerLink">Categories</h6></a>
+          <a><h6 class="footerLink">Authors</h6></a>
+          <a><h6 class="footerLink">List a book</h6></a>
+        </div>
+        <div class="fRow">
+          <h5 class="footerTitle">Legal</h5>
+          <a><h6 class="footerLink">Terms</h6></a>
+          <a><h6 class="footerLink">Policy</h6></a>
+        </div>
+        <div class="fRow fSocial">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+      </div>
+      <div class="fRights">
+        <p style="margin-bottom: 0">
+          All rights reserved. Copyright 2022© ESA -- Bookley
+        </p>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../colorMode.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>

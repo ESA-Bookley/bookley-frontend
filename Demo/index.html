@@ -40,13 +40,13 @@
       <div class="navLogoContainer">
         <img
           src="https://res.cloudinary.com/df6hxb2wx/image/upload/v1666891741/ESA-Bookley/Bookley_logo_1_m6ftrt.png"
-          alt=""
+          alt="BOOKLEY"
           class="navLogo"
         />
       </div>
       <div class="navLinks">
-        <a href="/LandingPage/" class="navLink active">Home</a>
-        <a href="/AboutPage/" class="navLink">About</a>
+        <a href="./index.html" class="navLink active">Home</a>
+        <a href="AboutPage/index.html" class="navLink">About</a>
         <a href="#" class="navLink" onclick="openNav()">Categories</a>
         <div class="categoriesMenu" id="catNav">
           <i class="fa-solid fa-xmark closeIcon" onclick="closeNav()"></i>
@@ -129,7 +129,7 @@
           </div>
         </div>
         <a href="index.html" class="mobNavLink"> Home</a>
-        <a href="/AboutPage/" class="mobNavLink">About</a>
+        <a href="./AboutPage/index.html" class="mobNavLink">About</a>
         <a href="#" class="mobNavLink" onclick="openNavMob()"> Categories</a>
         <div class="categoriesMenu" id="catNavMob">
           <i class="fa-solid fa-xmark closeIcon" onclick="closeNavMob()"></i>
@@ -871,8 +871,8 @@
         </div>
         <div class="fcol">
           <h5 class="footerTitle">Pages</h5>
-          <a><h6 class="footerLink">Home</h6></a>
-          <a><h6 class="footerLink">About us</h6></a>
+          <a href="./index.html"><h6 class="footerLink">Home</h6></a>
+          <a href="./AboutPage/index.html"><h6 class="footerLink">About us</h6></a>
           <a><h6 class="footerLink">Contact us</h6></a>
           <a><h6 class="footerLink">LogIn / Register</h6></a>
         </div>
@@ -934,17 +934,6 @@
       integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
       crossorigin="anonymous"
     ></script>
-    <script>
-      /* Open when someone clicks on the span element */
-      function openNav() {
-        document.getElementById("catNav").style.height = "100%";
-      }
-
-      /* Close when someone clicks on the "x" symbol inside the overlay */
-      function closeNav() {
-        document.getElementById("catNav").style.height = "0%";
-      }
-    </script>
     <script src="colorMode.js"></script>
     <script src="app.js"></script>
   </body>

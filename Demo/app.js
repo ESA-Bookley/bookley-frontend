@@ -1,21 +1,6 @@
-// let mobMenIcn = document.getElementById("MobileMenuIcon");
-// let mobNavMenu = document.getElementById("mobNavMenu");
-
-// let mobMenuToggle = () => {
-//   console.log("kabas");
-//   mobNavMenu.style.display === "none"
-//     ? (mobNavMenu.style.display = "flex")
-//     : (mobNavMenu.style.display = "none");
-// };
-
-// mobMenIcn.addEventListener("click", mobMenuToggle);
-
-/* Open when someone clicks on the span element */
 function openNavMob() {
   document.getElementById("catNavMob").style.height = "100%";
 }
-
-/* Close when someone clicks on the "x" symbol inside the overlay */
 function closeNavMob() {
   document.getElementById("catNavMob").style.height = "0%";
 }
@@ -30,3 +15,14 @@ $(document).ready(function () {
     $("#mobNavMenu").slideUp(500);
   });
 });
+
+//
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("catNav").style.height = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("catNav").style.height = "0%";
+}

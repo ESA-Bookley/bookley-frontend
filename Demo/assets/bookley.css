@@ -195,7 +195,7 @@ a:active {
 
 /* **** NAV BAR **** */
 .shadow-bottom {
-  box-shadow: 0px 15px 10px -15px #111;
+  box-shadow: 0px 15px 10px -15px var(--primaryGreen);
 }
 .navBar {
   display: flex;
@@ -210,7 +210,8 @@ a:active {
   background-color: inherit;
   z-index: 999999999;
   width: 100%;
-  border-bottom: 1px solid;
+  /* border-bottom: 1px solid; */
+  box-shadow: 0px 15px 10px -15px var(--primaryGreen);
 }
 .navLogoContainer {
   display: flex;
@@ -439,7 +440,8 @@ a:active {
     z-index: 999999999;
     width: 100%;
     background-color: inherit;
-    border-bottom: 1px solid;
+    /* border-bottom: 1px solid; */
+    box-shadow: 0px 15px 10px -15px var(--primaryGreen);
   }
   .navMobIconContainer {
     font-size: 2rem;
