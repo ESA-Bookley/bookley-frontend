@@ -242,6 +242,7 @@ a:active {
 /* *** Account Menu *** */
 .dropdownAccountMenu {
   overflow: hidden;
+  margin-left: 0.5rem;
 }
 .accountMenu {
   display: none;
