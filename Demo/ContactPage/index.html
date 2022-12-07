@@ -32,7 +32,7 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/bookley.css" />
-    <title>About BOOKLEY</title>
+    <title>Contact BOOKLEY</title>
   </head>
 
   <body id="body">
@@ -171,6 +171,110 @@
       </div>
     </div>
 
+    <div class="contactContent">
+      <div class="pageSection">
+        <div class="sectionWrapper">
+          <div class="lSection">
+            <div class="myPageTitleSection">
+              <hr class="myTitleLine" />
+              <h6 class="secTtl">CONTACT US</h6>
+            </div>
+            <div class="sectionDetails">
+              <h1 style="font-weight: bold">We'd love to hear from you</h1>
+              <br />
+              <h6>Have any question in mind or want to enquire?</h6>
+              <br />
+              <h6>
+                Please feel free to contact us through the form following
+                details
+              </h6>
+            </div>
+          </div>
+          <div class="rSection">
+            <h4 class="infoLabel">Let's Talk !</h4>
+            <p class="infoDetail">
+              <i class="fa-solid fa-phone"></i
+              ><a href="tel:+96181765652">+961 - 81765652</a>
+            </p>
+            <p class="infoDetail">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:alimallah.crm@bookley.com"
+                >alimallah.crm@bookley.com</a
+              >
+            </p>
+            <h4 class="infoLabel">Head Office</h4>
+            <p class="infoAddressDetail">ESA Coding Lab</p>
+            <p class="infoAddressDetail">Mahmoud Fakih Street,</p>
+            <p class="infoAddressDetail">Institut Francais du Liban,</p>
+            <p class="infoAddressDetail">Nabatieh</p>
+
+            <div class="footerSocialLinks">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="margin: 1rem 2rem" />
+      <div class="pageSection">
+        <div class="contactFormWrapper">
+          <form method="" action="" class="contactForm">
+            <div class="contactFormRow">
+              <div class="contactFormGroup">
+                <label for="fullname" class="contactLabel" id="fnLabel"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  class="contactInput"
+                  id="fn"
+                />
+              </div>
+              <div class="contactFormGroup">
+                <label for="email" class="contactLabel" id="emailLabel"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  placeholder="Email"
+                  class="contactInput"
+                  id="email"
+                />
+              </div>
+            </div>
+
+            <label for="subject" class="contactLabel" id="subjectLabel"
+              >Subject</label
+            >
+            <input
+              type="text"
+              placeholder="Subject"
+              class="contactInput"
+              id="subject"
+            />
+
+            <label for="Message">Message</label>
+            <textarea class="contactMessage"></textarea>
+            <button class="sendBtn">Send</button>
+          </form>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.5621532618215!2d35.47848687489735!3d33.3824952527991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151e94a67860f493%3A0x993e2e0f49fab5ef!2sInstitut%20Fran%C3%A7ais%20de%20Nabatieh!5e0!3m2!1sen!2slb!4v1670371879675!5m2!1sen!2slb"
+            width=""
+            height=""
+            style="border: solid 1px"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <div class="mapContainer"></div>
+      </div>
+    </div>
+
     <div class="myFooter" id="footer">
       <div class="footerCols">
         <div class="fcol">
@@ -252,5 +356,34 @@
     ></script>
     <script src="../colorMode.js"></script>
     <script src="../app.js"></script>
+    <script>
+      function validateForm() {
+        // e.preventDefault();
+        let fn = document.forms["myForm"]["firstName"].value;
+        let ln = document.forms["myForm"]["lastName"].value;
+        let em = document.forms["myForm"]["email"].value;
+        let ms = document.forms["myForm"]["messages"].value;
+        if (fn == "" || typeof fn === "number") {
+          document.getElementsByClassName("validation")[0].style.display =
+            "inline-block";
+          document.getElementsByClassName("validation")[0].style.color = "red";
+        }
+        if (ln == "") {
+          document.getElementsByClassName("validation")[1].style.display =
+            "inline-block";
+          document.getElementsByClassName("validation")[1].style.color = "red";
+        }
+        if (em == "") {
+          document.getElementsByClassName("validation")[2].style.display =
+            "inline-block";
+          document.getElementsByClassName("validation")[2].style.color = "red";
+        }
+        if (ms == "") {
+          document.getElementsByClassName("validation")[3].style.display =
+            "inline-block";
+          document.getElementsByClassName("validation")[3].style.color = "red";
+        }
+      }
+    </script>
   </body>
 </html>

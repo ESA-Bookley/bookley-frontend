@@ -1,0 +1,84 @@
+.contactContent {
+  padding-top: 4rem;
+}
+
+.sectionWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.sectionDetails {
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.rSection {
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.infoLabel {
+  font-weight: bold;
+}
+
+.infoAddressDetail {
+  margin-bottom: 0;
+}
+.contactFormWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.contactForm {
+  display: flex;
+  flex-direction: column;
+}
+.contactFormRow {
+  display: flex;
+  gap: 1rem;
+}
+.contactFormGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactInput {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.contactInput::placeholder {
+  color: transparent;
+}
+
+.contactMessage {
+  border: 1px solid;
+  background-color: transparent;
+  outline: none;
+  padding: 0.5rem;
+  resize: none;
+}
+.sendBtn {
+  align-self: baseline;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--primaryGreen);
+  border: 1px solid var(--primaryGreen);
+  padding: 00.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-top: 1rem;
+  width: 33%;
+}
+.sendBtn:hover {
+  background-color: var(--primaryGreen);
+  color: var(--secondaryLight);
+  border: 1px solid transparent;
+}
