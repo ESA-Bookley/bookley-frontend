@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8" />
     <title>Sign Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.6.1.min.js"></script>
-    <script src="register1.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="register.js"></script>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="registernshallah final try.css" />
-    
-
 </head>
 <body>
     <div class="registerContainer">
@@ -60,19 +55,18 @@
                         <h1>Sign Up</h1>
                         <a href="login.html" class="signIn">Sign In</a>
                     </div>
-                    <form action="" class="myForm" name="something" id="registerForm">
+                    <form action="" class="myForm" name="something" id="registerForm" method="POST">
                         <div class="registerInfo active">
                             <div class="row-form group-form">
                                 <div class="hold">
-                                    <input type="text" name="fn" id="firstname" value="" required>
+                                    <input type="text" name="firstname" id="firstname" value="" required>
                                     <span>First Name</span>
                                     <div class="error-message"></div>
                                 </div>
                                 <div class="hold">
-                                    <input type="text" name="ln" id="lastname" value="" required>
+                                    <input type="text" name="lastname" id="lastname" value="" required>
                                     <span>Last Name</span>
                                     <div class="error-message"></div>
-
                                 </div>
                             </div>
 
@@ -85,7 +79,7 @@
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <select class="selected" required>
+                                    <select class="selected" name="gender" required>
                                         <option value=""></option>
                                         <option value="1" class="regOption">Female</option>
                                         <option value="2" class="regOption">Male</option>
@@ -98,7 +92,7 @@
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <select name="" id="menu1" class="dr1" required>
+                                    <select name="education" id="menu1" class="dr1" required>
                                         <option value=""></option>
                                         <option value="1">School or Equevlant</option>
                                         <option value="2">HighSchool or Equevlant</option>
@@ -114,7 +108,7 @@
 
                             <div class="buttonSubmit">
                                 <h4></h4>
-                                <button type="submit" class="next"  rol="menuitem">NEXT</button>
+                                <button type="submit" class="next" id="btnnext" rol="menuitem">NEXT</button>
                             </div>
                         </div>
                         <div class="registerInfo">
@@ -137,16 +131,16 @@
                             </div>
                             <div class="row-form group-form">
                                 <div class="hold">
-                                    <select>
+                                    <select name="country">
                                         <option value="1">Lebanon</option>
                                     </select>
                                 </div>
                                 <div class="hold">
-                                    <select id="governote" class="selsected" required>
+                                    <select name="governorates" id="governorates" class="selsected" required>
                                         <option value=""></option>
                                         <option value="1">Beirut</option>
                                         <option value="2">Mount Lebanon</option>
-                                        <option value="3">North</option>
+                                        <option value="3">North Lebanon</option>
                                         <option value="4">Beqaa</option>
                                         <option value="5">Nabatiye</option>
                                         <option value="6">South</option>
@@ -197,7 +191,7 @@
                             </div>
                             <div class="row-form">
                                 <div class="hold">
-                                    <input type="password" name="password" id="confirmpassword" value="" required>
+                                    <input type="password" name="Conpassword" id="confirmpassword" value="" required>
 
                                     <span>Confirm password</span>
                                     <small class="eyeIcon"><i class="fa-regular fa-eye-slash eyeTwo"></i></small>
@@ -216,7 +210,7 @@
                                 </p>
                             </div>
                             <div class="buttonSubmit">
-                                <button type="submit" class="back">BACK</button>
+                                <button type="submit" class="back" >BACK</button>
                                 <button type="submit" class="next" >NEXT</button>
                             </div>
                         </div>
@@ -225,64 +219,64 @@
                         <div class="registerInfo">
                             <div class="row-form group-form">
                                 <div class="hold">
-                                    <input type="checkbox">Novels
+                                    <input type="checkbox" name="interests[]" value="novel">Novels
                                 </div>
                                 <div class="hold">
-                                    <input type="checkbox">History
+                                    <input type="checkbox" name="interests[]" value="history">History
                                 </div>
                                 <div class="hold">
-                                    <input type="checkbox">Music
-                                </div>
-                            </div>
-                            <div class="row-form group-form">
-                                <div class="hold">
-                                    <input type="checkbox">IT
-                                </div>
-                                <div class="hold">
-                                    <input type="checkbox">Bomic
-                                </div>
-                                <div class="hold">
-                                    <input type="checkbox">Business
+                                    <input type="checkbox"  name="interests[]" value="music">Music
                                 </div>
                             </div>
                             <div class="row-form group-form">
                                 <div class="hold">
-                                    <input type="checkbox">University and books
+                                    <input type="checkbox"  name="interests[]" value="it">IT
                                 </div>
                                 <div class="hold">
-                                    <input type="checkbox"> Art
+                                    <input type="checkbox"  name="interests[]"  value="bomic">Bomic
                                 </div>
                                 <div class="hold">
-                                    <input type="checkbox">chemistry
-                                </div>
-                            </div>
-                            <div class="row-form group-form">
-                                <div class="hold">
-                                    <input type="checkbox">Geography
-                                </div>
-                                <div class="hold">
-                                    <input type="checkbox">Dictionary
-                                </div>
-                                <div class="hold">
-                                    <input type="checkbox">Low
+                                    <input type="checkbox" name="interests[]"   value="business">Business
                                 </div>
                             </div>
                             <div class="row-form group-form">
                                 <div class="hold">
-                                    <input type="checkbox">Finance
+                                    <input type="checkbox" name="interests[]" value="university">University and books
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox" name="interests[]" value="art"> Art
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox" name="interests[]" value="chemistry">chemistry
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox" name="interests[]" value="Geography">Geography
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox" name="interests[]" value="dictionary">Dictionary
+                                </div>
+                                <div class="hold">
+                                    <input type="checkbox" name="interests[]" value="low">Low
+                                </div>
+                            </div>
+                            <div class="row-form group-form">
+                                <div class="hold">
+                                    <input type="checkbox" name="interests[]" value="finance">Finance
 
                                 </div>
                                 <div class="hold">
-                                    <input type="checkbox">Cooking
+                                    <input type="checkbox" name="interests[]" value="cooking">Cooking
                                 </div>
                                 <div class="hold">
-                                    <input type="checkbox">Sport
+                                    <input type="checkbox" name="interests[]" value="sport">Sport
                                 </div>
                             </div>
 
                             <div class="buttonSubmit">
                                 <button type="submit" class="back" >BACK</button>
-                                <button type="submit" class="create" id="createbtn">Create</button>
+                                <button type="submit" class="create" name="create">Create</button>
                             </div>
                         </div>
                 </div>
