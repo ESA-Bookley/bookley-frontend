@@ -1,0 +1,105 @@
+.userProfileContent {
+  padding: 4rem;
+}
+.imgTop {
+  width: 100%;
+  height: 100%;
+}
+.fullname,
+.username {
+  color: var(--secondaryLight);
+}
+.fullname.dark,
+.username.dark {
+  color: var(--primaryDark);
+}
+.editUserIcon {
+  text-decoration: none;
+  color: var(--secondaryLight);
+}
+.editUserIcon.dark {
+  color: var(--primaryDark);
+}
+.editUserIcon:hover {
+  text-decoration: none;
+}
+
+.bg-primaryGreen {
+  background: var(--primaryGreen);
+}
+.bgdark {
+  background: var(--secondaryDark);
+}
+
+.uInfo {
+  /* border-bottom: 1px dashed var(--secondaryDark); */
+  color: var(--primaryDark);
+}
+.uInfoTitle {
+  color: var(--primaryGreen);
+  font-weight: bold;
+}
+
+.half-skill-block {
+  width: 50%;
+}
+.uInfo > .skill-block {
+  border-color: transparent;
+  /* padding-top: 0.5rem;
+    padding-bottom: 0.5rem; */
+}
+.uInfo > div > p {
+  margin-bottom: 0.25rem;
+}
+/* .uInfo > div {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  } */
+.full-borders {
+  border: 1px solid var(--logoGreen);
+}
+
+.skill-block {
+  width: 25%;
+  border-right: 1px solid var(--secondaryDark);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.skill-block-dark {
+  color: var(--primaryLight);
+}
+.skill-block:last-child {
+  border-right: 1px solid transparent;
+}
+.skill-block > p {
+  margin-bottom: 0.25rem;
+}
+.skill-info > p {
+  color: var(--secondaryLight);
+}
+.skill-info.dark > p {
+  color: var(--primaryDark);
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+  .skill-block {
+    padding: 32px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skill-block {
+    padding: 56px !important;
+  }
+}
+.userPageItems {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.cardsPage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 12rem);
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem;
+}

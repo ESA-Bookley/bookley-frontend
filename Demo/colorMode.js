@@ -14,6 +14,10 @@ const catNav = document.getElementById("catNav");
 const catNavMob = document.getElementById("catNavMob");
 const mobNavMenu = document.getElementById("mobNavMenu");
 const footer = document.getElementById("footer");
+const skillInfo = document.getElementsByClassName("skill-info");
+const upFullName = document.getElementById("upFullName");
+const upUsername = document.getElementById("upUsername");
+const upEditIcon = document.getElementById("upEditIcon");
 
 let theme = window.localStorage.getItem("colorMode") || "light";
 
@@ -41,6 +45,12 @@ let initTheme = () => {
       catNavMob.classList.add("dark");
       mobNavMenu.classList.add("dark");
       footer.classList.add("dark");
+      upFullName.classList.add("darkText");
+      upUsername.classList.add("darkText");
+      upEditIcon.classList.add("darkText");
+      for (let i = 0; i < skillInfo.length; i++) {
+        skillInfo[i].classList.add("dark");
+      }
       break;
 
     default:
@@ -62,6 +72,12 @@ let initTheme = () => {
       catNavMob.classList.remove("dark");
       mobNavMenu.classList.remove("dark");
       footer.classList.remove("dark");
+      upFullName.classList.remove("darkText");
+      upUsername.classList.remove("darkText");
+      upEditIcon.classList.remove("darkText");
+      for (let i = 0; i < skillInfo.length; i++) {
+        skillInfo[i].classList.remove("dark");
+      }
       break;
   }
 };
@@ -99,6 +115,12 @@ function setLight() {
   catNavMob.classList.remove("dark");
   mobNavMenu.classList.remove("dark");
   footer.classList.remove("dark");
+  upFullName.classList.remove("darkText");
+  upUsername.classList.remove("darkText");
+  upEditIcon.classList.remove("darkText");
+  for (let i = 0; i < skillInfo.length; i++) {
+    skillInfo[i].classList.remove("dark");
+  }
 }
 function setDark() {
   window.localStorage.setItem("colorMode", "dark");
@@ -120,4 +142,10 @@ function setDark() {
   catNavMob.classList.add("dark");
   mobNavMenu.classList.add("dark");
   footer.classList.add("dark");
+  upFullName.classList.add("darkText");
+  upUsername.classList.add("darkText");
+  upEditIcon.classList.add("darkText");
+  for (let i = 0; i < skillInfo.length; i++) {
+    skillInfo[i].classList.add("dark");
+  }
 }
