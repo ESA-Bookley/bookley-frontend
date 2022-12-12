@@ -498,7 +498,7 @@ let BOOK_CARD = (item) => `<div class="myBookCardContainer" id="bookCard-${
 }">
 <div class="myBookCardImgContainer">
   <img
-    src=${item.Image}
+  src="https://m.media-amazon.com/images/I/71J6qUWtWML.jpg"
     alt="book"
     class="bookCardImg"
   />
@@ -641,7 +641,7 @@ function updateResult(query) {
           <div class="myBookCardContainer" id="bookCard-${algo.Id}">
           <div class="myBookCardImgContainer">
             <img
-              src=${algo.Image}
+              src="https://m.media-amazon.com/images/I/71J6qUWtWML.jpg"
               alt="book"
               class="bookCardImg"
             />
@@ -740,3 +740,15 @@ let sortFunc = () => {
     }
   });
 };
+
+// Reset BTN:
+const resetBtn = document.getElementById("restBTN");
+const sortForm = document.getElementById("sortForm");
+
+let resetSearchSortFilters = () => {
+  location.reload();
+};
+// resetBtn.addEventListener("click", resetSearchSortFilters);
+
+// Search Responsive:
+// Same function call on input

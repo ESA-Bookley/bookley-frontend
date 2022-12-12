@@ -18,6 +18,7 @@ const skillInfo = document.getElementsByClassName("skill-info");
 const upFullName = document.getElementById("upFullName");
 const upUsername = document.getElementById("upUsername");
 const upEditIcon = document.getElementById("upEditIcon");
+const cpTopBarMob = document.getElementById("cpTopBarMob");
 
 let theme = window.localStorage.getItem("colorMode") || "light";
 
@@ -48,6 +49,7 @@ let initTheme = () => {
       upFullName ? upFullName.classList.add("darkText") : null;
       upUsername ? upUsername.classList.add("darkText") : null;
       upEditIcon ? upEditIcon.classList.add("darkText") : null;
+      cpTopBarMob ? cpTopBarMob.classList.add("dark") : null;
       for (let i = 0; i < skillInfo.length; i++) {
         skillInfo[i].classList.add("dark");
       }
@@ -76,6 +78,7 @@ let initTheme = () => {
       upFullName ? upFullName.classList.remove("darkText") : null;
       upUsername ? upUsername.classList.remove("darkText") : null;
       upEditIcon ? upEditIcon.classList.remove("darkText") : null;
+      cpTopBarMob ? cpTopBarMob.classList.remove("dark") : null;
       for (let i = 0; i < skillInfo.length; i++) {
         skillInfo[i].classList.remove("dark");
       }
@@ -119,6 +122,7 @@ function setLight() {
   upFullName ? upFullName.classList.remove("darkText") : null;
   upUsername ? upUsername.classList.remove("darkText") : null;
   upEditIcon ? upEditIcon.classList.remove("darkText") : null;
+  cpTopBarMob ? cpTopBarMob.classList.remove("dark") : null;
   for (let i = 0; i < skillInfo.length; i++) {
     skillInfo[i].classList.remove("dark");
   }
@@ -146,6 +150,7 @@ function setDark() {
   upFullName ? upFullName.classList.add("darkText") : null;
   upUsername ? upUsername.classList.add("darkText") : null;
   upEditIcon ? upEditIcon.classList.add("darkText") : null;
+  cpTopBarMob ? cpTopBarMob.classList.add("dark") : null;
   for (let i = 0; i < skillInfo.length; i++) {
     skillInfo[i].classList.add("dark");
   }

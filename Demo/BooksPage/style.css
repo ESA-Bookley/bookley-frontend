@@ -1,8 +1,10 @@
 .categoryPageContent {
   padding-top: 4rem;
+  min-height: 70vh;
 }
 .categoryPageLeftBar {
   height: 100%;
+  /* max-height: 70vh; */
   width: 15rem;
   position: fixed;
   /* z-index: 1; */
@@ -17,6 +19,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .categoryPageLeftBar > * {
   margin-bottom: 1rem;
 }
@@ -498,6 +501,7 @@ div[slider] > input[type="range"]::-ms-tooltip {
 
   background-color: var(--primaryLight);
   color: var(--logoGreen);
+  margin-bottom: 12rem;
 }
 
 .restBTN:hover {
@@ -525,4 +529,40 @@ div[slider] > input[type="range"]::-ms-tooltip {
   display: flex;
   align-items: center;
   /* padding: 0.5rem; */
+}
+
+/* **** RESPONSIVE **** */
+.categoryPageTopBarMob {
+  display: none;
+}
+@media screen and (max-width: 650px) {
+  .categoryPageLeftBar {
+    display: none;
+  }
+  .categoryPageItems {
+    margin-left: 0;
+  }
+  .categoryPageTopBarMob {
+    display: flex;
+    padding: 2rem;
+    padding-bottom: 1rem;
+    justify-content: center;
+    position: sticky;
+    top: 4rem;
+    z-index: 100;
+    background-color: var(--secondaryLight);
+  }
+  .categoryPageMobileSearch {
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    outline: none;
+    background-color: transparent;
+  }
+  .categoryPageTopBarMob.dark {
+    background-color: var(--darkBG);
+  }
+}
+
+.vPointsText {
+  color: #fff;
 }

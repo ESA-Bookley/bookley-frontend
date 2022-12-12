@@ -190,7 +190,7 @@
           </span>
         </div>
         <div class="sortSectionLB">
-          <form class="sortSectionLBForm" onchange="sortFunc()">
+          <form class="sortSectionLBForm" onchange="sortFunc()" id="sortForm">
             <h5 style="color: var(--primaryGreen)">Sort By</h5>
             <span class="minMaxSort" id="minMaxSort">+</span>
             <div id="sortOptions">
@@ -289,20 +289,20 @@
                   <div>
                     <div inverse-left style="width: 70%"></div>
                     <div inverse-right style="width: 70%"></div>
-                    <div range style="left: 20%; right: 40%"></div>
-                    <span thumb style="left: 20%"></span>
-                    <span thumb style="left: 60%"></span>
-                    <div sign style="left: 20%">
-                      <span id="value">200</span>
+                    <div range style="left: 0%; right: 0%"></div>
+                    <span thumb style="left: 0%"></span>
+                    <span thumb style="left: 100%"></span>
+                    <div sign style="left: 0%">
+                      <span id="value" class="vPointsText">0</span>
                     </div>
-                    <div sign style="left: 60%">
-                      <span id="value">600</span>
+                    <div sign style="left: 100%">
+                      <span id="value" class="vPointsText">1000</span>
                     </div>
                   </div>
                   <input
                     type="range"
                     tabindex="0"
-                    value="200"
+                    value="0"
                     max="1000"
                     min="0"
                     step="50"
@@ -319,7 +319,7 @@
                   <input
                     type="range"
                     tabindex="0"
-                    value="600"
+                    value="1000"
                     max="1000"
                     min="0"
                     step="50"
@@ -348,8 +348,19 @@
           </form>
         </div>
         <div class="resetFiltersContainer">
-          <button class="restBTN">Reset</button>
+          <button class="restBTN" onclick="resetSearchSortFilters()">
+            Reset
+          </button>
         </div>
+      </div>
+      <div class="categoryPageTopBarMob" id="cpTopBarMob">
+        <input
+          type="search"
+          placeholder="Search"
+          class="categoryPageMobileSearch"
+          id="categoryPageSearchMob"
+          oninput="updateResult(this.value)"
+        />
       </div>
       <div class="categoryPageItems">
         <div class="myCardsContainerTitleSection">
