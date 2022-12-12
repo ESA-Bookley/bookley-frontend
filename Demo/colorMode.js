@@ -19,6 +19,9 @@ const upFullName = document.getElementById("upFullName");
 const upUsername = document.getElementById("upUsername");
 const upEditIcon = document.getElementById("upEditIcon");
 const cpTopBarMob = document.getElementById("cpTopBarMob");
+const listingInfoContainer_bookPage_h = document.getElementsByClassName(
+  "listingInfoContainer-bookPage-h"
+);
 
 let theme = window.localStorage.getItem("colorMode") || "light";
 
@@ -53,6 +56,9 @@ let initTheme = () => {
       for (let i = 0; i < skillInfo.length; i++) {
         skillInfo[i].classList.add("dark");
       }
+      for (let i = 0; i < listingInfoContainer_bookPage_h.length; i++) {
+        listingInfoContainer_bookPage_h[i].classList.add("darkText");
+      }
       break;
 
     default:
@@ -81,6 +87,9 @@ let initTheme = () => {
       cpTopBarMob ? cpTopBarMob.classList.remove("dark") : null;
       for (let i = 0; i < skillInfo.length; i++) {
         skillInfo[i].classList.remove("dark");
+      }
+      for (let i = 0; i < listingInfoContainer_bookPage_h.length; i++) {
+        listingInfoContainer_bookPage_h[i].classList.remove("darkText");
       }
       break;
   }
@@ -126,6 +135,9 @@ function setLight() {
   for (let i = 0; i < skillInfo.length; i++) {
     skillInfo[i].classList.remove("dark");
   }
+  for (let i = 0; i < listingInfoContainer_bookPage_h.length; i++) {
+    listingInfoContainer_bookPage_h[i].classList.remove("darkText");
+  }
 }
 function setDark() {
   window.localStorage.setItem("colorMode", "dark");
@@ -153,5 +165,8 @@ function setDark() {
   cpTopBarMob ? cpTopBarMob.classList.add("dark") : null;
   for (let i = 0; i < skillInfo.length; i++) {
     skillInfo[i].classList.add("dark");
+  }
+  for (let i = 0; i < listingInfoContainer_bookPage_h.length; i++) {
+    listingInfoContainer_bookPage_h[i].classList.add("darkText");
   }
 }

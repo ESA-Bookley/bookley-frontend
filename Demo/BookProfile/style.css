@@ -1,0 +1,269 @@
+.bookProfileContent {
+  padding-top: 4rem;
+}
+
+.bookPageContainer {
+  padding: 1rem;
+  color: var(--primaryGreen);
+}
+.bookPageRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.bookPageRow .bookPageRowTop {
+  align-items: flex-start;
+}
+.bookPageCol {
+  flex: 1 20rem;
+}
+.bookPageCol-2 {
+  flex: 1 35rem;
+  padding: 1rem;
+}
+/* .bookInfo-bookPage {
+    color: var(--primaryGreen);
+  } */
+
+.imgContainer-bookPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.author-bookPage {
+  font-size: 1rem;
+  font-style: italic;
+  color: grey;
+}
+.dateInTitle-bookPage {
+  font-size: 1rem;
+  font-style: italic;
+  color: grey;
+}
+.bookCategory-bookPage {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.bookInfoTagTitle-pookPage {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.bookInfoText-bookPage {
+  margin-bottom: 0.25rem;
+}
+
+.userInfo-bookPage {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.userAvatar-bookPage {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userImg-bookPage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.userDetails-bookPage > * {
+  margin: 0;
+}
+.userDetails-bookPage {
+  text-indent: 0.5rem;
+}
+.reportUser-bookPage {
+  align-self: flex-end;
+  text-align: center;
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.reportIcon-bookPage {
+  cursor: pointer;
+}
+.reportIcon-bookPage:hover > * {
+  color: red;
+}
+
+.listingInfoContainer-bookPage {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--primaryGreen);
+  color: var(--primaryLight);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.listingInfoDiv-bookPage {
+  text-align: center;
+}
+.bookDetailsContainer-bookPage {
+  background-color: var(--tertiaryGreen);
+  padding: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.boookDetailHeader-bookPage {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+.bookDetailsList-bookPage {
+  list-style: none;
+  padding: 0;
+}
+.detailListItem-bookPage {
+  margin-bottom: 1rem;
+}
+.detailName {
+  font-weight: bold;
+}
+.listingInfoContainer-bookPage-h {
+  color: var(--secondaryLight);
+}
+
+/* Comments */
+.commentForm,
+.rateForm {
+  display: flex;
+  flex-direction: column;
+}
+.commentForm > *,
+.rateForm > * {
+  margin-bottom: 1rem;
+}
+.commentMessage {
+  border: 1px solid;
+  background-color: transparent;
+  outline: none;
+  padding: 1rem;
+  resize: none;
+}
+
+.commentBtn,
+.rateBtn {
+  align-self: baseline;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--primaryGreen);
+  border: 1px solid var(--primaryGreen);
+  padding: 00.5rem 1rem;
+  margin-top: 0.5rem;
+  margin-top: 1rem;
+  width: 33%;
+}
+.commentBtn:hover,
+.rateBtn:hover {
+  background-color: var(--primaryGreen);
+  color: var(--secondaryLight);
+  border: 1px solid transparent;
+}
+
+.commentFormWrapper,
+.rateFormWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* .rateFormWrapper {
+  padding: 1rem;
+} */
+/* .commentFormWrapper {
+  padding-top: 1rem;
+} */
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input[type="range"] {
+    overflow: hidden;
+    width: 11rem;
+    appearance: none;
+    background-color: var(--secondaryGreen);
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    appearance: none;
+    color: var(--primaryGreen);
+    margin-top: -1px;
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 1rem;
+    appearance: none;
+    height: 1rem;
+    cursor: pointer;
+    background: var(--primaryDark);
+    box-shadow: -80px 0 0 80px var(--primaryGreen);
+  }
+}
+/** FF*/
+input[type="range"]::-moz-range-progress {
+  background-color: #43e5f7;
+}
+input[type="range"]::-moz-range-track {
+  background-color: #9a905d;
+}
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+  background-color: #43e5f7;
+}
+input[type="range"]::-ms-fill-upper {
+  background-color: #9a905d;
+}
+
+.cmntFeeds {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-self: baseline;
+}
+.cmntFeeds > * {
+  margin-bottom: 1rem;
+}
+
+.commentCard {
+  border: 1px solid;
+  padding: 0.5rem 1rem;
+}
+.userInfo-bookPage-cmnt {
+  display: flex;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.userAvatar-bookPage-cmnt {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.userImg-bookPage-cmnt {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.userDetails-bookPage-cmnt > * {
+  margin: 0;
+}
+.userDetails-bookPage-cmnt {
+  text-indent: 0.5rem;
+}
+.cmntBody {
+  padding: 0.5rem;
+}
+.cmntBottom {
+  display: flex;
+  justify-content: space-between;
+}
+.cmnt-actions {
+  display: flex;
+  padding-left: 0.5rem;
+  gap: 1rem;
+}
