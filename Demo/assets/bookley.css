@@ -347,6 +347,7 @@ a:active {
 
 .myFooter {
   background-color: var(--primaryLight);
+  position: sticky;
 }
 .myFooter.dark {
   background-color: var(--primaryDark);

@@ -32,7 +32,7 @@
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="../assets/bookley.css" />
-    <title>Contact BOOKLEY</title>
+    <title>BOOKS -- BOOKELY</title>
   </head>
 
   <body id="body">
@@ -74,7 +74,7 @@
             <a href="#" class="categoryItem">Gaming</a>
           </div>
         </div>
-        <a href="../ContactPage/" class="navLink active">Contact</a>
+        <a href="../ContactPage/" class="navLink">Contact</a>
         <div class="dropdownAccountMenu">
           <div class="accountAvatar">IB</div>
           <div class="accountMenu" id="accMenu">
@@ -171,106 +171,195 @@
       </div>
     </div>
 
-    <div class="contactContent">
-      <div class="pageSection">
-        <div class="sectionWrapper">
-          <div class="lSection">
-            <div class="myPageTitleSection">
-              <hr class="myTitleLine" />
-              <h6 class="secTtl">CONTACT US</h6>
+    <div class="categoryPageContent">
+      <div class="categoryPageLeftBar">
+        <div class="searchSectionLB">
+          <span>
+            <input
+              class="balloon"
+              id="categoryPageSearch"
+              type="search"
+              placeholder="Search..."
+              oninput="updateResult(this.value)"
+            /><label for="planet">
+              <i
+                class="fa-solid fa-magnifying-glass"
+                style="font-size: 1rem"
+              ></i
+            ></label>
+          </span>
+        </div>
+        <div class="sortSectionLB">
+          <form class="sortSectionLBForm" onchange="sortFunc()">
+            <h5 style="color: var(--primaryGreen)">Sort By</h5>
+            <span class="minMaxSort" id="minMaxSort">+</span>
+            <div id="sortOptions">
+              <div class="inputGroup">
+                <input
+                  id="sortRadio1"
+                  name="sortRadio"
+                  type="radio"
+                  value="phtl"
+                  ;
+                />
+                <label for="sortRadio1">Points high to low</label>
+              </div>
+              <div class="inputGroup">
+                <input
+                  id="sortRadio2"
+                  name="sortRadio"
+                  type="radio"
+                  value="plth"
+                />
+                <label for="sortRadio2">Points low to high </label>
+              </div>
+              <div class="inputGroup">
+                <input
+                  id="sortRadio3"
+                  name="sortRadio"
+                  type="radio"
+                  value="mr"
+                />
+                <label for="sortRadio3">Most Recent</label>
+              </div>
+              <div class="inputGroup">
+                <input
+                  id="sortRadio4"
+                  name="sortRadio"
+                  type="radio"
+                  value="mo"
+                />
+                <label for="sortRadio4">Most Old</label>
+              </div>
+              <div class="inputGroup">
+                <input
+                  id="sortRadio5"
+                  name="sortRadio"
+                  type="radio"
+                  value="a2z"
+                />
+                <label for="sortRadio5">Alphabetical A to Z</label>
+              </div>
+              <div class="inputGroup">
+                <input
+                  id="sortRadio6"
+                  name="sortRadio"
+                  type="radio"
+                  value="z2a"
+                />
+                <label for="sortRadio6">Alphabetical Z to A</label>
+              </div>
             </div>
-            <div class="sectionDetails">
-              <h1 style="font-weight: bold">We'd love to hear from you</h1>
-              <br />
-              <h6>Have any question in mind or want to enquire?</h6>
-              <br />
-              <h6>
-                Please feel free to contact us through the form following
-                details
-              </h6>
-            </div>
-          </div>
-          <div class="rSection">
-            <h4 class="infoLabel">Let's Talk !</h4>
-            <p class="infoDetail">
-              <i class="fa-solid fa-phone"></i
-              ><a href="tel:+96181765652">+961 - 81765652</a>
-            </p>
-            <p class="infoDetail">
-              <i class="fa-solid fa-envelope"></i>
-              <a href="mailto:alimallah.crm@bookley.com"
-                >alimallah.crm@bookley.com</a
-              >
-            </p>
-            <h4 class="infoLabel">Head Office</h4>
-            <p class="infoAddressDetail">ESA Coding Lab</p>
-            <p class="infoAddressDetail">Mahmoud Fakih Street,</p>
-            <p class="infoAddressDetail">Institut Francais du Liban,</p>
-            <p class="infoAddressDetail">Nabatieh</p>
+          </form>
+        </div>
+        <div class="filterSectionLB">
+          <form class="filterSectionLBForm">
+            <h5 style="color: var(--primaryGreen)">Filters</h5>
 
-            <div class="footerSocialLinks">
-              <i class="fa-brands fa-facebook"></i>
-              <i class="fa-brands fa-twitter"></i>
-              <i class="fa-brands fa-instagram"></i>
-              <i class="fa-brands fa-youtube"></i>
+            <span class="minMaxFilters" id="minMaxFilters">-</span>
+            <div id="filtersOptions">
+              <div class="filterOptionHeader">
+                <h6>Condition</h6>
+                <h6 id="conditionMinMax" class="actionMinMax">-</h6>
+              </div>
+              <div id="conditionFilter" class="filterSection">
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersNew"
+                    name="filtersCondition"
+                    type="checkbox"
+                  />
+                  <label for="filtersNew">New</label>
+                </div>
+                <div class="inputGroupFilters">
+                  <input
+                    id="filtersUsed"
+                    name="filtersCondition"
+                    type="checkbox"
+                  />
+                  <label for="filtersUsed">Used</label>
+                </div>
+              </div>
+              <div class="filterOptionHeader">
+                <h6>Points</h6>
+                <h6 id="pointsMinMax" class="actionMinMax">-</h6>
+              </div>
+              <div id="pointsFilter" class="filterSection">
+                <div slider id="slider-distance">
+                  <div>
+                    <div inverse-left style="width: 70%"></div>
+                    <div inverse-right style="width: 70%"></div>
+                    <div range style="left: 20%; right: 40%"></div>
+                    <span thumb style="left: 20%"></span>
+                    <span thumb style="left: 60%"></span>
+                    <div sign style="left: 20%">
+                      <span id="value">200</span>
+                    </div>
+                    <div sign style="left: 60%">
+                      <span id="value">600</span>
+                    </div>
+                  </div>
+                  <input
+                    type="range"
+                    tabindex="0"
+                    value="200"
+                    max="1000"
+                    min="0"
+                    step="50"
+                    oninput="
+                    this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                    var children = this.parentNode.childNodes[1].childNodes;
+                    children[1].style.width=value+'%';
+                    children[5].style.left=value+'%';
+                    children[7].style.left=value+'%';children[11].style.left=value+'%';
+                    children[11].childNodes[1].innerHTML=this.value;"
+                  />
+
+                  <input
+                    type="range"
+                    tabindex="0"
+                    value="600"
+                    max="1000"
+                    min="0"
+                    step="50"
+                    oninput="
+                    this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+                    var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+                    var children = this.parentNode.childNodes[1].childNodes;
+                    children[3].style.width=(100-value)+'%';
+                    children[5].style.right=(100-value)+'%';
+                    children[9].style.left=value+'%';children[13].style.left=value+'%';
+                    children[13].childNodes[1].innerHTML=this.value;"
+                  />
+                </div>
+              </div>
+              <div class="filterOptionHeader">
+                <h6>Categories</h6>
+                <h6 id="catMinMax" class="actionMinMax">-</h6>
+              </div>
+              <div id="catFilter" class="filterSection"></div>
+              <div class="filterOptionHeader">
+                <h6>Authors</h6>
+                <h6 id="authorsMinMax" class="actionMinMax">-</h6>
+              </div>
+              <div id="authorsFilter" class="filterSection"></div>
             </div>
-          </div>
+          </form>
+        </div>
+        <div class="resetFiltersContainer">
+          <button class="restBTN">Reset</button>
         </div>
       </div>
-      <hr style="margin: 1rem 2rem" />
-      <div class="pageSection">
-        <div class="contactFormWrapper">
-          <form method="" action="" class="contactForm">
-            <div class="contactFormRow">
-              <div class="contactFormGroup">
-                <label for="fullname" class="contactLabel" id="fnLabel"
-                  >Full Name</label
-                >
-                <input
-                  type="text"
-                  placeholder="Full Name"
-                  class="contactInput"
-                  id="fn"
-                />
-              </div>
-              <div class="contactFormGroup">
-                <label for="email" class="contactLabel" id="emailLabel"
-                  >Email</label
-                >
-                <input
-                  type="email"
-                  placeholder="Email"
-                  class="contactInput"
-                  id="email"
-                />
-              </div>
-            </div>
-
-            <label for="subject" class="contactLabel" id="subjectLabel"
-              >Subject</label
-            >
-            <input
-              type="text"
-              placeholder="Subject"
-              class="contactInput"
-              id="subject"
-            />
-
-            <label for="Message">Message</label>
-            <textarea class="contactMessage"></textarea>
-            <button class="sendBtn">Send</button>
-          </form>
-
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3331.5621532618215!2d35.47848687489735!3d33.3824952527991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151e94a67860f493%3A0x993e2e0f49fab5ef!2sInstitut%20Fran%C3%A7ais%20de%20Nabatieh!5e0!3m2!1sen!2slb!4v1670371879675!5m2!1sen!2slb"
-            width=""
-            height=""
-            style="border: solid 1px"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+      <div class="categoryPageItems">
+        <div class="myCardsContainerTitleSection">
+          <hr class="myTitleLine" />
+          <h1 id="catPageTitle">Category Title</h1>
         </div>
+
+        <p id="catSearchTermTxt"></p>
+        <p id="catSortOptionTxt"></p>
+        <div class="cardsPage list" id="cardsPage"></div>
       </div>
     </div>
 
@@ -355,34 +444,6 @@
     ></script>
     <script src="../colorMode.js"></script>
     <script src="../app.js"></script>
-    <script>
-      function validateForm() {
-        // e.preventDefault();
-        let fn = document.forms["myForm"]["firstName"].value;
-        let ln = document.forms["myForm"]["lastName"].value;
-        let em = document.forms["myForm"]["email"].value;
-        let ms = document.forms["myForm"]["messages"].value;
-        if (fn == "" || typeof fn === "number") {
-          document.getElementsByClassName("validation")[0].style.display =
-            "inline-block";
-          document.getElementsByClassName("validation")[0].style.color = "red";
-        }
-        if (ln == "") {
-          document.getElementsByClassName("validation")[1].style.display =
-            "inline-block";
-          document.getElementsByClassName("validation")[1].style.color = "red";
-        }
-        if (em == "") {
-          document.getElementsByClassName("validation")[2].style.display =
-            "inline-block";
-          document.getElementsByClassName("validation")[2].style.color = "red";
-        }
-        if (ms == "") {
-          document.getElementsByClassName("validation")[3].style.display =
-            "inline-block";
-          document.getElementsByClassName("validation")[3].style.color = "red";
-        }
-      }
-    </script>
+    <script src="./booksPage.js"></script>
   </body>
 </html>

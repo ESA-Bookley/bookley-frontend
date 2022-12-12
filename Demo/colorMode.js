@@ -45,9 +45,9 @@ let initTheme = () => {
       catNavMob.classList.add("dark");
       mobNavMenu.classList.add("dark");
       footer.classList.add("dark");
-      upFullName.classList.add("darkText");
-      upUsername.classList.add("darkText");
-      upEditIcon.classList.add("darkText");
+      upFullName ? upFullName.classList.add("darkText") : null;
+      upUsername ? upUsername.classList.add("darkText") : null;
+      upEditIcon ? upEditIcon.classList.add("darkText") : null;
       for (let i = 0; i < skillInfo.length; i++) {
         skillInfo[i].classList.add("dark");
       }
@@ -72,9 +72,10 @@ let initTheme = () => {
       catNavMob.classList.remove("dark");
       mobNavMenu.classList.remove("dark");
       footer.classList.remove("dark");
-      upFullName.classList.remove("darkText");
-      upUsername.classList.remove("darkText");
-      upEditIcon.classList.remove("darkText");
+
+      upFullName ? upFullName.classList.remove("darkText") : null;
+      upUsername ? upUsername.classList.remove("darkText") : null;
+      upEditIcon ? upEditIcon.classList.remove("darkText") : null;
       for (let i = 0; i < skillInfo.length; i++) {
         skillInfo[i].classList.remove("dark");
       }
@@ -115,9 +116,9 @@ function setLight() {
   catNavMob.classList.remove("dark");
   mobNavMenu.classList.remove("dark");
   footer.classList.remove("dark");
-  upFullName.classList.remove("darkText");
-  upUsername.classList.remove("darkText");
-  upEditIcon.classList.remove("darkText");
+  upFullName ? upFullName.classList.remove("darkText") : null;
+  upUsername ? upUsername.classList.remove("darkText") : null;
+  upEditIcon ? upEditIcon.classList.remove("darkText") : null;
   for (let i = 0; i < skillInfo.length; i++) {
     skillInfo[i].classList.remove("dark");
   }
@@ -142,9 +143,9 @@ function setDark() {
   catNavMob.classList.add("dark");
   mobNavMenu.classList.add("dark");
   footer.classList.add("dark");
-  upFullName.classList.add("darkText");
-  upUsername.classList.add("darkText");
-  upEditIcon.classList.add("darkText");
+  upFullName ? upFullName.classList.add("darkText") : null;
+  upUsername ? upUsername.classList.add("darkText") : null;
+  upEditIcon ? upEditIcon.classList.add("darkText") : null;
   for (let i = 0; i < skillInfo.length; i++) {
     skillInfo[i].classList.add("dark");
   }
